@@ -145,29 +145,31 @@ flutter run
 
 ## 📸 Application Screenshots
 
+## 📸 Application Screenshots
+
 <table>
   <tr>
-    <td align="center">
-      <img src="assets/screenshots/home.png" width="250"/>
-      <br/>
-      <b>Home Screen</b>
-    </td>
 
-    <td align="center">
-      <img src="assets/screenshots/scan.png" width="250"/>
-      <br/>
-      <b>Scan Screen</b>
-    </td>
+<td align="center">
+  <img src="assets/screenshots/home.jpeg" width="250"/>
+  <br/>
+  <b>Home Screen</b>
+</td>
 
-    <td align="center">
-      <img src="assets/screenshots/result.png" width="250"/>
-      <br/>
-      <b>Result Screen</b>
-    </td>
+<td align="center">
+  <img src="assets/screenshots/scan.png" width="250"/>
+  <br/>
+  <b>Scan Screen</b>
+</td>
+
+<td align="center">
+  <img src="assets/screenshots/result.png" width="250"/>
+  <br/>
+  <b>Result Screen</b>
+</td>
+
   </tr>
 </table>
-
----
 
 # 🎯 Future Enhancements
 
