@@ -1,0 +1,331 @@
+{
+  "diseases": [
+    {
+      "id": "mango_anthracnose",
+      "crop": "Mango",
+      "label": "Anthracnose",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "severity": "High risk",
+      "name": "Anthracnose",
+      "name_sd": "اينٿراڪنوز",
+      "symptoms": ["Dark sunken leaf spots", "Black lesions on flowers and fruits", "Leaf edges may dry in humid weather"],
+      "symptoms_sd": ["پنن تي ڪارا دٻيل داغ", "گلن ۽ ميوي تي ڪارا نشان", "نمي ۾ پنن جا ڪنارا سڪي سگهن ٿا"],
+      "causes": ["Fungal infection caused by Colletotrichum species", "High humidity and rain splash spread spores"],
+      "causes_sd": ["ڪوليٽوٽرائڪم فنگس جي ڪري بيماري", "گهڻي نمي ۽ مينهن جا ڦڙا بيماري پکيڙين ٿا"],
+      "prevention": ["Prune trees for air flow", "Remove infected leaves and fallen fruits", "Avoid overhead irrigation"],
+      "prevention_sd": ["هوا جي گذر لاءِ وڻ ڇانٽيو", "بيمار پن ۽ ڪريل ميوو هٽايو", "مٿي کان پاڻي ڏيڻ کان پاسو ڪريو"],
+      "treatment": ["Spray copper oxychloride or mancozeb as advised by a local agronomist", "Repeat after rain if infection pressure remains high"],
+      "treatment_sd": ["مقامي زرعي ماهر جي صلاح سان ڪاپر آڪسي ڪلورائيڊ يا مينڪوزيب اسپري ڪريو", "مينهن کان پوءِ ضرورت هجي ته ٻيهر اسپري ڪريو"],
+      "medicines": [
+        {"name": "Mancozeb 80% WP", "name_sd": "مينڪوزيب 80٪ WP", "dose": "2-2.5 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
+        {"name": "Copper Oxychloride", "name_sd": "ڪاپر آڪسي ڪلورائيڊ", "dose": "2.5-3 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    },
+    {
+      "id": "mango_bacterial_canker",
+      "crop": "Mango",
+      "label": "Bacterial Canker",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "severity": "High risk",
+      "name": "Bacterial Canker",
+      "name_sd": "بيڪٽيريل ڪينڪر",
+      "symptoms": ["Water-soaked spots on leaves", "Raised cracked lesions on stems", "Fruit spots with gum-like ooze"],
+      "symptoms_sd": ["پنن تي پاڻي جهڙا داغ", "ٿڙن تي ڦاٽل اڀريل نشان", "ميوي تي گوند جهڙو رس نڪرڻ"],
+      "causes": ["Bacterial infection entering through wounds", "Spread by rain, tools, and infected planting material"],
+      "causes_sd": ["زخم مان داخل ٿيندڙ بيڪٽيريا", "مينهن، اوزارن ۽ بيمار ٻوٽن سان پکڙجڻ"],
+      "prevention": ["Use disease-free planting material", "Disinfect pruning tools", "Avoid pruning during wet weather"],
+      "prevention_sd": ["بيماري کان پاڪ ٻوٽا استعمال ڪريو", "ڇانٽڻ جا اوزار صاف ڪريو", "برساتي موسم ۾ ڇانٽڻ کان پاسو ڪريو"],
+      "treatment": ["Remove severely infected branches", "Apply copper-based bactericide under expert guidance"],
+      "treatment_sd": ["تمام بيمار ٽاريون ڪٽي هٽايو", "ماهر جي صلاح سان ڪاپر واري دوا استعمال ڪريو"],
+      "medicines": [
+        {"name": "Copper Hydroxide", "name_sd": "ڪاپر هائيڊرو آڪسائيڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"},
+        {"name": "Streptocycline + Copper", "name_sd": "اسٽرپٽو سائڪلين + ڪاپر", "dose": "Use only with local extension advice", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
+      ]
+    },
+    {
+      "id": "mango_cutting_weevil",
+      "crop": "Mango",
+      "label": "Cutting Weevil",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "severity": "Pest alert",
+      "name": "Mango Cutting Weevil",
+      "name_sd": "انب ڪٽنگ ويول",
+      "symptoms": ["Fresh shoots are cut or wilted", "Small holes on tender growth", "Damaged leaves may fall early"],
+      "symptoms_sd": ["نئون ڦٽل واڌ ڪٽيل يا مرجهيل", "نرم حصن تي ننڍا سوراخ", "خراب پن جلد ڪري سگهن ٿا"],
+      "causes": ["Weevil insect feeding and egg laying on tender shoots"],
+      "causes_sd": ["ويول جيت جو نرم ٽارين تي کاڌو ۽ انڊا رکڻ"],
+      "prevention": ["Collect and destroy damaged shoots", "Keep orchard clean", "Monitor new flush regularly"],
+      "prevention_sd": ["خراب ٽاريون گڏ ڪري ختم ڪريو", "باغ صاف رکو", "نئين واڌ تي باقاعده نظر رکو"],
+      "treatment": ["Use recommended insecticide only when pest population crosses threshold"],
+      "treatment_sd": ["جيت وڌي وڃڻ تي سفارش ڪيل دوا استعمال ڪريو"],
+      "medicines": [
+        {"name": "Imidacloprid", "name_sd": "اميڊاڪلوپرڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
+        {"name": "Lambda-cyhalothrin", "name_sd": "ليمبڊا سائي هيلوٿرن", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    },
+    {
+      "id": "mango_die_back",
+      "crop": "Mango",
+      "label": "Die Back",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "severity": "High risk",
+      "name": "Die Back",
+      "name_sd": "ڊائي بيڪ",
+      "symptoms": ["Twigs dry from tip backward", "Leaves turn brown and remain attached", "Branches show dark streaks under bark"],
+      "symptoms_sd": ["ٽاريون چوٽي کان پوئتي سڪڻ", "پن ناسي ٿي ٽاري تي لڳل رهڻ", "ڇل هيٺ ڪارا نشان"],
+      "causes": ["Fungal infection favored by plant stress", "Poor sanitation and wounds after pruning"],
+      "causes_sd": ["ٻوٽي جي ڪمزوري سان فنگس جو حملو", "صفائي جي کوٽ ۽ ڇانٽڻ جا زخم"],
+      "prevention": ["Prune dead twigs below infected area", "Apply pruning paste", "Improve nutrition and irrigation balance"],
+      "prevention_sd": ["بيمار حصي کان هيٺ سڪل ٽاري ڪٽيو", "ڪٽ تي پيسٽ لڳايو", "غذا ۽ پاڻي جو توازن بهتر ڪريو"],
+      "treatment": ["Destroy infected prunings", "Spray carbendazim or copper fungicide as advised"],
+      "treatment_sd": ["ڪٽيل بيمار حصا ختم ڪريو", "صلاح موجب ڪاربينڊازم يا ڪاپر فنگسائڊ اسپري ڪريو"],
+      "medicines": [
+        {"name": "Carbendazim", "name_sd": "ڪاربينڊازم", "dose": "1 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
+        {"name": "Copper Oxychloride", "name_sd": "ڪاپر آڪسي ڪلورائيڊ", "dose": "2.5 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    },
+    {
+      "id": "mango_gall_midge",
+      "crop": "Mango",
+      "label": "Gall Midge",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "severity": "Pest alert",
+      "name": "Gall Midge",
+      "name_sd": "گال مِج",
+      "symptoms": ["Small raised galls on leaves", "Distorted tender leaves", "Heavy attack reduces new growth"],
+      "symptoms_sd": ["پنن تي ننڍا اڀريل گال", "نرم پن بگڙيل", "گهڻو حملو نئين واڌ گهٽائي ٿو"],
+      "causes": ["Midge larvae feeding inside leaf tissue"],
+      "causes_sd": ["مِج جي لاروا جو پن جي اندر کاڌو"],
+      "prevention": ["Remove affected leaves", "Encourage orchard sanitation", "Monitor during new flush"],
+      "prevention_sd": ["متاثر پن هٽايو", "باغ جي صفائي رکو", "نئين واڌ دوران نگراني ڪريو"],
+      "treatment": ["Apply suitable systemic insecticide if infestation is severe"],
+      "treatment_sd": ["حملو سخت هجي ته مناسب سسٽمڪ دوا استعمال ڪريو"],
+      "medicines": [
+        {"name": "Acetamiprid", "name_sd": "اسيٽاميپرڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
+        {"name": "Imidacloprid", "name_sd": "اميڊاڪلوپرڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    },
+    {
+      "id": "mango_healthy",
+      "crop": "Mango",
+      "label": "Healthy",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mangifera_indica_leaf.jpg",
+      "severity": "Healthy",
+      "name": "Healthy Leaf",
+      "name_sd": "صحتمند پن",
+      "symptoms": ["Uniform green color", "No visible lesions", "Normal leaf shape"],
+      "symptoms_sd": ["هڪجهڙو سائو رنگ", "ڪو واضح داغ ناهي", "پن جي شڪل نارمل"],
+      "causes": ["No disease detected"],
+      "causes_sd": ["بيماري ظاهر ناهي"],
+      "prevention": ["Continue balanced irrigation and nutrition", "Inspect orchard weekly"],
+      "prevention_sd": ["پاڻي ۽ ڀاڻ جو توازن جاري رکو", "هفتي وار باغ ڏسو"],
+      "treatment": ["No chemical treatment required"],
+      "treatment_sd": ["ڪيميائي علاج جي ضرورت ناهي"],
+      "medicines": [
+        {"name": "No medicine needed", "name_sd": "دوا جي ضرورت ناهي", "dose": "Maintain good crop care", "image": ""}
+      ]
+    },
+    {
+      "id": "mango_powdery_mildew",
+      "crop": "Mango",
+      "label": "Powdery Mildew",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_powdery_mildew_severe_leaf_blight_with_mycelium_1.jpg",
+      "severity": "Medium risk",
+      "name": "Powdery Mildew",
+      "name_sd": "پائوڊري ملڊيو",
+      "symptoms": ["White powdery growth on leaves and flowers", "Flower drying", "Poor fruit set"],
+      "symptoms_sd": ["پنن ۽ گلن تي اڇو پائوڊر", "گل سڪڻ", "ميوي لڳڻ ۾ گهٽتائي"],
+      "causes": ["Fungal disease favored by cool dry nights and humid mornings"],
+      "causes_sd": ["ٿڌين خشڪ راتين ۽ نمي وارن صبحن ۾ فنگس وڌي ٿي"],
+      "prevention": ["Improve air movement", "Avoid dense canopy", "Monitor flowering stage"],
+      "prevention_sd": ["هوا جي گذر بهتر ڪريو", "گهڻي گھاٽي ڇانو کان بچو", "گل واري وقت نگراني ڪريو"],
+      "treatment": ["Spray sulfur or hexaconazole according to label and local advice"],
+      "treatment_sd": ["ليبل ۽ مقامي صلاح موجب سلفر يا هيڪساڪونازول اسپري ڪريو"],
+      "medicines": [
+        {"name": "Wettable Sulfur", "name_sd": "ويٽيبل سلفر", "dose": "2-3 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
+        {"name": "Hexaconazole", "name_sd": "هيڪساڪونازول", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    },
+    {
+      "id": "mango_sooty_mould",
+      "crop": "Mango",
+      "label": "Sooty Mould",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sooty_mould_in_mango.jpg",
+      "severity": "Medium risk",
+      "name": "Sooty Mould",
+      "name_sd": "سوٽي مولڊ",
+      "symptoms": ["Black soot-like layer on leaves", "Sticky honeydew on leaf surface", "Reduced photosynthesis"],
+      "symptoms_sd": ["پنن تي ڪاري ڪجل جهڙي پرت", "پنن تي چپچپو مادو", "روشني ٺاهڻ واري عمل ۾ گهٽتائي"],
+      "causes": ["Fungus grows on honeydew produced by sucking insects"],
+      "causes_sd": ["چوسيندڙ جيتن جي چپچپي مادو تي فنگس وڌي ٿي"],
+      "prevention": ["Control mango hoppers, scales, and mealybugs", "Wash heavy deposits where practical"],
+      "prevention_sd": ["هاپر، اسڪيل ۽ ميلي بگ تي ضابطو ڪريو", "گهڻي پرت هجي ته ڌوئي ڇڏيو"],
+      "treatment": ["Manage sucking pests first, then use mild fungicide if needed"],
+      "treatment_sd": ["پهرين چوسيندڙ جيتن کي ڪنٽرول ڪريو، ضرورت هجي ته هلڪو فنگسائڊ استعمال ڪريو"],
+      "medicines": [
+        {"name": "Neem Oil", "name_sd": "نيم آئل", "dose": "3-5 ml per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Expeller_(4).jpg"},
+        {"name": "Imidacloprid", "name_sd": "اميڊاڪلوپرڊ", "dose": "Use label dose for sucking pests", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
+      ]
+    },
+    {
+      "id": "mango_scab",
+      "crop": "Mango",
+      "label": "Mango Scab",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "severity": "Medium risk",
+      "name": "Mango Scab",
+      "name_sd": "انب اسڪيب",
+      "symptoms": ["Small dark corky spots on leaves and young fruit", "Leaf distortion during early flush", "Rough scabby fruit surface"],
+      "symptoms_sd": ["پنن ۽ ننڍي ميوي تي ننڍا ڪارا سخت داغ", "نئين پنن جي شڪل بگڙڻ", "ميوي جي سطح کُردري ٿيڻ"],
+      "causes": ["Fungal disease favored by wet weather and dense canopy"],
+      "causes_sd": ["نمي ۽ گھاٽي ڇانو ۾ فنگس وڌي ٿي"],
+      "prevention": ["Improve pruning", "Remove infected debris", "Protect young flush during wet periods"],
+      "prevention_sd": ["ڇانٽڻ بهتر ڪريو", "بيمار ڪچرو هٽايو", "برساتي وقت نئين واڌ کي بچايو"],
+      "treatment": ["Use copper or mancozeb sprays under local recommendation"],
+      "treatment_sd": ["مقامي سفارش موجب ڪاپر يا مينڪوزيب اسپري ڪريو"],
+      "medicines": [
+        {"name": "Copper Fungicide", "name_sd": "ڪاپر فنگسائڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    },
+    {
+      "id": "mango_alternaria_leaf_spot",
+      "crop": "Mango",
+      "label": "Alternaria Leaf Spot",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "severity": "Medium risk",
+      "name": "Alternaria Leaf Spot",
+      "name_sd": "الٽرنيريا ليف اسپاٽ",
+      "symptoms": ["Brown circular spots with yellow halo", "Older leaves show larger necrotic patches", "Severe infection causes leaf fall"],
+      "symptoms_sd": ["پيلي گهيري سان ناسي گول داغ", "پراڻن پنن تي وڏا سڪل نشان", "سخت بيماري ۾ پن ڪري سگهن ٿا"],
+      "causes": ["Alternaria fungus spreading in humid orchards"],
+      "causes_sd": ["نمي وارن باغن ۾ الٽرنيريا فنگس پکڙجڻ"],
+      "prevention": ["Avoid excess irrigation", "Keep orchard airy", "Remove fallen infected leaves"],
+      "prevention_sd": ["گهڻو پاڻي ڏيڻ کان بچو", "باغ ۾ هوا جو گذر رکو", "ڪريل بيمار پن هٽايو"],
+      "treatment": ["Apply broad-spectrum fungicide after expert diagnosis"],
+      "treatment_sd": ["ماهر جي تشخيص کان پوءِ براڊ اسپيڪٽرم فنگسائڊ استعمال ڪريو"],
+      "medicines": [
+        {"name": "Mancozeb", "name_sd": "مينڪوزيب", "dose": "2 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
+      ]
+    },
+    {
+      "id": "wheat_rust",
+      "crop": "Wheat",
+      "label": "Wheat Rust",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wheat_leaf_rust.jpg",
+      "severity": "High risk",
+      "name": "Wheat Rust",
+      "name_sd": "ڪڻڪ جو رسٽ",
+      "symptoms": ["Orange or brown pustules on leaves", "Premature leaf drying"],
+      "symptoms_sd": ["پنن تي نارنگي يا ناسي ڦٽ", "پن جلد سڪڻ"],
+      "causes": ["Rust fungus spread by wind"],
+      "causes_sd": ["هوا سان پکڙجندڙ رسٽ فنگس"],
+      "prevention": ["Use resistant varieties", "Avoid late sowing where rust is common"],
+      "prevention_sd": ["مزاحمتي قسم پوکيو", "رسٽ وارن علائقن ۾ دير سان پوک کان بچو"],
+      "treatment": ["Use recommended triazole fungicide at early infection"],
+      "treatment_sd": ["شروعاتي بيماري تي سفارش ڪيل ٽرائيازول فنگسائڊ استعمال ڪريو"],
+      "medicines": [
+        {"name": "Propiconazole", "name_sd": "پروپيڪونازول", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
+      ]
+    },
+    {
+      "id": "wheat_powdery_mildew",
+      "crop": "Wheat",
+      "label": "Wheat Powdery Mildew",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Powdery_mildew_on_wheat_leaf.jpg",
+      "severity": "Medium risk",
+      "name": "Wheat Powdery Mildew",
+      "name_sd": "ڪڻڪ پائوڊري ملڊيو",
+      "symptoms": ["White powdery patches on leaves", "Yellowing under heavy infection"],
+      "symptoms_sd": ["پنن تي اڇا پائوڊر جهڙا داغ", "سخت بيماري ۾ پن پيلا ٿيڻ"],
+      "causes": ["Dense crop canopy and humid conditions"],
+      "causes_sd": ["گھاٽو فصل ۽ نمي واري حالت"],
+      "prevention": ["Avoid excessive nitrogen", "Use resistant varieties"],
+      "prevention_sd": ["نائٽروجن گهڻي نه ڏيو", "مزاحمتي قسم استعمال ڪريو"],
+      "treatment": ["Apply sulfur or triazole fungicide if disease spreads"],
+      "treatment_sd": ["بيماري پکڙجي ته سلفر يا ٽرائيازول فنگسائڊ استعمال ڪريو"],
+      "medicines": [
+        {"name": "Sulfur", "name_sd": "سلفر", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    },
+    {
+      "id": "cotton_leaf_curl",
+      "crop": "Cotton",
+      "label": "Cotton Leaf Curl",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_leaf_curl_virus_symptoms.jpg",
+      "severity": "High risk",
+      "name": "Cotton Leaf Curl",
+      "name_sd": "ڪپهه ليف ڪرل",
+      "symptoms": ["Leaves curl upward or downward", "Vein thickening", "Stunted plants"],
+      "symptoms_sd": ["پن مڙڻ", "رڳون ٿلهيون ٿيڻ", "ٻوٽو ننڍو رهڻ"],
+      "causes": ["Virus transmitted by whitefly"],
+      "causes_sd": ["سفيد مک ذريعي پکڙجندڙ وائرس"],
+      "prevention": ["Use tolerant varieties", "Control whitefly early", "Remove infected volunteer plants"],
+      "prevention_sd": ["برداشت ڪندڙ قسم استعمال ڪريو", "سفيد مک کي جلد ڪنٽرول ڪريو", "بيمار پاڻمرادو ڦٽل ٻوٽا هٽايو"],
+      "treatment": ["No cure for infected plants; manage whitefly and crop hygiene"],
+      "treatment_sd": ["بيمار ٻوٽي جو علاج ناهي؛ سفيد مک ۽ صفائي تي ڌيان ڏيو"],
+      "medicines": [
+        {"name": "Pyriproxyfen", "name_sd": "پائريپروڪسيفن", "dose": "Use label dose for whitefly", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
+      ]
+    },
+    {
+      "id": "cotton_boll_rot",
+      "crop": "Cotton",
+      "label": "Cotton Boll Rot",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_boll_rot.jpg",
+      "severity": "Medium risk",
+      "name": "Cotton Boll Rot",
+      "name_sd": "ڪپهه بول روٽ",
+      "symptoms": ["Bolls become brown or black", "Lint quality drops", "Bad smell in wet rot cases"],
+      "symptoms_sd": ["بول ناسي يا ڪارا ٿيڻ", "روئي جي معيار گهٽجڻ", "نمي واري روٽ ۾ بدبو"],
+      "causes": ["Fungi and bacteria entering damaged bolls during humid weather"],
+      "causes_sd": ["نمي ۾ خراب بول ۾ فنگس ۽ بيڪٽيريا داخل ٿيڻ"],
+      "prevention": ["Control bollworms", "Improve field drainage", "Avoid excessive vegetative growth"],
+      "prevention_sd": ["بول ورم ڪنٽرول ڪريو", "پاڻي نيڪال بهتر ڪريو", "گهڻي سبزي واڌ کان بچو"],
+      "treatment": ["Manage insects and apply recommended fungicide if needed"],
+      "treatment_sd": ["جيت ڪنٽرول ڪريو ۽ ضرورت هجي ته سفارش ڪيل فنگسائڊ ڏيو"],
+      "medicines": [
+        {"name": "Chlorothalonil", "name_sd": "ڪلوروٿالونل", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    },
+    {
+      "id": "rice_blast",
+      "crop": "Rice",
+      "label": "Rice Blast",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rice_blast_leaf_lesions.jpg",
+      "severity": "High risk",
+      "name": "Rice Blast",
+      "name_sd": "چانور بلاسٽ",
+      "symptoms": ["Diamond-shaped lesions on leaves", "Neck blast can empty grains", "Grey center with brown border"],
+      "symptoms_sd": ["پنن تي هيري جهڙا داغ", "نيڪ بلاسٽ سان داڻا خالي ٿي سگهن ٿا", "ڀورو مرڪز ۽ ناسي ڪنارو"],
+      "causes": ["Magnaporthe fungus under humid conditions"],
+      "causes_sd": ["نمي ۾ ميگناپورٿي فنگس"],
+      "prevention": ["Use resistant varieties", "Avoid excess nitrogen", "Keep balanced water management"],
+      "prevention_sd": ["مزاحمتي قسم استعمال ڪريو", "نائٽروجن گهڻي نه ڏيو", "پاڻي جو توازن رکو"],
+      "treatment": ["Apply tricyclazole or recommended fungicide at early symptoms"],
+      "treatment_sd": ["شروعاتي علامتن تي ٽرائي سائيڪلازول يا سفارش ڪيل فنگسائڊ ڏيو"],
+      "medicines": [
+        {"name": "Tricyclazole", "name_sd": "ٽرائي سائيڪلازول", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
+      ]
+    },
+    {
+      "id": "tomato_late_blight",
+      "crop": "Tomato",
+      "label": "Tomato Late Blight",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phytophthora_infestans_-_potato_late_blight.jpg",
+      "severity": "High risk",
+      "name": "Tomato Late Blight",
+      "name_sd": "ٽماٽو ليٽ بلائٽ",
+      "symptoms": ["Water-soaked leaf spots", "White growth under leaves in humid weather", "Brown fruit rot"],
+      "symptoms_sd": ["پنن تي پاڻي جهڙا داغ", "نمي ۾ پنن هيٺ اڇي واڌ", "ميوي تي ناسي روٽ"],
+      "causes": ["Oomycete pathogen spread by cool wet weather"],
+      "causes_sd": ["ٿڌي ۽ نمي واري موسم ۾ پکڙجندڙ جراثيم"],
+      "prevention": ["Avoid overhead irrigation", "Use clean seedling material", "Remove infected plants quickly"],
+      "prevention_sd": ["مٿي کان پاڻي نه ڏيو", "صاف ٻوٽا استعمال ڪريو", "بيمار ٻوٽا جلد هٽايو"],
+      "treatment": ["Use protective fungicides early and follow local extension advice"],
+      "treatment_sd": ["شروعات ۾ حفاظتي فنگسائڊ ۽ مقامي زرعي صلاح تي عمل ڪريو"],
+      "medicines": [
+        {"name": "Mancozeb + Metalaxyl", "name_sd": "مينڪوزيب + ميٽالاڪسل", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
+      ]
+    }
+  ]
+}
