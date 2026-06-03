@@ -14,6 +14,13 @@ enum PredictionStatus {
 
 enum ImageQualityIssue { lowResolution, tooDark, tooBright, blurry }
 
+class PredictionCandidate {
+  const PredictionCandidate({required this.label, required this.confidence});
+
+  final String label;
+  final double confidence;
+}
+
 class ImageQualityReport {
   const ImageQualityReport({
     required this.brightness,
@@ -37,12 +44,14 @@ class PredictionResult {
     required this.label,
     required this.confidence,
     required this.quality,
+    required this.topPredictions,
     this.disease,
   });
 
   final String label;
   final double confidence;
   final ImageQualityReport quality;
+  final List<PredictionCandidate> topPredictions;
   final Disease? disease;
 
   PredictionStatus get status => PredictionStatus.fromConfidence(confidence);

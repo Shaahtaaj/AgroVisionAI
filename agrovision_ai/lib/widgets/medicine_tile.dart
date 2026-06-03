@@ -31,7 +31,7 @@ class MedicineTile extends StatelessWidget {
           medicine.localizedName(language),
           style: const TextStyle(fontWeight: FontWeight.w800),
         ),
-        subtitle: Text(medicine.dose),
+        subtitle: Text(medicine.localizedDose(language)),
       ),
     );
   }

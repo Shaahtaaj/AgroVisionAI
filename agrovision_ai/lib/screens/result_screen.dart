@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/app_scope.dart';
 import '../core/app_strings.dart';
+import '../models/disease.dart';
 import '../models/prediction_result.dart';
 import '../widgets/info_section.dart';
 import '../widgets/language_switcher.dart';
@@ -103,6 +104,8 @@ class _ResultScreenState extends State<ResultScreen> {
               ),
             )
           else if (prediction.shouldShowTreatment) ...[
+            if (disease.recommendationSummary.isNotEmpty)
+              _ActionSummaryCard(disease: disease),
             InfoSection(
               title: strings.symptoms,
               items: disease.localizedSymptoms(language),
@@ -151,6 +154,68 @@ class _ResultScreenState extends State<ResultScreen> {
             label: Text(strings.retry),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _ActionSummaryCard extends StatelessWidget {
+  const _ActionSummaryCard({required this.disease});
+
+  final Disease disease;
+
+  @override
+  Widget build(BuildContext context) {
+    final strings = AppStrings(AppScope.of(context).language);
+    return Card(
+      color: const Color(0xFFEAF8D8),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                const Icon(Icons.tips_and_updates, color: Color(0xFF0B7A3B)),
+                const SizedBox(width: 8),
+                Text(
+                  strings.quickAdvice,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            Text(
+              disease.localizedRecommendationSummary(
+                AppScope.of(context).language,
+              ),
+              style: const TextStyle(
+                fontWeight: FontWeight.w800,
+                height: 1.35,
+                color: Color(0xFF263D33),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                Chip(
+                  label: Text(
+                    '${strings.actionUrgency}: ${strings.localizedUrgency(disease.actionUrgency)}',
+                  ),
+                  backgroundColor: Colors.white,
+                ),
+                Chip(
+                  label: Text('${strings.ipmScore}: ${disease.ipmScore}/10'),
+                  backgroundColor: Colors.white,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

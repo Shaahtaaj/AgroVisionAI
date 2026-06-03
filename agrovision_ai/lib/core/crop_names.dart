@@ -6,7 +6,7 @@ class CropNames {
   static const Map<String, String> _sindhi = {
     'Mango': 'انب',
     'Wheat': 'ڪڻڪ',
-    'Cotton': 'ڪپھ',
+    'Cotton': 'ڪپهه',
     'Rice': 'چانور',
     'Tomato': 'ٽماٽو',
   };

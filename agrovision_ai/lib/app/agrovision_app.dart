@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/app_language.dart';
 import '../core/app_scope.dart';
 import '../screens/about_screen.dart';
+import '../screens/agri_terms_screen.dart';
 import '../screens/disease_info_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/result_screen.dart';
@@ -64,6 +65,7 @@ class _AgroVisionAppState extends State<AgroVisionApp> {
           WelcomeScreen.routeName: (_) => const WelcomeScreen(),
           HomeScreen.routeName: (_) => const HomeScreen(),
           AboutScreen.routeName: (_) => const AboutScreen(),
+          AgriTermsScreen.routeName: (_) => const AgriTermsScreen(),
           ScanScreen.routeName: (_) => ScanScreen(classifier: _classifier),
         },
         builder: (context, child) => Directionality(

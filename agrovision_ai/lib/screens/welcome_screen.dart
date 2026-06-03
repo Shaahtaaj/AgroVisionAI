@@ -90,18 +90,27 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 18),
-                const Row(
+                Row(
                   children: [
                     Expanded(
-                      child: _HeroStat(value: '224', label: 'AI input'),
+                      child: _HeroStat(
+                        value: '224',
+                        label: strings.imageSizeLabel,
+                      ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Expanded(
-                      child: _HeroStat(value: '2', label: 'Languages'),
+                      child: _HeroStat(
+                        value: '2',
+                        label: strings.languageCountLabel,
+                      ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Expanded(
-                      child: _HeroStat(value: 'Offline', label: 'Guide'),
+                      child: _HeroStat(
+                        value: strings.offlineLabel,
+                        label: strings.guideLabel,
+                      ),
                     ),
                   ],
                 ),
@@ -136,7 +145,7 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                           onPressed: () => scope.onLanguageChanged(language),
                           child: Text(
-                            language.label,
+                            strings.languageName(language),
                             style: const TextStyle(fontWeight: FontWeight.w800),
                           ),
                         ),

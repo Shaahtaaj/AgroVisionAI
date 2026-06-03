@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/app_language.dart';
 import '../core/app_scope.dart';
 import '../core/app_strings.dart';
 import '../core/crop_names.dart';
@@ -8,13 +9,21 @@ import '../models/disease.dart';
 import '../widgets/language_switcher.dart';
 import '../widgets/smart_image.dart';
 import 'about_screen.dart';
+import 'agri_terms_screen.dart';
 import 'disease_info_screen.dart';
 import 'scan_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   static const routeName = '/home';
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  String _query = '';
 
   @override
   Widget build(BuildContext context) {
@@ -55,10 +64,27 @@ class HomeScreen extends StatelessWidget {
               .where((disease) => disease.crop.toLowerCase() == 'mango')
               .take(4)
               .toList();
+          final filteredDiseases = _filterDiseases(diseases, language);
           return ListView(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 110),
             children: [
               _ClassifierHero(strings: strings),
+              const SizedBox(height: 18),
+              _AgriTermsLink(strings: strings),
+              const SizedBox(height: 18),
+              TextField(
+                onChanged: (value) => setState(() => _query = value),
+                decoration: InputDecoration(
+                  hintText: strings.searchKnowledge,
+                  prefixIcon: const Icon(Icons.search),
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
               const SizedBox(height: 18),
               Text(
                 strings.crops,
@@ -70,7 +96,9 @@ class HomeScreen extends StatelessWidget {
               ...crops.map((crop) => _CropCard(crop: crop, diseases: diseases)),
               const SizedBox(height: 12),
               Text(
-                strings.classifierLibrary,
+                _query.trim().isEmpty
+                    ? strings.classifierLibrary
+                    : strings.knowledgeHub,
                 style: Theme.of(
                   context,
                 ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900),
@@ -80,16 +108,90 @@ class HomeScreen extends StatelessWidget {
                 height: 188,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
-                  itemCount: mangoDiseases.length,
+                  itemCount:
+                      (_query.trim().isEmpty ? mangoDiseases : filteredDiseases)
+                          .length,
                   separatorBuilder: (_, _) => const SizedBox(width: 12),
                   itemBuilder: (context, index) {
-                    return _FeaturedDiseaseCard(disease: mangoDiseases[index]);
+                    final items = _query.trim().isEmpty
+                        ? mangoDiseases
+                        : filteredDiseases;
+                    return _FeaturedDiseaseCard(disease: items[index]);
                   },
                 ),
               ),
             ],
           );
         },
+      ),
+    );
+  }
+
+  List<Disease> _filterDiseases(List<Disease> diseases, AppLanguage language) {
+    final query = _query.trim().toLowerCase();
+    if (query.isEmpty) return diseases;
+    return diseases.where((disease) {
+      final haystack = [
+        disease.name,
+        disease.nameSd,
+        disease.crop,
+        CropNames.localized(disease.crop, language),
+        disease.label,
+        disease.severity,
+      ].join(' ').toLowerCase();
+      return haystack.contains(query);
+    }).toList();
+  }
+}
+
+class _AgriTermsLink extends StatelessWidget {
+  const _AgriTermsLink({required this.strings});
+
+  final AppStrings strings;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: InkWell(
+        borderRadius: BorderRadius.circular(8),
+        onTap: () =>
+            Navigator.pushNamed(context, AgriTermsScreen.routeName),
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            children: [
+              const CircleAvatar(
+                backgroundColor: Color(0xFFEAF8D8),
+                child: Icon(Icons.menu_book, color: Color(0xFF0B7A3B)),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      strings.agriWords,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      strings.agriWordsSubtitle,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Color(0xFF60756B),
+                        height: 1.25,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Icon(Icons.chevron_right),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -185,6 +287,7 @@ class _CropCard extends StatelessWidget {
     final isMango = crop.toLowerCase() == 'mango';
     final count = diseases.where((disease) => disease.crop == crop).length;
     final language = AppScope.of(context).language;
+    final strings = AppStrings(language);
     final cropName = CropNames.localized(crop, language);
     return Card(
       margin: const EdgeInsets.only(bottom: 12),
@@ -229,7 +332,7 @@ class _CropCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      '$count disease records',
+                      strings.diseaseRecords(count),
                       style: const TextStyle(color: Color(0xFF60756B)),
                     ),
                   ],
@@ -297,7 +400,7 @@ class _FeaturedDiseaseCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      disease.severity,
+                      AppStrings(language).localizedRisk(disease.severity),
                       style: const TextStyle(color: Colors.white70),
                     ),
                   ],

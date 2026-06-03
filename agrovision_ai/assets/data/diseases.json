@@ -6,20 +6,228 @@
       "label": "Anthracnose",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
       "severity": "High risk",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Fungal",
+        "class_label": "mango_anthracnose"
+      },
+      "scientific_name": "Colletotrichum gloeosporioides species complex",
+      "confidence_level": "High",
+      "spread_type": "Water",
+      "economic_impact": "High",
+      "growth_stage_affected": [
+        "Flowering",
+        "Fruit",
+        "Vegetative"
+      ],
+      "image_symptoms_focus": [
+        "dark sunken spots",
+        "black leaf margins",
+        "necrotic lesions",
+        "fruit lesions"
+      ],
+      "differential_diagnosis": [
+        "Alternaria leaf spot has more circular target-like spots",
+        "Bacterial canker may show water-soaked lesions and gum ooze"
+      ],
+      "organic_treatment_options": [
+        "Prune infected twigs and improve airflow",
+        "Remove fallen leaves and infected fruit",
+        "Use approved copper products only where organic rules allow"
+      ],
+      "chemical_safety_warning": "Use fungicide only after symptom confirmation. Wear PPE, follow label dose and pre-harvest interval, and avoid spraying during wind or heat.",
+      "local_sindhi_term_verified": true,
       "name": "Anthracnose",
       "name_sd": "اينٿراڪنوز",
-      "symptoms": ["Dark sunken leaf spots", "Black lesions on flowers and fruits", "Leaf edges may dry in humid weather"],
-      "symptoms_sd": ["پنن تي ڪارا دٻيل داغ", "گلن ۽ ميوي تي ڪارا نشان", "نمي ۾ پنن جا ڪنارا سڪي سگهن ٿا"],
-      "causes": ["Fungal infection caused by Colletotrichum species", "High humidity and rain splash spread spores"],
-      "causes_sd": ["ڪوليٽوٽرائڪم فنگس جي ڪري بيماري", "گهڻي نمي ۽ مينهن جا ڦڙا بيماري پکيڙين ٿا"],
-      "prevention": ["Prune trees for air flow", "Remove infected leaves and fallen fruits", "Avoid overhead irrigation"],
-      "prevention_sd": ["هوا جي گذر لاءِ وڻ ڇانٽيو", "بيمار پن ۽ ڪريل ميوو هٽايو", "مٿي کان پاڻي ڏيڻ کان پاسو ڪريو"],
-      "treatment": ["Spray copper oxychloride or mancozeb as advised by a local agronomist", "Repeat after rain if infection pressure remains high"],
-      "treatment_sd": ["مقامي زرعي ماهر جي صلاح سان ڪاپر آڪسي ڪلورائيڊ يا مينڪوزيب اسپري ڪريو", "مينهن کان پوءِ ضرورت هجي ته ٻيهر اسپري ڪريو"],
+      "symptoms": [
+        "Dark sunken leaf spots",
+        "Black lesions on flowers and fruits",
+        "Leaf edges may dry in humid weather"
+      ],
+      "symptoms_sd": [
+        "پنن تي ڪارا دٻيل داغ",
+        "گلن ۽ ميوي تي ڪارا نشان",
+        "گهم ۾ پنن جا ڪنارا سڪي سگهن ٿا"
+      ],
+      "causes": [
+        "Fungal infection caused by Colletotrichum species",
+        "High humidity and rain splash spread spores"
+      ],
+      "causes_sd": [
+        "ڪوليٽوٽرائڪم ڦڦوند جي ڪري بيماري",
+        "گهڻي گهم ۽ مينهن جا ڦڙا بيماري پکيڙين ٿا"
+      ],
+      "prevention": [
+        "Prune trees for air flow",
+        "Remove infected leaves and fallen fruits",
+        "Avoid overhead irrigation"
+      ],
+      "prevention_sd": [
+        "هوا جي گذر لاءِ وڻ ڇانٽيو",
+        "بيمار پن ۽ ڪريل ميوو هٽايو",
+        "مٿي کان پاڻي ڏيڻ کان پاسو ڪريو"
+      ],
+      "treatment": [
+        "Spray copper oxychloride or mancozeb as advised by a local agronomist",
+        "Repeat after rain if infection pressure remains high"
+      ],
+      "treatment_sd": [
+        "مقامي زرعي ماهر جي صلاح سان ڪاپر آڪسي ڪلورائيڊ يا مينڪوزيب ڇڻڪار ڪريو",
+        "مينهن کان پوءِ ضرورت هجي ته ٻيهر ڇڻڪار ڪريو"
+      ],
       "medicines": [
-        {"name": "Mancozeb 80% WP", "name_sd": "مينڪوزيب 80٪ WP", "dose": "2-2.5 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
-        {"name": "Copper Oxychloride", "name_sd": "ڪاپر آڪسي ڪلورائيڊ", "dose": "2.5-3 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Mancozeb 80% WP",
+          "name_sd": "مينڪوزيب 80٪ WP",
+          "dose": "2-2.5 g per liter water",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        },
+        {
+          "name": "Copper Oxychloride",
+          "name_sd": "ڪاپر آڪسي ڪلورائيڊ",
+          "dose": "2.5-3 g per liter water",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Immediate",
+      "favorable_conditions": {
+        "temperature": "20-30°C",
+        "humidity": "High",
+        "rainfall": "Frequent rain or leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "High",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 8,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": [
+        "Anthracnose + Powdery mildew",
+        "Anthracnose + Sooty mould"
+      ],
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Medium",
+      "recommendation_summary": "Remove infected leaves/debris immediately and consider Mancozeb 80% WP within 48 hours if symptoms are active and spreading.",
+      "sd": {
+        "simple": {
+          "name": "اينٿراڪنوز",
+          "overview": "انب جي پنن، گلن ۽ ميوي تي ڪارا داغ پيدا ڪندڙ ڦڦوند واري بيماري آهي. گهم ۽ مينهن کان پوءِ هي بيماري تيزي سان وڌي سگهي ٿي.",
+          "symptoms": [
+            "پنن تي ڪارا يا ناسي دٻيل داغ ظاهر ٿين ٿا",
+            "گل سڪڻ لڳن ٿا ۽ ميوو ڪارو نشان وٺي سگهي ٿو",
+            "گهم واري موسم ۾ داغ تيزي سان وڌن ٿا"
+          ],
+          "causes": [
+            "گهم، مينهن ۽ پنن تي پاڻي بيهڻ سبب ڦڦوند وڌي ٿي",
+            "بيمار پنن ۽ ڪريل ميوي مان بيماري ٻيهر پکڙجي ٿي"
+          ],
+          "prevention": [
+            "وڻ جي ڇانٽ ڪري هوا جو گذر بهتر رکو",
+            "ڪريل پن ۽ بيمار ميوو باغ مان هٽايو",
+            "مٿي کان پاڻي ڏيڻ کان بچو"
+          ],
+          "treatment": [
+            "بيمار پن ۽ ٽاريون هٽايو",
+            "بيماري پکڙجي ته مقامي زرعي صلاح مطابق مينڪوزيب يا ڪاپر واري دوا ڇڻڪار ڪريو",
+            "مينهن کان پوءِ باغ ٻيهر ڏسو"
+          ],
+          "important_note": "دوا تڏهن استعمال ڪريو جڏهن داغ وڌي رهيا هجن. هر صورت ۾ لکيل هدايت ۽ مقامي زرعي ماهر جي صلاح تي عمل ڪريو."
+        },
+        "medium": {
+          "name": "اينٿراڪنوز",
+          "overview": "انب جي پنن، گلن ۽ ميوي تي ڪارا داغ پيدا ڪندڙ ڦڦوند واري بيماري آهي. گهم ۽ مينهن کان پوءِ هي بيماري تيزي سان وڌي سگهي ٿي.",
+          "symptoms": [
+            "پنن تي ڪارا يا ناسي دٻيل داغ ظاهر ٿين ٿا",
+            "گل سڪڻ لڳن ٿا ۽ ميوو ڪارو نشان وٺي سگهي ٿو",
+            "گهم واري موسم ۾ داغ تيزي سان وڌن ٿا"
+          ],
+          "causes": [
+            "گهم، مينهن ۽ پنن تي پاڻي بيهڻ سبب ڦڦوند وڌي ٿي",
+            "بيمار پنن ۽ ڪريل ميوي مان بيماري ٻيهر پکڙجي ٿي"
+          ],
+          "prevention": [
+            "وڻ جي ڇانٽي ڪري هوا جو گذر بهتر رکو",
+            "ڪريل پن ۽ بيمار ميوو باغ مان هٽايو",
+            "مٿي کان پاڻي ڏيڻ کان بچو"
+          ],
+          "treatment": [
+            "بيمار پن ۽ ٽاريون هٽايو",
+            "بيماري پکڙجي ته مقامي زرعي صلاح مطابق مينڪوزيب يا ڪاپر واري دوا ڇڻڪار ڪريو",
+            "مينهن کان پوءِ فصل ٻيهر ڏسو"
+          ],
+          "important_note": "دوا تڏهن استعمال ڪريو جڏهن داغ وڌي رهيا هجن. هر صورت ۾ لکيل هدايت ۽ مقامي زرعي ماهر جي صلاح تي عمل ڪريو."
+        },
+        "expert": {
+          "name": "اينٿراڪنوز",
+          "overview": "انب جي پنن، گلن ۽ ميوي تي ڪارا داغ پيدا ڪندڙ ڦڦوند واري بيماري آهي. گهم ۽ مينهن کان پوءِ هي بيماري تيزي سان وڌي سگهي ٿي. هن داخلا ۾ سائنسي نالو ۽ فصل تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي ڪارا يا ناسي دٻيل داغ ظاهر ٿين ٿا",
+            "گل سڪڻ لڳن ٿا ۽ ميوو ڪارو نشان وٺي سگهي ٿو",
+            "گهم واري موسم ۾ داغ تيزي سان وڌن ٿا"
+          ],
+          "causes": [
+            "گهم، مينهن ۽ پنن تي پاڻي بيهڻ سبب ڦڦوند وڌي ٿي",
+            "بيمار پنن ۽ ڪريل ميوي مان بيماري ٻيهر پکڙجي ٿي"
+          ],
+          "prevention": [
+            "وڻ جي ڇانٽي ڪري هوا جو گذر بهتر رکو",
+            "ڪريل پن ۽ بيمار ميوو باغ مان هٽايو",
+            "مٿي کان پاڻي ڏيڻ کان بچو"
+          ],
+          "treatment": [
+            "بيمار پن ۽ ٽاريون هٽايو",
+            "بيماري پکڙجي ته مقامي زرعي صلاح مطابق مينڪوزيب يا ڪاپر واري دوا ڇڻڪار ڪريو",
+            "مينهن کان پوءِ باغ ٻيهر ڏسو"
+          ],
+          "important_note": "دوا تڏهن استعمال ڪريو جڏهن داغ وڌي رهيا هجن. هر صورت ۾ لکيل هدايت ۽ مقامي زرعي ماهر جي صلاح تي عمل ڪريو. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_bacterial_canker",
@@ -27,20 +235,221 @@
       "label": "Bacterial Canker",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
       "severity": "High risk",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Bacterial",
+        "class_label": "mango_bacterial_canker"
+      },
+      "scientific_name": "Xanthomonas citri pv. mangiferaeindicae",
+      "confidence_level": "Medium",
+      "spread_type": "Water",
+      "economic_impact": "High",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Flowering",
+        "Fruit"
+      ],
+      "image_symptoms_focus": [
+        "water-soaked angular spots",
+        "raised cracked lesions",
+        "yellow halos",
+        "gum ooze"
+      ],
+      "differential_diagnosis": [
+        "Anthracnose spots are usually darker and sunken",
+        "Scab lesions become corky and rough"
+      ],
+      "organic_treatment_options": [
+        "Use disease-free nursery plants",
+        "Prune during dry weather",
+        "Disinfect tools after pruning"
+      ],
+      "chemical_safety_warning": "Copper bactericides can injure plants if overused. Follow label limits and avoid repeated unnecessary sprays.",
+      "local_sindhi_term_verified": true,
       "name": "Bacterial Canker",
       "name_sd": "بيڪٽيريل ڪينڪر",
-      "symptoms": ["Water-soaked spots on leaves", "Raised cracked lesions on stems", "Fruit spots with gum-like ooze"],
-      "symptoms_sd": ["پنن تي پاڻي جهڙا داغ", "ٿڙن تي ڦاٽل اڀريل نشان", "ميوي تي گوند جهڙو رس نڪرڻ"],
-      "causes": ["Bacterial infection entering through wounds", "Spread by rain, tools, and infected planting material"],
-      "causes_sd": ["زخم مان داخل ٿيندڙ بيڪٽيريا", "مينهن، اوزارن ۽ بيمار ٻوٽن سان پکڙجڻ"],
-      "prevention": ["Use disease-free planting material", "Disinfect pruning tools", "Avoid pruning during wet weather"],
-      "prevention_sd": ["بيماري کان پاڪ ٻوٽا استعمال ڪريو", "ڇانٽڻ جا اوزار صاف ڪريو", "برساتي موسم ۾ ڇانٽڻ کان پاسو ڪريو"],
-      "treatment": ["Remove severely infected branches", "Apply copper-based bactericide under expert guidance"],
-      "treatment_sd": ["تمام بيمار ٽاريون ڪٽي هٽايو", "ماهر جي صلاح سان ڪاپر واري دوا استعمال ڪريو"],
+      "symptoms": [
+        "Water-soaked spots on leaves",
+        "Raised cracked lesions on stems",
+        "Fruit spots with gum-like ooze"
+      ],
+      "symptoms_sd": [
+        "پنن تي پاڻي جهڙا داغ",
+        "ٿڙن تي ڦاٽل اڀريل نشان",
+        "ميوي تي گوند جهڙو رس نڪرڻ"
+      ],
+      "causes": [
+        "Bacterial infection entering through wounds",
+        "Spread by rain, tools, and infected planting material"
+      ],
+      "causes_sd": [
+        "زخم مان داخل ٿيندڙ بيڪٽيريا",
+        "مينهن، اوزارن ۽ بيمار ٻوٽن سان پکڙجڻ"
+      ],
+      "prevention": [
+        "Use disease-free planting material",
+        "Disinfect pruning tools",
+        "Avoid pruning during wet weather"
+      ],
+      "prevention_sd": [
+        "بيماري کان پاڪ ٻوٽا استعمال ڪريو",
+        "ڇانٽڻ جا اوزار صاف ڪريو",
+        "برساتي موسم ۾ ڇانٽڻ کان پاسو ڪريو"
+      ],
+      "treatment": [
+        "Remove severely infected branches",
+        "Apply copper-based bactericide under expert guidance"
+      ],
+      "treatment_sd": [
+        "تمام بيمار ٽاريون ڪٽي هٽايو",
+        "ماهر جي صلاح سان ڪاپر واري دوا استعمال ڪريو"
+      ],
       "medicines": [
-        {"name": "Copper Hydroxide", "name_sd": "ڪاپر هائيڊرو آڪسائيڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"},
-        {"name": "Streptocycline + Copper", "name_sd": "اسٽرپٽو سائڪلين + ڪاپر", "dose": "Use only with local extension advice", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
-      ]
+        {
+          "name": "Copper Hydroxide",
+          "name_sd": "ڪاپر هائيڊرو آڪسائيڊ",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        },
+        {
+          "name": "Streptocycline + Copper",
+          "name_sd": "اسٽرپٽو سائڪلين + ڪاپر",
+          "dose": "Use only with local extension advice",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        }
+      ],
+      "action_urgency": "Immediate",
+      "favorable_conditions": {
+        "temperature": "20-30°C",
+        "humidity": "High",
+        "rainfall": "Frequent rain or leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "High",
+      "resistance_notes": "No pesticide resistance concern for healthy plants; avoid unnecessary chemical use.",
+      "ipm_score": 8,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": "Bacterial canker + Anthracnose",
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Medium",
+      "recommendation_summary": "Remove infected leaves/debris immediately and consider Copper Hydroxide within 48 hours if symptoms are active and spreading.",
+      "sd": {
+        "simple": {
+          "name": "بيڪٽيريل ڪينڪر",
+          "overview": "هي انب جي بيڪٽيريا واري بيماري آهي، جيڪا پنن، ٽارين ۽ ميوي تي پاڻي جهڙا داغ ۽ ڪڏهن کونئر جهڙو رس پيدا ڪري ٿي.",
+          "symptoms": [
+            "پنن تي پاڻي جهڙا يا پيلي گهيري وارا داغ ٿين ٿا",
+            "ٽارين تي ڦاٽل نشان يا زخم نظر اچن ٿا",
+            "ميوي مان ڪڏهن گوند جهڙو رس نڪري ٿو"
+          ],
+          "causes": [
+            "زخمن، ڇانٽ يا اوزارن ذريعي بيڪٽيريا ٻوٽي ۾ داخل ٿين ٿا",
+            "مينهن ۽ تيز هوا بيماري کي هڪ وڻ کان ٻئي وڻ ڏانهن کڻي وڃي ٿي"
+          ],
+          "prevention": [
+            "صحتمند ٻوٽا لڳايو",
+            "ڇانٽڻ کان اڳ ۽ پوءِ اوزار صاف ڪريو",
+            "برساتي ڏينهن ۾ ڇانٽ کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "تمام بيمار ٽاريون ڪٽي باغ کان ٻاهر ختم ڪريو",
+            "زخم تي حفاظتي پيسٽ لڳايو",
+            "ضرورت هجي ته ڪاپر واري دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "بيڪٽيريا واري بيماري ۾ صفائي ۽ اوزارن جي جراثيم ڪشي تمام ضروري آهي."
+        },
+        "medium": {
+          "name": "بيڪٽيريل ڪينڪر",
+          "overview": "هي انب جي بيڪٽيريا واري بيماري آهي، جيڪا پنن، ٽارين ۽ ميوي تي پاڻي جهڙا داغ ۽ ڪڏهن گوند جهڙو رس پيدا ڪري ٿي.",
+          "symptoms": [
+            "پنن تي پاڻي جهڙا يا پيلي گهيري وارا داغ ٿين ٿا",
+            "ٽارين تي ڦاٽل نشان يا زخم نظر اچن ٿا",
+            "ميوي مان ڪڏهن گوند جهڙو رس نڪري ٿو"
+          ],
+          "causes": [
+            "زخمن، ڇانٽ يا اوزارن ذريعي بيڪٽيريا ٻوٽي ۾ داخل ٿين ٿا",
+            "مينهن ۽ تيز هوا بيماري کي هڪ وڻ کان ٻئي وڻ ڏانهن کڻي وڃي ٿي"
+          ],
+          "prevention": [
+            "صحتمند ٻوٽا لڳايو",
+            "ڇانٽڻ کان اڳ ۽ پوءِ اوزار صاف ڪريو",
+            "برساتي ڏينهن ۾ ڇانٽ کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "تمام بيمار ٽاريون ڪٽي باغ کان ٻاهر ختم ڪريو",
+            "زخم تي حفاظتي پيسٽ لڳايو",
+            "ضرورت هجي ته ڪاپر واري دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "بيڪٽيريا واري بيماري ۾ صفائي ۽ اوزارن جي جراثيم ڪشي تمام ضروري آهي."
+        },
+        "expert": {
+          "name": "بيڪٽيريل ڪينڪر",
+          "overview": "هي انب جي بيڪٽيريا واري بيماري آهي، جيڪا پنن، ٽارين ۽ ميوي تي پاڻي جهڙا داغ ۽ ڪڏهن گوند جهڙو رس پيدا ڪري ٿي. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي پاڻي جهڙا يا پيلي گهيري وارا داغ ٿين ٿا",
+            "ٽارين تي ڦاٽل نشان يا زخم نظر اچن ٿا",
+            "ميوي مان ڪڏهن گوند جهڙو رس نڪري ٿو"
+          ],
+          "causes": [
+            "زخمن، ڇانٽ يا اوزارن ذريعي بيڪٽيريا ٻوٽي ۾ داخل ٿين ٿا",
+            "مينهن ۽ تيز هوا بيماري کي هڪ وڻ کان ٻئي وڻ ڏانهن کڻي وڃي ٿي"
+          ],
+          "prevention": [
+            "صحتمند ٻوٽا لڳايو",
+            "ڇانٽڻ کان اڳ ۽ پوءِ اوزار صاف ڪريو",
+            "برساتي ڏينهن ۾ ڇانٽ کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "تمام بيمار ٽاريون ڪٽي باغ کان ٻاهر ختم ڪريو",
+            "زخم تي حفاظتي پيسٽ لڳايو",
+            "ضرورت هجي ته ڪاپر واري دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "بيڪٽيريا واري بيماري ۾ صفائي ۽ اوزارن جي جراثيم ڪشي تمام ضروري آهي. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_cutting_weevil",
@@ -48,20 +457,219 @@
       "label": "Cutting Weevil",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
       "severity": "Pest alert",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Insect pest",
+        "class_label": "mango_cutting_weevil"
+      },
+      "scientific_name": "Deporaus marginatus",
+      "confidence_level": "Medium",
+      "spread_type": "Insect",
+      "economic_impact": "Medium",
+      "growth_stage_affected": [
+        "Vegetative"
+      ],
+      "image_symptoms_focus": [
+        "cut tender shoots",
+        "wilted flush",
+        "feeding holes",
+        "fallen damaged leaves"
+      ],
+      "differential_diagnosis": [
+        "Die back dries twigs from the tip without fresh cutting marks",
+        "Gall midge makes raised galls rather than cut shoots"
+      ],
+      "organic_treatment_options": [
+        "Collect and destroy cut shoots",
+        "Use field sanitation",
+        "Encourage natural enemies and avoid broad-spectrum sprays early"
+      ],
+      "chemical_safety_warning": "Use insecticide only when pest population is high. Protect pollinators and avoid spraying during flowering.",
+      "local_sindhi_term_verified": true,
       "name": "Mango Cutting Weevil",
       "name_sd": "انب ڪٽنگ ويول",
-      "symptoms": ["Fresh shoots are cut or wilted", "Small holes on tender growth", "Damaged leaves may fall early"],
-      "symptoms_sd": ["نئون ڦٽل واڌ ڪٽيل يا مرجهيل", "نرم حصن تي ننڍا سوراخ", "خراب پن جلد ڪري سگهن ٿا"],
-      "causes": ["Weevil insect feeding and egg laying on tender shoots"],
-      "causes_sd": ["ويول جيت جو نرم ٽارين تي کاڌو ۽ انڊا رکڻ"],
-      "prevention": ["Collect and destroy damaged shoots", "Keep orchard clean", "Monitor new flush regularly"],
-      "prevention_sd": ["خراب ٽاريون گڏ ڪري ختم ڪريو", "باغ صاف رکو", "نئين واڌ تي باقاعده نظر رکو"],
-      "treatment": ["Use recommended insecticide only when pest population crosses threshold"],
-      "treatment_sd": ["جيت وڌي وڃڻ تي سفارش ڪيل دوا استعمال ڪريو"],
+      "symptoms": [
+        "Fresh shoots are cut or wilted",
+        "Small holes on tender growth",
+        "Damaged leaves may fall early"
+      ],
+      "symptoms_sd": [
+        "نئون ڦٽل واڌ ڪٽيل يا مرجهيل",
+        "نرم حصن تي ننڍا سوراخ",
+        "خراب پن جلد ڪري سگهن ٿا"
+      ],
+      "causes": [
+        "Weevil insect feeding and egg laying on tender shoots"
+      ],
+      "causes_sd": [
+        "ويول جيت جو نرم ٽارين تي کاڌو ۽ انڊا رکڻ"
+      ],
+      "prevention": [
+        "Collect and destroy damaged shoots",
+        "Keep orchard clean",
+        "Monitor new flush regularly"
+      ],
+      "prevention_sd": [
+        "خراب ٽاريون گڏ ڪري ختم ڪريو",
+        "باغ صاف رکو",
+        "نئين واڌ تي باقاعده نظر رکو"
+      ],
+      "treatment": [
+        "Use recommended insecticide only when pest population crosses threshold"
+      ],
+      "treatment_sd": [
+        "جيت وڌي وڃڻ تي سفارش ڪيل دوا استعمال ڪريو"
+      ],
       "medicines": [
-        {"name": "Imidacloprid", "name_sd": "اميڊاڪلوپرڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
-        {"name": "Lambda-cyhalothrin", "name_sd": "ليمبڊا سائي هيلوٿرن", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Imidacloprid",
+          "name_sd": "اميڊاڪلوپرڊ",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        },
+        {
+          "name": "Lambda-cyhalothrin",
+          "name_sd": "ليمبڊا سائي هيلوٿرن",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Within 3 days",
+      "favorable_conditions": {
+        "temperature": "25-35°C",
+        "humidity": "Medium to high",
+        "rainfall": "Low to moderate rainfall; new flush after rain increases risk"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with wind damage, pruning injury, or other chewing pests"
+      ],
+      "economic_threshold_action": "Treat only if fresh damage is increasing and pest presence is confirmed during scouting.",
+      "stage_based_management": {
+        "early": [
+          "Scout new flush and confirm active pest presence",
+          "Remove damaged shoots or leaves where practical"
+        ],
+        "moderate": [
+          "Use traps, sanitation, and conserve natural enemies",
+          "Apply selective insecticide only if pest damage is increasing"
+        ],
+        "severe": [
+          "Treat affected block based on local threshold",
+          "Avoid broad-spectrum sprays during flowering and protect beneficial insects"
+        ]
+      },
+      "recurrence_risk": "Medium",
+      "resistance_notes": "Repeated use of the same insecticide group can build pest resistance. Rotate chemistry and use scouting thresholds.",
+      "ipm_score": 7,
+      "pre_harvest_interval_days": 7,
+      "progression_stages": [
+        "Stage 1: small feeding marks or tender flush damage",
+        "Stage 2: visible galls, holes, or cut shoots increase",
+        "Stage 3: new growth loss and reduced canopy development"
+      ],
+      "possible_co_infections": "Leaf spot complex + secondary pest damage",
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "wind damage",
+        "pruning cuts",
+        "mechanical tearing"
+      ],
+      "ml_focus_regions": [
+        "shoot tip",
+        "stem junction",
+        "new flush",
+        "leaf petiole"
+      ],
+      "treatment_effectiveness": {
+        "field_scouting_and_sanitation": 0.65,
+        "neem_or_soft_control": 0.5,
+        "selective_insecticide": 0.75
+      },
+      "treatment_cost_estimate": "Low",
+      "recommendation_summary": "Scout active pest damage within 3 days, remove damaged flush, conserve natural enemies, and use selective insecticide only if fresh damage is increasing.",
+      "sd": {
+        "simple": {
+          "name": "انب ڪٽڻ وارو ويول",
+          "overview": "هي جيت انب جي نئين نرم واڌ کي ڪٽي يا زخمي ڪري ٿو، جنهن سان نوان پن ۽ ٽاريون خراب ٿين ٿيون.",
+          "symptoms": [
+            "نئين ڦٽل ٽارين جا ڇيڙا ڪٽيل يا مرجهيل نظر اچن ٿا",
+            "نرم پنن تي ننڍا سوراخ ٿين ٿا",
+            "خراب ٿيل پن يا ٽاريون ڪري سگهن ٿيون"
+          ],
+          "causes": [
+            "ويول جيت نرم واڌ تي کاڌو کائي ٿو ۽ انڊا رکي ٿو",
+            "نئين واڌ واري موسم ۾ حملو وڌيڪ ڏسڻ ۾ اچي ٿو"
+          ],
+          "prevention": [
+            "ڪٽيل يا خراب ٽاريون گڏ ڪري ختم ڪريو",
+            "باغ صاف رکو",
+            "نئين واڌ دوران هفتي ۾ هڪ دفعو معائنو ڪريو"
+          ],
+          "treatment": [
+            "جيت جي موجودگي پڪ ڪريو",
+            "قدرتي فائديمند جيتن کي بچايو",
+            "حملو وڌي ته چونڊيل جيت مار دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "هر ننڍي نقصان تي دوا نه ڇڻڪار ڪريو؛ پهرين ڏسو ته تازو نقصان وڌي رهيو آهي يا نه."
+        },
+        "medium": {
+          "name": "انب ڪٽڻ وارو ويول",
+          "overview": "هي جيت انب جي نئين نرم واڌ کي ڪٽي يا زخمي ڪري ٿو، جنهن سان نوان پن ۽ ٽاريون خراب ٿين ٿيون.",
+          "symptoms": [
+            "نئين ڦٽل ٽارين جا ڇيڙا ڪٽيل يا مرجهيل نظر اچن ٿا",
+            "نرم پنن تي ننڍا سوراخ ٿين ٿا",
+            "خراب ٿيل پن يا ٽاريون ڪري سگهن ٿيون"
+          ],
+          "causes": [
+            "ويول جيت نرم واڌ تي کاڌو کائي ٿو ۽ انڊا رکي ٿو",
+            "نئين واڌ واري موسم ۾ حملو وڌيڪ ڏسڻ ۾ اچي ٿو"
+          ],
+          "prevention": [
+            "ڪٽيل يا خراب ٽاريون گڏ ڪري ختم ڪريو",
+            "باغ صاف رکو",
+            "نئين واڌ دوران هفتي ۾ هڪ دفعو معائنو ڪريو"
+          ],
+          "treatment": [
+            "جيت جي موجودگي پڪ ڪريو",
+            "قدرتي فائديمند جيتن کي بچايو",
+            "حملو وڌي ته چونڊيل جيت مار دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "هر ننڍي نقصان تي دوا نه ڇڻڪار ڪريو؛ پهرين ڏسو ته تازو نقصان وڌي رهيو آهي يا نه."
+        },
+        "expert": {
+          "name": "انب ڪٽڻ وارو ويول",
+          "overview": "هي جيت انب جي نئين نرم واڌ کي ڪٽي يا زخمي ڪري ٿو، جنهن سان نوان پن ۽ ٽاريون خراب ٿين ٿيون. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "نئين ڦٽل ٽارين جا ڇيڙا ڪٽيل يا مرجهيل نظر اچن ٿا",
+            "نرم پنن تي ننڍا سوراخ ٿين ٿا",
+            "خراب ٿيل پن يا ٽاريون ڪري سگهن ٿيون"
+          ],
+          "causes": [
+            "ويول جيت نرم واڌ تي کاڌو کائي ٿو ۽ انڊا رکي ٿو",
+            "نئين واڌ واري موسم ۾ حملو وڌيڪ ڏسڻ ۾ اچي ٿو"
+          ],
+          "prevention": [
+            "ڪٽيل يا خراب ٽاريون گڏ ڪري ختم ڪريو",
+            "باغ صاف رکو",
+            "نئين واڌ دوران هفتي ۾ هڪ دفعو معائنو ڪريو"
+          ],
+          "treatment": [
+            "جيت جي موجودگي پڪ ڪريو",
+            "قدرتي فائديمند جيتن کي بچايو",
+            "حملو وڌي ته چونڊيل جيت مار دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "هر ننڍي نقصان تي دوا نه ڇڻڪار ڪريو؛ پهرين ڏسو ته تازو نقصان وڌي رهيو آهي يا نه. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_die_back",
@@ -69,20 +677,224 @@
       "label": "Die Back",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
       "severity": "High risk",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Fungal",
+        "class_label": "mango_die_back"
+      },
+      "scientific_name": "Lasiodiplodia theobromae",
+      "confidence_level": "Medium",
+      "spread_type": "Contact",
+      "economic_impact": "High",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Flowering"
+      ],
+      "image_symptoms_focus": [
+        "tip drying",
+        "brown attached leaves",
+        "dark streaks on twigs",
+        "branch dieback"
+      ],
+      "differential_diagnosis": [
+        "Water stress causes general wilting rather than dark streaking",
+        "Cutting weevil damage shows fresh cut marks"
+      ],
+      "organic_treatment_options": [
+        "Prune below infected tissue",
+        "Seal pruning wounds",
+        "Improve irrigation and nutrition balance"
+      ],
+      "chemical_safety_warning": "Do not spray repeatedly without pruning infected wood first. Wear PPE and follow label interval.",
+      "local_sindhi_term_verified": true,
       "name": "Die Back",
       "name_sd": "ڊائي بيڪ",
-      "symptoms": ["Twigs dry from tip backward", "Leaves turn brown and remain attached", "Branches show dark streaks under bark"],
-      "symptoms_sd": ["ٽاريون چوٽي کان پوئتي سڪڻ", "پن ناسي ٿي ٽاري تي لڳل رهڻ", "ڇل هيٺ ڪارا نشان"],
-      "causes": ["Fungal infection favored by plant stress", "Poor sanitation and wounds after pruning"],
-      "causes_sd": ["ٻوٽي جي ڪمزوري سان فنگس جو حملو", "صفائي جي کوٽ ۽ ڇانٽڻ جا زخم"],
-      "prevention": ["Prune dead twigs below infected area", "Apply pruning paste", "Improve nutrition and irrigation balance"],
-      "prevention_sd": ["بيمار حصي کان هيٺ سڪل ٽاري ڪٽيو", "ڪٽ تي پيسٽ لڳايو", "غذا ۽ پاڻي جو توازن بهتر ڪريو"],
-      "treatment": ["Destroy infected prunings", "Spray carbendazim or copper fungicide as advised"],
-      "treatment_sd": ["ڪٽيل بيمار حصا ختم ڪريو", "صلاح موجب ڪاربينڊازم يا ڪاپر فنگسائڊ اسپري ڪريو"],
+      "symptoms": [
+        "Twigs dry from tip backward",
+        "Leaves turn brown and remain attached",
+        "Branches show dark streaks under bark"
+      ],
+      "symptoms_sd": [
+        "ٽاريون چوٽي کان پوئتي سڪڻ",
+        "پن ناسي ٿي ٽاري تي لڳل رهڻ",
+        "ڇل هيٺ ڪارا نشان"
+      ],
+      "causes": [
+        "Fungal infection favored by plant stress",
+        "Poor sanitation and wounds after pruning"
+      ],
+      "causes_sd": [
+        "ٻوٽي جي ڪمزوري سان ڦڦوند جو حملو",
+        "صفائي جي کوٽ ۽ ڇانٽڻ جا زخم"
+      ],
+      "prevention": [
+        "Prune dead twigs below infected area",
+        "Apply pruning paste",
+        "Improve nutrition and irrigation balance"
+      ],
+      "prevention_sd": [
+        "بيمار حصي کان هيٺ سڪل ٽاري ڪٽيو",
+        "ڪٽ تي پيسٽ لڳايو",
+        "غذا ۽ پاڻي جو توازن بهتر ڪريو"
+      ],
+      "treatment": [
+        "Destroy infected prunings",
+        "Spray carbendazim or copper fungicide as advised"
+      ],
+      "treatment_sd": [
+        "ڪٽيل بيمار حصا ختم ڪريو",
+        "صلاح موجب ڪاربينڊازم يا ڪاپر ڦڦوند مار دوا ڇڻڪار ڪريو"
+      ],
       "medicines": [
-        {"name": "Carbendazim", "name_sd": "ڪاربينڊازم", "dose": "1 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
-        {"name": "Copper Oxychloride", "name_sd": "ڪاپر آڪسي ڪلورائيڊ", "dose": "2.5 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Carbendazim",
+          "name_sd": "ڪاربينڊازم",
+          "dose": "1 g per liter water",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        },
+        {
+          "name": "Copper Oxychloride",
+          "name_sd": "ڪاپر آڪسي ڪلورائيڊ",
+          "dose": "2.5 g per liter water",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Immediate",
+      "favorable_conditions": {
+        "temperature": "20-30°C",
+        "humidity": "High",
+        "rainfall": "Frequent rain or leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "High",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 8,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": "Leaf spot complex + secondary pest damage",
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "shoot tip",
+        "stem junction",
+        "new flush",
+        "leaf petiole"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Medium",
+      "recommendation_summary": "Remove infected leaves/debris immediately and consider Carbendazim within 48 hours if symptoms are active and spreading.",
+      "sd": {
+        "simple": {
+          "name": "ٽارين جو سڪڻ",
+          "overview": "انب ۾ ٽاريون چوٽي کان پوئتي سڪڻ لڳن ٿيون. ڪمزور وڻن يا زخمي ٽارين ۾ هي مسئلو وڌيڪ وڌي ٿو.",
+          "symptoms": [
+            "ٽاريون مٿان کان پوئتي سڪڻ شروع ڪن ٿيون",
+            "پن ناسي ٿي ٽاري تي لڳل رهن ٿا",
+            "ڇل هيٺ ڪارا نشان يا سڙيل حصا نظر اچن ٿا"
+          ],
+          "causes": [
+            "زخم ۽ ڪمزوري سبب ڦڦوند ٽاري ۾ داخل ٿئي ٿي",
+            "غلط ڇانٽ، پاڻي جي کوٽ يا غذائي ڪمزوري بيماري وڌائي ٿي"
+          ],
+          "prevention": [
+            "وڻ کي مناسب پاڻي ۽ ڀاڻ ڏيو",
+            "سڪل ٽاريون وقت تي ڪٽيو",
+            "ڪٽ واري هنڌ تي حفاظتي پيسٽ لڳايو"
+          ],
+          "treatment": [
+            "بيمار حصي کان هيٺ صحتمند ڪاٺ تائين ٽاري ڪٽيو",
+            "ڪٽيل حصا باغ ۾ نه ڇڏيو",
+            "ضرورت هجي ته ڪاپر يا ڪاربينڊازم ماهر جي صلاح سان ڏيو"
+          ],
+          "important_note": "صرف ڇڻڪار ڪافي نه آهي؛ بيمار ٽاري ڪٽڻ سڀ کان اهم قدم آهي."
+        },
+        "medium": {
+          "name": "ٽارين جو سڪڻ",
+          "overview": "انب ۾ ٽاريون چوٽي کان پوئتي سڪڻ لڳن ٿيون. ڪمزور وڻن يا زخمي ٽارين ۾ هي مسئلو وڌيڪ وڌي ٿو.",
+          "symptoms": [
+            "ٽاريون مٿان کان پوئتي سڪڻ شروع ڪن ٿيون",
+            "پن ناسي ٿي ٽاري تي لڳل رهن ٿا",
+            "ڇل هيٺ ڪارا نشان يا سڙيل حصا نظر اچن ٿا"
+          ],
+          "causes": [
+            "زخم ۽ ڪمزوري سبب ڦڦوند ٽاري ۾ داخل ٿئي ٿي",
+            "غلط ڇانٽ، پاڻي جي کوٽ يا غذائي ڪمزوري بيماري وڌائي ٿي"
+          ],
+          "prevention": [
+            "وڻ کي مناسب پاڻي ۽ ڀاڻ ڏيو",
+            "سڪل ٽاريون وقت تي ڪٽيو",
+            "ڪٽ واري هنڌ تي حفاظتي پيسٽ لڳايو"
+          ],
+          "treatment": [
+            "بيمار حصي کان هيٺ صحتمند ڪاٺ تائين ٽاري ڪٽيو",
+            "ڪٽيل حصا باغ ۾ نه ڇڏيو",
+            "ضرورت هجي ته ڪاپر يا ڪاربينڊازم ماهر جي صلاح سان ڏيو"
+          ],
+          "important_note": "صرف ڇڻڪار ڪافي نه آهي؛ بيمار ٽاري ڪٽڻ سڀ کان اهم قدم آهي."
+        },
+        "expert": {
+          "name": "ٽارين جو سڪڻ",
+          "overview": "انب ۾ ٽاريون چوٽي کان پوئتي سڪڻ لڳن ٿيون. ڪمزور وڻن يا زخمي ٽارين ۾ هي مسئلو وڌيڪ وڌي ٿو. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "ٽاريون مٿان کان پوئتي سڪڻ شروع ڪن ٿيون",
+            "پن ناسي ٿي ٽاري تي لڳل رهن ٿا",
+            "ڇل هيٺ ڪارا نشان يا سڙيل حصا نظر اچن ٿا"
+          ],
+          "causes": [
+            "زخم ۽ ڪمزوري سبب ڦڦوند ٽاري ۾ داخل ٿئي ٿي",
+            "غلط ڇانٽ، پاڻي جي کوٽ يا غذائي ڪمزوري بيماري وڌائي ٿي"
+          ],
+          "prevention": [
+            "وڻ کي مناسب پاڻي ۽ ڀاڻ ڏيو",
+            "سڪل ٽاريون وقت تي ڪٽيو",
+            "ڪٽ واري هنڌ تي حفاظتي پيسٽ لڳايو"
+          ],
+          "treatment": [
+            "بيمار حصي کان هيٺ صحتمند ڪاٺ تائين ٽاري ڪٽيو",
+            "ڪٽيل حصا باغ ۾ نه ڇڏيو",
+            "ضرورت هجي ته ڪاپر يا ڪاربينڊازم ماهر جي صلاح سان ڏيو"
+          ],
+          "important_note": "صرف ڇڻڪار ڪافي نه آهي؛ بيمار ٽاري ڪٽڻ سڀ کان اهم قدم آهي. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_gall_midge",
@@ -90,20 +902,218 @@
       "label": "Gall Midge",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
       "severity": "Pest alert",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Insect pest",
+        "class_label": "mango_gall_midge"
+      },
+      "scientific_name": "Procontarinia matteiana",
+      "confidence_level": "Medium",
+      "spread_type": "Insect",
+      "economic_impact": "Medium",
+      "growth_stage_affected": [
+        "Vegetative"
+      ],
+      "image_symptoms_focus": [
+        "raised leaf galls",
+        "distorted tender leaves",
+        "small blister-like swellings"
+      ],
+      "differential_diagnosis": [
+        "Leaf spot diseases form necrotic patches, not raised galls",
+        "Nutrient issues are more uniform across leaves"
+      ],
+      "organic_treatment_options": [
+        "Remove badly affected flush",
+        "Maintain orchard hygiene",
+        "Avoid excessive nitrogen that attracts tender flush pests"
+      ],
+      "chemical_safety_warning": "Systemic insecticides should be used only after field scouting. Avoid use near water bodies and flowering.",
+      "local_sindhi_term_verified": true,
       "name": "Gall Midge",
       "name_sd": "گال مِج",
-      "symptoms": ["Small raised galls on leaves", "Distorted tender leaves", "Heavy attack reduces new growth"],
-      "symptoms_sd": ["پنن تي ننڍا اڀريل گال", "نرم پن بگڙيل", "گهڻو حملو نئين واڌ گهٽائي ٿو"],
-      "causes": ["Midge larvae feeding inside leaf tissue"],
-      "causes_sd": ["مِج جي لاروا جو پن جي اندر کاڌو"],
-      "prevention": ["Remove affected leaves", "Encourage orchard sanitation", "Monitor during new flush"],
-      "prevention_sd": ["متاثر پن هٽايو", "باغ جي صفائي رکو", "نئين واڌ دوران نگراني ڪريو"],
-      "treatment": ["Apply suitable systemic insecticide if infestation is severe"],
-      "treatment_sd": ["حملو سخت هجي ته مناسب سسٽمڪ دوا استعمال ڪريو"],
+      "symptoms": [
+        "Small raised galls on leaves",
+        "Distorted tender leaves",
+        "Heavy attack reduces new growth"
+      ],
+      "symptoms_sd": [
+        "پنن تي ننڍا اڀريل گال",
+        "نرم پن بگڙيل",
+        "گهڻو حملو نئين واڌ گهٽائي ٿو"
+      ],
+      "causes": [
+        "Midge larvae feeding inside leaf tissue"
+      ],
+      "causes_sd": [
+        "مِج جي لاروا جو پن جي اندر کاڌو"
+      ],
+      "prevention": [
+        "Remove affected leaves",
+        "Encourage orchard sanitation",
+        "Monitor during new flush"
+      ],
+      "prevention_sd": [
+        "متاثر پن هٽايو",
+        "باغ جي صفائي رکو",
+        "نئين واڌ دوران نگراني ڪريو"
+      ],
+      "treatment": [
+        "Apply suitable systemic insecticide if infestation is severe"
+      ],
+      "treatment_sd": [
+        "حملو سخت هجي ته مناسب ٻوٽي اندر اثر ڪندڙ دوا استعمال ڪريو"
+      ],
       "medicines": [
-        {"name": "Acetamiprid", "name_sd": "اسيٽاميپرڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
-        {"name": "Imidacloprid", "name_sd": "اميڊاڪلوپرڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Acetamiprid",
+          "name_sd": "اسيٽاميپرڊ",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        },
+        {
+          "name": "Imidacloprid",
+          "name_sd": "اميڊاڪلوپرڊ",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Within 3 days",
+      "favorable_conditions": {
+        "temperature": "25-35°C",
+        "humidity": "Medium to high",
+        "rainfall": "Low to moderate rainfall; new flush after rain increases risk"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with wind damage, pruning injury, or other chewing pests"
+      ],
+      "economic_threshold_action": "Treat only if fresh damage is increasing and pest presence is confirmed during scouting.",
+      "stage_based_management": {
+        "early": [
+          "Scout new flush and confirm active pest presence",
+          "Remove damaged shoots or leaves where practical"
+        ],
+        "moderate": [
+          "Use traps, sanitation, and conserve natural enemies",
+          "Apply selective insecticide only if pest damage is increasing"
+        ],
+        "severe": [
+          "Treat affected block based on local threshold",
+          "Avoid broad-spectrum sprays during flowering and protect beneficial insects"
+        ]
+      },
+      "recurrence_risk": "Medium",
+      "resistance_notes": "Repeated use of the same insecticide group can build pest resistance. Rotate chemistry and use scouting thresholds.",
+      "ipm_score": 7,
+      "pre_harvest_interval_days": 7,
+      "progression_stages": [
+        "Stage 1: small feeding marks or tender flush damage",
+        "Stage 2: visible galls, holes, or cut shoots increase",
+        "Stage 3: new growth loss and reduced canopy development"
+      ],
+      "possible_co_infections": "Leaf spot complex + secondary pest damage",
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "wind damage",
+        "pruning cuts",
+        "mechanical tearing"
+      ],
+      "ml_focus_regions": [
+        "shoot tip",
+        "stem junction",
+        "new flush",
+        "leaf petiole"
+      ],
+      "treatment_effectiveness": {
+        "field_scouting_and_sanitation": 0.65,
+        "neem_or_soft_control": 0.5,
+        "selective_insecticide": 0.75
+      },
+      "treatment_cost_estimate": "Low",
+      "recommendation_summary": "Scout active pest damage within 3 days, remove damaged flush, conserve natural enemies, and use selective insecticide only if fresh damage is increasing.",
+      "sd": {
+        "simple": {
+          "name": "گال مِج",
+          "overview": "هي ننڍڙو جيت پنن جي اندر کاڌو کائي پنن تي اڀريل گال يا ڦوڪارا پيدا ڪري ٿو.",
+          "symptoms": [
+            "پنن تي ننڍا اڀريل گول نشان ٿين ٿا",
+            "نرم پن بگڙيل يا مڙيل ٿي سگهن ٿا",
+            "گهڻي حملي سان نئين واڌ گهٽجي ٿي"
+          ],
+          "causes": [
+            "مِج جي لاروا پن جي اندر کاڌو کائي ٿي",
+            "نئين نرم واڌ واري وقت حملو وڌيڪ ٿيندو آهي"
+          ],
+          "prevention": [
+            "متاثر پن هٽايو",
+            "باغ جي صفائي رکو",
+            "گهڻي نائٽروجن کان پاسو ڪريو ڇو ته نرم واڌ وڌي ٿي"
+          ],
+          "treatment": [
+            "نقصان جي شدت ڏسو",
+            "قدرتي دشمن جيتن کي بچايو",
+            "حملو وڌي ته ٻوٽي اندر اثر ڪندڙ دوا مقامي صلاح مطابق استعمال ڪريو"
+          ],
+          "important_note": "هي مسئلو گهڻو ڪري نئين واڌ تي ٿيندو آهي، تنهنڪري ان وقت نگراني وڌايو."
+        },
+        "medium": {
+          "name": "گال مِج",
+          "overview": "هي ننڍڙو جيت پنن جي اندر کاڌو کائي پنن تي اڀريل گال يا ڦوڪارا پيدا ڪري ٿو.",
+          "symptoms": [
+            "پنن تي ننڍا اڀريل گول نشان ٿين ٿا",
+            "نرم پن بگڙيل يا مڙيل ٿي سگهن ٿا",
+            "گهڻي حملي سان نئين واڌ گهٽجي ٿي"
+          ],
+          "causes": [
+            "مِج جي لاروا پن جي اندر کاڌو کائي ٿي",
+            "نئين نرم واڌ واري وقت حملو وڌيڪ ٿيندو آهي"
+          ],
+          "prevention": [
+            "متاثر پن هٽايو",
+            "باغ جي صفائي رکو",
+            "گهڻي نائٽروجن کان پاسو ڪريو ڇو ته نرم واڌ وڌي ٿي"
+          ],
+          "treatment": [
+            "نقصان جي شدت ڏسو",
+            "قدرتي دشمن جيتن کي بچايو",
+            "حملو وڌي ته ٻوٽي اندر اثر ڪندڙ دوا مقامي صلاح مطابق استعمال ڪريو"
+          ],
+          "important_note": "هي مسئلو گهڻو ڪري نئين واڌ تي ٿيندو آهي، تنهنڪري ان وقت نگراني وڌايو."
+        },
+        "expert": {
+          "name": "گال مِج",
+          "overview": "هي ننڍڙو جيت پنن جي اندر کاڌو کائي پنن تي اڀريل گال يا ڦوڪارا پيدا ڪري ٿو. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي ننڍا اڀريل گول نشان ٿين ٿا",
+            "نرم پن بگڙيل يا مڙيل ٿي سگهن ٿا",
+            "گهڻي حملي سان نئين واڌ گهٽجي ٿي"
+          ],
+          "causes": [
+            "مِج جي لاروا پن جي اندر کاڌو کائي ٿي",
+            "نئين نرم واڌ واري وقت حملو وڌيڪ ٿيندو آهي"
+          ],
+          "prevention": [
+            "متاثر پن هٽايو",
+            "باغ جي صفائي رکو",
+            "گهڻي نائٽروجن کان پاسو ڪريو ڇو ته نرم واڌ وڌي ٿي"
+          ],
+          "treatment": [
+            "نقصان جي شدت ڏسو",
+            "قدرتي دشمن جيتن کي بچايو",
+            "حملو وڌي ته ٻوٽي اندر اثر ڪندڙ دوا مقامي صلاح مطابق استعمال ڪريو"
+          ],
+          "important_note": "هي مسئلو گهڻو ڪري نئين واڌ تي ٿيندو آهي، تنهنڪري ان وقت نگراني وڌايو. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_healthy",
@@ -111,19 +1121,203 @@
       "label": "Healthy",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mangifera_indica_leaf.jpg",
       "severity": "Healthy",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Healthy",
+        "class_label": "mango_healthy"
+      },
+      "scientific_name": "None",
+      "confidence_level": "High",
+      "spread_type": "None",
+      "economic_impact": "Low",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Flowering",
+        "Fruit"
+      ],
+      "image_symptoms_focus": [
+        "uniform green leaf",
+        "no lesions",
+        "normal leaf texture",
+        "no fungal growth"
+      ],
+      "differential_diagnosis": [
+        "Nutrient deficiency may show yellowing",
+        "Early disease may have very small spots requiring close inspection"
+      ],
+      "organic_treatment_options": [
+        "Continue balanced nutrition",
+        "Monitor weekly",
+        "Keep orchard clean"
+      ],
+      "chemical_safety_warning": "No pesticide is recommended for a healthy result. Avoid preventive chemical use without risk or symptoms.",
+      "local_sindhi_term_verified": true,
       "name": "Healthy Leaf",
       "name_sd": "صحتمند پن",
-      "symptoms": ["Uniform green color", "No visible lesions", "Normal leaf shape"],
-      "symptoms_sd": ["هڪجهڙو سائو رنگ", "ڪو واضح داغ ناهي", "پن جي شڪل نارمل"],
-      "causes": ["No disease detected"],
-      "causes_sd": ["بيماري ظاهر ناهي"],
-      "prevention": ["Continue balanced irrigation and nutrition", "Inspect orchard weekly"],
-      "prevention_sd": ["پاڻي ۽ ڀاڻ جو توازن جاري رکو", "هفتي وار باغ ڏسو"],
-      "treatment": ["No chemical treatment required"],
-      "treatment_sd": ["ڪيميائي علاج جي ضرورت ناهي"],
+      "symptoms": [
+        "Uniform green color",
+        "No visible lesions",
+        "Normal leaf shape"
+      ],
+      "symptoms_sd": [
+        "هڪجهڙو سائو رنگ",
+        "ڪو واضح داغ ناهي",
+        "پن جي شڪل نارمل"
+      ],
+      "causes": [
+        "No disease detected"
+      ],
+      "causes_sd": [
+        "بيماري ظاهر ناهي"
+      ],
+      "prevention": [
+        "Continue balanced irrigation and nutrition",
+        "Inspect orchard weekly"
+      ],
+      "prevention_sd": [
+        "پاڻي ۽ ڀاڻ جو توازن جاري رکو",
+        "هفتي وار باغ ڏسو"
+      ],
+      "treatment": [
+        "No chemical treatment required"
+      ],
+      "treatment_sd": [
+        "ڪيميائي علاج جي ضرورت ناهي"
+      ],
       "medicines": [
-        {"name": "No medicine needed", "name_sd": "دوا جي ضرورت ناهي", "dose": "Maintain good crop care", "image": ""}
-      ]
+        {
+          "name": "No medicine needed",
+          "name_sd": "دوا جي ضرورت ناهي",
+          "dose": "Maintain good crop care",
+          "image": ""
+        }
+      ],
+      "action_urgency": "Monitor",
+      "favorable_conditions": {
+        "temperature": "Normal crop range",
+        "humidity": "Normal",
+        "rainfall": "No disease-favorable warning"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Very early disease may not show visible symptoms",
+        "Dust or camera glare may hide small lesions"
+      ],
+      "economic_threshold_action": "No treatment. Monitor orchard weekly and rescan if symptoms appear.",
+      "stage_based_management": {
+        "early": [
+          "No disease action needed",
+          "Continue weekly scouting"
+        ],
+        "moderate": [
+          "Maintain balanced irrigation and nutrition"
+        ],
+        "severe": [
+          "No severe disease management required unless new symptoms appear"
+        ]
+      },
+      "recurrence_risk": "Low",
+      "resistance_notes": "No pesticide resistance concern for healthy plants; avoid unnecessary chemical use.",
+      "ipm_score": 0,
+      "pre_harvest_interval_days": 0,
+      "progression_stages": [
+        "Stage 1: healthy uniform leaf color",
+        "Stage 2: continue monitoring for small spots or discoloration",
+        "Stage 3: rescan if visible symptoms appear"
+      ],
+      "possible_co_infections": "None expected; rescan if symptoms appear",
+      "false_positive_triggers": [
+        "very early disease without visible symptoms",
+        "camera too far from leaf",
+        "washed-out image hiding small lesions"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "no_treatment": 1.0,
+        "unnecessary_pesticide": 0.0
+      },
+      "treatment_cost_estimate": "Low",
+      "recommendation_summary": "No spray needed. Keep weekly monitoring, maintain balanced irrigation and nutrition, and rescan if new spots appear.",
+      "sd": {
+        "simple": {
+          "name": "صحتمند پن",
+          "overview": "پن صحتمند لڳي ٿو ۽ بيماري جا صاف نشان نظر نٿا اچن.",
+          "symptoms": [
+            "پن جو رنگ هڪجهڙو سائو آهي",
+            "داغ، ڦڦوند يا سڙڻ جا نشان ناهن",
+            "پن جي شڪل نارمل آهي"
+          ],
+          "causes": [
+            "هن وقت بيماري جا ظاهري نشان موجود ناهن"
+          ],
+          "prevention": [
+            "باغ جو هفتي وار معائنو جاري رکو",
+            "پاڻي ۽ ڀاڻ جو توازن رکو",
+            "ڪريل پن ۽ ڪچرو صاف رکو"
+          ],
+          "treatment": [
+            "دوا جي ضرورت ناهي",
+            "غير ضروري ڇڻڪار کان پاسو ڪريو",
+            "نئين علامت ظاهر ٿئي ته ٻيهر تصوير وٺو"
+          ],
+          "important_note": "صحتمند پن تي دوا استعمال ڪرڻ خرچ به وڌائي ٿو ۽ فائديمند جيتن کي به نقصان ڏئي سگهي ٿو."
+        },
+        "medium": {
+          "name": "صحتمند پن",
+          "overview": "پن صحتمند لڳي ٿو ۽ بيماري جا صاف نشان نظر نٿا اچن.",
+          "symptoms": [
+            "پن جو رنگ هڪجهڙو سائو آهي",
+            "داغ، ڦڦوند يا سڙڻ جا نشان ناهن",
+            "پن جي شڪل نارمل آهي"
+          ],
+          "causes": [
+            "هن وقت بيماري جا ظاهري نشان موجود ناهن"
+          ],
+          "prevention": [
+            "باغ جو هفتي وار معائنو جاري رکو",
+            "پاڻي ۽ ڀاڻ جو توازن رکو",
+            "ڪريل پن ۽ ڪچرو صاف رکو"
+          ],
+          "treatment": [
+            "دوا جي ضرورت ناهي",
+            "غير ضروري ڇڻڪار کان پاسو ڪريو",
+            "نئين علامت ظاهر ٿئي ته ٻيهر تصوير وٺو"
+          ],
+          "important_note": "صحتمند پن تي دوا استعمال ڪرڻ خرچ به وڌائي ٿو ۽ فائديمند جيتن کي به نقصان ڏئي سگهي ٿو."
+        },
+        "expert": {
+          "name": "صحتمند پن",
+          "overview": "پن صحتمند لڳي ٿو ۽ بيماري جا صاف نشان نظر نٿا اچن. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پن جو رنگ هڪجهڙو سائو آهي",
+            "داغ، ڦڦوند يا سڙڻ جا نشان ناهن",
+            "پن جي شڪل نارمل آهي"
+          ],
+          "causes": [
+            "هن وقت بيماري جا ظاهري نشان موجود ناهن"
+          ],
+          "prevention": [
+            "باغ جو هفتي وار معائنو جاري رکو",
+            "پاڻي ۽ ڀاڻ جو توازن رکو",
+            "ڪريل پن ۽ ڪچرو صاف رکو"
+          ],
+          "treatment": [
+            "دوا جي ضرورت ناهي",
+            "غير ضروري ڇڻڪار کان پاسو ڪريو",
+            "نئين علامت ظاهر ٿئي ته ٻيهر تصوير وٺو"
+          ],
+          "important_note": "صحتمند پن تي دوا استعمال ڪرڻ خرچ به وڌائي ٿو ۽ فائديمند جيتن کي به نقصان ڏئي سگهي ٿو. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_powdery_mildew",
@@ -131,20 +1325,221 @@
       "label": "Powdery Mildew",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_powdery_mildew_severe_leaf_blight_with_mycelium_1.jpg",
       "severity": "Medium risk",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Fungal",
+        "class_label": "mango_powdery_mildew"
+      },
+      "scientific_name": "Oidium mangiferae",
+      "confidence_level": "High",
+      "spread_type": "Airborne",
+      "economic_impact": "High",
+      "growth_stage_affected": [
+        "Flowering",
+        "Vegetative",
+        "Fruit"
+      ],
+      "image_symptoms_focus": [
+        "white powdery growth",
+        "gray-white mycelium",
+        "flower drying",
+        "leaf surface coating"
+      ],
+      "differential_diagnosis": [
+        "Sooty mould is black and linked with honeydew",
+        "Dust can wipe off but lacks disease pattern"
+      ],
+      "organic_treatment_options": [
+        "Improve canopy airflow",
+        "Use wettable sulfur where appropriate",
+        "Avoid dense canopy and excessive nitrogen"
+      ],
+      "chemical_safety_warning": "Do not apply sulfur during high heat or close to oil sprays. Follow product label and local extension advice.",
+      "local_sindhi_term_verified": true,
       "name": "Powdery Mildew",
       "name_sd": "پائوڊري ملڊيو",
-      "symptoms": ["White powdery growth on leaves and flowers", "Flower drying", "Poor fruit set"],
-      "symptoms_sd": ["پنن ۽ گلن تي اڇو پائوڊر", "گل سڪڻ", "ميوي لڳڻ ۾ گهٽتائي"],
-      "causes": ["Fungal disease favored by cool dry nights and humid mornings"],
-      "causes_sd": ["ٿڌين خشڪ راتين ۽ نمي وارن صبحن ۾ فنگس وڌي ٿي"],
-      "prevention": ["Improve air movement", "Avoid dense canopy", "Monitor flowering stage"],
-      "prevention_sd": ["هوا جي گذر بهتر ڪريو", "گهڻي گھاٽي ڇانو کان بچو", "گل واري وقت نگراني ڪريو"],
-      "treatment": ["Spray sulfur or hexaconazole according to label and local advice"],
-      "treatment_sd": ["ليبل ۽ مقامي صلاح موجب سلفر يا هيڪساڪونازول اسپري ڪريو"],
+      "symptoms": [
+        "White powdery growth on leaves and flowers",
+        "Flower drying",
+        "Poor fruit set"
+      ],
+      "symptoms_sd": [
+        "پنن ۽ گلن تي اڇو پائوڊر",
+        "گل سڪڻ",
+        "ميوي لڳڻ ۾ گهٽتائي"
+      ],
+      "causes": [
+        "Fungal disease favored by cool dry nights and humid mornings"
+      ],
+      "causes_sd": [
+        "ٿڌين خشڪ راتين ۽ گهم وارن صبحن ۾ ڦڦوند وڌي ٿي"
+      ],
+      "prevention": [
+        "Improve air movement",
+        "Avoid dense canopy",
+        "Monitor flowering stage"
+      ],
+      "prevention_sd": [
+        "هوا جي گذر بهتر ڪريو",
+        "گهڻي گھاٽي ڇانو کان بچو",
+        "گل واري وقت نگراني ڪريو"
+      ],
+      "treatment": [
+        "Spray sulfur or hexaconazole according to label and local advice"
+      ],
+      "treatment_sd": [
+        "لکيل هدايت ۽ مقامي صلاح موجب سلفر يا هيڪساڪونازول ڇڻڪار ڪريو"
+      ],
       "medicines": [
-        {"name": "Wettable Sulfur", "name_sd": "ويٽيبل سلفر", "dose": "2-3 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"},
-        {"name": "Hexaconazole", "name_sd": "هيڪساڪونازول", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Wettable Sulfur",
+          "name_sd": "ويٽيبل سلفر",
+          "dose": "2-3 g per liter water",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        },
+        {
+          "name": "Hexaconazole",
+          "name_sd": "هيڪساڪونازول",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Within 3 days",
+      "favorable_conditions": {
+        "temperature": "18-28°C",
+        "humidity": "High humidity with dry leaf surface",
+        "rainfall": "Light rain/dew; heavy rain may wash spores"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "Medium",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 6,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": "Powdery mildew + Anthracnose",
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Medium",
+      "recommendation_summary": "Scout the field within 3 days, remove infected material, improve airflow, and use Wettable Sulfur only if symptoms continue spreading.",
+      "sd": {
+        "simple": {
+          "name": "اڇي ڦڦوند",
+          "overview": "انب جي پنن ۽ گلن تي اڇي پائوڊر جهڙي ڦڦوند نظر اچي ٿي. گلن واري وقت هي بيماري پيداوار تي وڏو اثر وجهي سگهي ٿي.",
+          "symptoms": [
+            "پنن يا گلن تي اڇي پائوڊر جهڙي پرت ٿئي ٿي",
+            "گل سڪي سگهن ٿا",
+            "ميوو لڳڻ گهٽجي سگهي ٿو"
+          ],
+          "causes": [
+            "ٿڌيون راتيون ۽ گهم واريون صبحون بيماري وڌائين ٿيون",
+            "گهاٽو ڇانو ۽ هوا جي کوٽ سان بيماري وڌي ٿي"
+          ],
+          "prevention": [
+            "وڻ جي ڇانٽ ڪري هوا جو گذر بهتر ڪريو",
+            "گلن واري وقت باغ تي نظر رکو",
+            "گهڻي نائٽروجن کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "شروع ۾ متاثر حصا ڏسو ۽ باغ صاف رکو",
+            "ضرورت هجي ته سلفر يا مناسب ڦڦوند مار دوا لکيل هدايت مطابق استعمال ڪريو",
+            "تيز گرمي ۾ سلفر استعمال نه ڪريو"
+          ],
+          "important_note": "گلن واري مرحلي ۾ احتياط وڌيڪ ضروري آهي، ڇو ته ان وقت نقصان پيداوار گهٽائي سگهي ٿو."
+        },
+        "medium": {
+          "name": "اڇي ڦڦوند",
+          "overview": "انب جي پنن ۽ گلن تي اڇي پائوڊر جهڙي ڦڦوند نظر اچي ٿي. گلن واري وقت هي بيماري پيداوار تي وڏو اثر وجهي سگهي ٿي.",
+          "symptoms": [
+            "پنن يا گلن تي اڇي پائوڊر جهڙي پرت ٿئي ٿي",
+            "گل سڪي سگهن ٿا",
+            "ميوو لڳڻ گهٽجي سگهي ٿو"
+          ],
+          "causes": [
+            "ٿڌيون راتيون ۽ گهم واريون صبحون بيماري وڌائين ٿيون",
+            "گهاٽو ڇانو ۽ هوا جي کوٽ سان بيماري وڌي ٿي"
+          ],
+          "prevention": [
+            "وڻ جي ڇانٽ ڪري هوا جو گذر بهتر ڪريو",
+            "گلن واري وقت باغ تي نظر رکو",
+            "گهڻي نائٽروجن کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "شروع ۾ متاثر حصا ڏسو ۽ باغ صاف رکو",
+            "ضرورت هجي ته سلفر يا مناسب ڦڦوند مار دوا لکيل هدايت مطابق استعمال ڪريو",
+            "تيز گرمي ۾ سلفر استعمال نه ڪريو"
+          ],
+          "important_note": "گلن واري مرحلي ۾ احتياط وڌيڪ ضروري آهي، ڇو ته ان وقت نقصان پيداوار گهٽائي سگهي ٿو."
+        },
+        "expert": {
+          "name": "اڇي ڦڦوند",
+          "overview": "انب جي پنن ۽ گلن تي اڇي پائوڊر جهڙي ڦڦوند نظر اچي ٿي. گلن واري وقت هي بيماري پيداوار تي وڏو اثر وجهي سگهي ٿي. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن يا گلن تي اڇي پائوڊر جهڙي پرت ٿئي ٿي",
+            "گل سڪي سگهن ٿا",
+            "ميوو لڳڻ گهٽجي سگهي ٿو"
+          ],
+          "causes": [
+            "ٿڌيون راتيون ۽ گهم واريون صبحون بيماري وڌائين ٿيون",
+            "گهاٽو ڇانو ۽ هوا جي کوٽ سان بيماري وڌي ٿي"
+          ],
+          "prevention": [
+            "وڻ جي ڇانٽ ڪري هوا جو گذر بهتر ڪريو",
+            "گلن واري وقت باغ تي نظر رکو",
+            "گهڻي نائٽروجن کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "شروع ۾ متاثر حصا ڏسو ۽ باغ صاف رکو",
+            "ضرورت هجي ته سلفر يا مناسب ڦڦوند مار دوا لکيل هدايت مطابق استعمال ڪريو",
+            "تيز گرمي ۾ سلفر استعمال نه ڪريو"
+          ],
+          "important_note": "گلن واري مرحلي ۾ احتياط وڌيڪ ضروري آهي، ڇو ته ان وقت نقصان پيداوار گهٽائي سگهي ٿو. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_sooty_mould",
@@ -152,20 +1547,221 @@
       "label": "Sooty Mould",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sooty_mould_in_mango.jpg",
       "severity": "Medium risk",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Fungal secondary",
+        "class_label": "mango_sooty_mould"
+      },
+      "scientific_name": "Capnodium species complex",
+      "confidence_level": "High",
+      "spread_type": "Insect",
+      "economic_impact": "Medium",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Fruit"
+      ],
+      "image_symptoms_focus": [
+        "black soot-like coating",
+        "sticky honeydew",
+        "surface mould layer",
+        "reduced leaf shine"
+      ],
+      "differential_diagnosis": [
+        "Powdery mildew is white",
+        "Anthracnose forms necrotic spots rather than removable black coating"
+      ],
+      "organic_treatment_options": [
+        "Control sucking pests with neem oil or soap where suitable",
+        "Wash heavy honeydew deposits",
+        "Conserve natural enemies"
+      ],
+      "chemical_safety_warning": "Treat the sucking insect source first. Avoid unnecessary fungicide because the mould is secondary.",
+      "local_sindhi_term_verified": true,
       "name": "Sooty Mould",
       "name_sd": "سوٽي مولڊ",
-      "symptoms": ["Black soot-like layer on leaves", "Sticky honeydew on leaf surface", "Reduced photosynthesis"],
-      "symptoms_sd": ["پنن تي ڪاري ڪجل جهڙي پرت", "پنن تي چپچپو مادو", "روشني ٺاهڻ واري عمل ۾ گهٽتائي"],
-      "causes": ["Fungus grows on honeydew produced by sucking insects"],
-      "causes_sd": ["چوسيندڙ جيتن جي چپچپي مادو تي فنگس وڌي ٿي"],
-      "prevention": ["Control mango hoppers, scales, and mealybugs", "Wash heavy deposits where practical"],
-      "prevention_sd": ["هاپر، اسڪيل ۽ ميلي بگ تي ضابطو ڪريو", "گهڻي پرت هجي ته ڌوئي ڇڏيو"],
-      "treatment": ["Manage sucking pests first, then use mild fungicide if needed"],
-      "treatment_sd": ["پهرين چوسيندڙ جيتن کي ڪنٽرول ڪريو، ضرورت هجي ته هلڪو فنگسائڊ استعمال ڪريو"],
+      "symptoms": [
+        "Black soot-like layer on leaves",
+        "Sticky honeydew on leaf surface",
+        "Reduced photosynthesis"
+      ],
+      "symptoms_sd": [
+        "پنن تي ڪاري ڪجل جهڙي پرت",
+        "پنن تي چپچپو مادو",
+        "روشني ٺاهڻ واري عمل ۾ گهٽتائي"
+      ],
+      "causes": [
+        "Fungus grows on honeydew produced by sucking insects"
+      ],
+      "causes_sd": [
+        "چوسيندڙ جيتن جي چپچپي مادو تي ڦڦوند وڌي ٿي"
+      ],
+      "prevention": [
+        "Control mango hoppers, scales, and mealybugs",
+        "Wash heavy deposits where practical"
+      ],
+      "prevention_sd": [
+        "هاپر، اسڪيل ۽ ميلي بگ تي ضابطو ڪريو",
+        "گهڻي پرت هجي ته ڌوئي ڇڏيو"
+      ],
+      "treatment": [
+        "Manage sucking pests first, then use mild fungicide if needed"
+      ],
+      "treatment_sd": [
+        "پهرين چوسيندڙ جيتن کي قابو ڪريو، ضرورت هجي ته هلڪي ڦڦوند مار دوا استعمال ڪريو"
+      ],
       "medicines": [
-        {"name": "Neem Oil", "name_sd": "نيم آئل", "dose": "3-5 ml per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Expeller_(4).jpg"},
-        {"name": "Imidacloprid", "name_sd": "اميڊاڪلوپرڊ", "dose": "Use label dose for sucking pests", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
-      ]
+        {
+          "name": "Neem Oil",
+          "name_sd": "نيم آئل",
+          "dose": "3-5 ml per liter water",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Expeller_(4).jpg"
+        },
+        {
+          "name": "Imidacloprid",
+          "name_sd": "اميڊاڪلوپرڊ",
+          "dose": "Use label dose for sucking pests",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        }
+      ],
+      "action_urgency": "Within 3 days",
+      "favorable_conditions": {
+        "temperature": "20-30°C",
+        "humidity": "High",
+        "rainfall": "Frequent rain or leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "Medium",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 6,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": [
+        "Sooty mould + hopper/mealybug infestation",
+        "Sooty mould + Anthracnose"
+      ],
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "sucking_pest_control": 0.8,
+        "neem_oil": 0.6,
+        "fungicide_alone": 0.25
+      },
+      "treatment_cost_estimate": "Low",
+      "recommendation_summary": "Scout the field within 3 days, remove infected material, improve airflow, and use Neem Oil only if symptoms continue spreading.",
+      "sd": {
+        "simple": {
+          "name": "ڪاري ڦڦوند",
+          "overview": "پنن تي ڪاري ڪجل جهڙي پرت ٺهي ٿي. اڪثر هي بيماري چوسيندڙ جيتن جي چپچپي مادو کان پوءِ پيدا ٿئي ٿي.",
+          "symptoms": [
+            "پنن تي ڪاري ڪجل جهڙي پرت نظر اچي ٿي",
+            "پن چپچپا محسوس ٿين ٿا",
+            "پنن جي روشني وٺڻ جي صلاحيت گهٽجي ٿي"
+          ],
+          "causes": [
+            "هاپر، اسڪيل يا ميلي بگ جهڙا جيت چپچپو مادو ڇڏين ٿا",
+            "ان مادو تي ڪاري ڦڦوند وڌي ٿي"
+          ],
+          "prevention": [
+            "چوسيندڙ جيتن تي وقت سر نظر رکو",
+            "نيم آئل يا نرم طريقا استعمال ڪريو جتي مناسب هجن",
+            "فائديمند جيتن کي بچايو"
+          ],
+          "treatment": [
+            "پهرين چوسيندڙ جيتن کي قابو ڪريو",
+            "گهڻي پرت هجي ته پن ڌوئڻ يا صاف ڪرڻ مددگار آهي",
+            "صرف ڦڦوند مار دوا اڪيلي ڪافي نه هوندي"
+          ],
+          "important_note": "اصل مسئلو اڪثر جيت هوندا آهن، تنهنڪري علاج به پهرين جيتن تي ٿيڻ گهرجي."
+        },
+        "medium": {
+          "name": "ڪاري ڦڦوند",
+          "overview": "پنن تي ڪاري ڪجل جهڙي پرت ٺهي ٿي. اڪثر هي بيماري چوسيندڙ جيتن جي چپچپي مادو کان پوءِ پيدا ٿئي ٿي.",
+          "symptoms": [
+            "پنن تي ڪاري ڪجل جهڙي پرت نظر اچي ٿي",
+            "پن چپچپا محسوس ٿين ٿا",
+            "پنن جي روشني وٺڻ جي صلاحيت گهٽجي ٿي"
+          ],
+          "causes": [
+            "هاپر، اسڪيل يا ميلي بگ جهڙا جيت چپچپو مادو ڇڏين ٿا",
+            "ان مادو تي ڪاري ڦڦوند وڌي ٿي"
+          ],
+          "prevention": [
+            "چوسيندڙ جيتن تي وقت سر نظر رکو",
+            "نيم آئل يا نرم طريقا استعمال ڪريو جتي مناسب هجن",
+            "فائديمند جيتن کي بچايو"
+          ],
+          "treatment": [
+            "پهرين چوسيندڙ جيتن کي قابو ڪريو",
+            "گهڻي پرت هجي ته پن ڌوئڻ يا صاف ڪرڻ مددگار آهي",
+            "صرف ڦڦوند مار دوا اڪيلي ڪافي نه هوندي"
+          ],
+          "important_note": "اصل مسئلو اڪثر جيت هوندا آهن، تنهنڪري علاج به پهرين جيتن تي ٿيڻ گهرجي."
+        },
+        "expert": {
+          "name": "ڪاري ڦڦوند",
+          "overview": "پنن تي ڪاري ڪجل جهڙي پرت ٺهي ٿي. اڪثر هي بيماري چوسيندڙ جيتن جي چپچپي مادو کان پوءِ پيدا ٿئي ٿي. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي ڪاري ڪجل جهڙي پرت نظر اچي ٿي",
+            "پن چپچپا محسوس ٿين ٿا",
+            "پنن جي روشني وٺڻ جي صلاحيت گهٽجي ٿي"
+          ],
+          "causes": [
+            "هاپر، اسڪيل يا ميلي بگ جهڙا جيت چپچپو مادو ڇڏين ٿا",
+            "ان مادو تي ڪاري ڦڦوند وڌي ٿي"
+          ],
+          "prevention": [
+            "چوسيندڙ جيتن تي وقت سر نظر رکو",
+            "نيم آئل يا نرم طريقا استعمال ڪريو جتي مناسب هجن",
+            "فائديمند جيتن کي بچايو"
+          ],
+          "treatment": [
+            "پهرين چوسيندڙ جيتن کي قابو ڪريو",
+            "گهڻي پرت هجي ته پن ڌوئڻ يا صاف ڪرڻ مددگار آهي",
+            "صرف ڦڦوند مار دوا اڪيلي ڪافي نه هوندي"
+          ],
+          "important_note": "اصل مسئلو اڪثر جيت هوندا آهن، تنهنڪري علاج به پهرين جيتن تي ٿيڻ گهرجي. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_scab",
@@ -173,19 +1769,211 @@
       "label": "Mango Scab",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
       "severity": "Medium risk",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Fungal",
+        "class_label": "mango_scab"
+      },
+      "scientific_name": "Elsinoe mangiferae",
+      "confidence_level": "Medium",
+      "spread_type": "Water",
+      "economic_impact": "Medium",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Fruit"
+      ],
+      "image_symptoms_focus": [
+        "corky raised spots",
+        "rough scabby fruit surface",
+        "small dark lesions",
+        "distorted young leaves"
+      ],
+      "differential_diagnosis": [
+        "Anthracnose lesions are often sunken",
+        "Alternaria spots often show yellow halos"
+      ],
+      "organic_treatment_options": [
+        "Remove infected debris",
+        "Prune for airflow",
+        "Protect new flush during wet weather"
+      ],
+      "chemical_safety_warning": "Use protectant fungicides before heavy disease pressure, not as repeated routine sprays.",
+      "local_sindhi_term_verified": true,
       "name": "Mango Scab",
       "name_sd": "انب اسڪيب",
-      "symptoms": ["Small dark corky spots on leaves and young fruit", "Leaf distortion during early flush", "Rough scabby fruit surface"],
-      "symptoms_sd": ["پنن ۽ ننڍي ميوي تي ننڍا ڪارا سخت داغ", "نئين پنن جي شڪل بگڙڻ", "ميوي جي سطح کُردري ٿيڻ"],
-      "causes": ["Fungal disease favored by wet weather and dense canopy"],
-      "causes_sd": ["نمي ۽ گھاٽي ڇانو ۾ فنگس وڌي ٿي"],
-      "prevention": ["Improve pruning", "Remove infected debris", "Protect young flush during wet periods"],
-      "prevention_sd": ["ڇانٽڻ بهتر ڪريو", "بيمار ڪچرو هٽايو", "برساتي وقت نئين واڌ کي بچايو"],
-      "treatment": ["Use copper or mancozeb sprays under local recommendation"],
-      "treatment_sd": ["مقامي سفارش موجب ڪاپر يا مينڪوزيب اسپري ڪريو"],
+      "symptoms": [
+        "Small dark corky spots on leaves and young fruit",
+        "Leaf distortion during early flush",
+        "Rough scabby fruit surface"
+      ],
+      "symptoms_sd": [
+        "پنن ۽ ننڍي ميوي تي ننڍا ڪارا سخت داغ",
+        "نئين پنن جي شڪل بگڙڻ",
+        "ميوي جي سطح کُردري ٿيڻ"
+      ],
+      "causes": [
+        "Fungal disease favored by wet weather and dense canopy"
+      ],
+      "causes_sd": [
+        "گهم ۽ گھاٽي ڇانو ۾ ڦڦوند وڌي ٿي"
+      ],
+      "prevention": [
+        "Improve pruning",
+        "Remove infected debris",
+        "Protect young flush during wet periods"
+      ],
+      "prevention_sd": [
+        "ڇانٽڻ بهتر ڪريو",
+        "بيمار ڪچرو هٽايو",
+        "برساتي وقت نئين واڌ کي بچايو"
+      ],
+      "treatment": [
+        "Use copper or mancozeb sprays under local recommendation"
+      ],
+      "treatment_sd": [
+        "مقامي سفارش موجب ڪاپر يا مينڪوزيب ڇڻڪار ڪريو"
+      ],
       "medicines": [
-        {"name": "Copper Fungicide", "name_sd": "ڪاپر فنگسائڊ", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Copper Fungicide",
+          "name_sd": "ڪاپر ڦڦوند مار دوا",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Within 3 days",
+      "favorable_conditions": {
+        "temperature": "20-30°C",
+        "humidity": "High",
+        "rainfall": "Frequent rain or leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "Medium",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 6,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": "Leaf spot complex + secondary pest damage",
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Low",
+      "recommendation_summary": "Scout the field within 3 days, remove infected material, improve airflow, and use Copper Fungicide only if symptoms continue spreading.",
+      "sd": {
+        "simple": {
+          "name": "انب اسڪيب",
+          "overview": "انب جي پنن ۽ ننڍي ميوي تي سخت، کُردرا ۽ ڪارا داغ پيدا ٿين ٿا، خاص ڪري گهم واري موسم ۾.",
+          "symptoms": [
+            "پنن تي ننڍا سخت ڪارا داغ ٿين ٿا",
+            "نئون پن بگڙيل ٿي سگهي ٿو",
+            "ميوي جي سطح کُردري يا داغدار ٿي وڃي ٿي"
+          ],
+          "causes": [
+            "گهم ۽ برساتي موسم ۾ ڦڦوند وڌي ٿي",
+            "گهاٽو وڻ ۽ هوا جي کوٽ بيماري وڌائين ٿا"
+          ],
+          "prevention": [
+            "ڇانٽ ڪري وڻ کي کليل رکو",
+            "بيمار ڪچرو باغ مان هٽايو",
+            "نئين واڌ کي برساتي وقت خاص ڏسو"
+          ],
+          "treatment": [
+            "شروعاتي داغن تي متاثر پن هٽايو",
+            "بيماري وڌي ته ڪاپر يا مينڪوزيب مقامي صلاح مطابق استعمال ڪريو"
+          ],
+          "important_note": "اسڪيب ميوي جي خوبصورتي ۽ بازاري قيمت گهٽائي سگهي ٿي، تنهنڪري شروعاتي سنڀال اهم آهي."
+        },
+        "medium": {
+          "name": "انب اسڪيب",
+          "overview": "انب جي پنن ۽ ننڍي ميوي تي سخت، کُردرا ۽ ڪارا داغ پيدا ٿين ٿا، خاص ڪري گهم واري موسم ۾.",
+          "symptoms": [
+            "پنن تي ننڍا سخت ڪارا داغ ٿين ٿا",
+            "نئون پن بگڙيل ٿي سگهي ٿو",
+            "ميوي جي سطح کُردري يا داغدار ٿي وڃي ٿي"
+          ],
+          "causes": [
+            "گهم ۽ برساتي موسم ۾ ڦڦوند وڌي ٿي",
+            "گهاٽو وڻ ۽ هوا جي کوٽ بيماري وڌائين ٿا"
+          ],
+          "prevention": [
+            "ڇانٽ ڪري وڻ کي کليل رکو",
+            "بيمار ڪچرو باغ مان هٽايو",
+            "نئين واڌ کي برساتي وقت خاص ڏسو"
+          ],
+          "treatment": [
+            "شروعاتي داغن تي متاثر پن هٽايو",
+            "بيماري وڌي ته ڪاپر يا مينڪوزيب مقامي صلاح مطابق استعمال ڪريو"
+          ],
+          "important_note": "اسڪيب ميوي جي خوبصورتي ۽ بازاري قيمت گهٽائي سگهي ٿي، تنهنڪري شروعاتي سنڀال اهم آهي."
+        },
+        "expert": {
+          "name": "انب اسڪيب",
+          "overview": "انب جي پنن ۽ ننڍي ميوي تي سخت، کُردرا ۽ ڪارا داغ پيدا ٿين ٿا، خاص ڪري گهم واري موسم ۾. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي ننڍا سخت ڪارا داغ ٿين ٿا",
+            "نئون پن بگڙيل ٿي سگهي ٿو",
+            "ميوي جي سطح کُردري يا داغدار ٿي وڃي ٿي"
+          ],
+          "causes": [
+            "گهم ۽ برساتي موسم ۾ ڦڦوند وڌي ٿي",
+            "گهاٽو وڻ ۽ هوا جي کوٽ بيماري وڌائين ٿا"
+          ],
+          "prevention": [
+            "ڇانٽ ڪري وڻ کي کليل رکو",
+            "بيمار ڪچرو باغ مان هٽايو",
+            "نئين واڌ کي برساتي وقت خاص ڏسو"
+          ],
+          "treatment": [
+            "شروعاتي داغن تي متاثر پن هٽايو",
+            "بيماري وڌي ته ڪاپر يا مينڪوزيب مقامي صلاح مطابق استعمال ڪريو"
+          ],
+          "important_note": "اسڪيب ميوي جي خوبصورتي ۽ بازاري قيمت گهٽائي سگهي ٿي، تنهنڪري شروعاتي سنڀال اهم آهي. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "mango_alternaria_leaf_spot",
@@ -193,19 +1981,211 @@
       "label": "Alternaria Leaf Spot",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
       "severity": "Medium risk",
+      "taxonomy": {
+        "crop": "Mango",
+        "disease_type": "Fungal",
+        "class_label": "mango_alternaria_leaf_spot"
+      },
+      "scientific_name": "Alternaria alternata",
+      "confidence_level": "Medium",
+      "spread_type": "Airborne",
+      "economic_impact": "Medium",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Fruit"
+      ],
+      "image_symptoms_focus": [
+        "brown circular spots",
+        "yellow halo",
+        "necrotic patches",
+        "leaf fall symptoms"
+      ],
+      "differential_diagnosis": [
+        "Anthracnose spots are darker and more sunken",
+        "Bacterial canker may be water-soaked"
+      ],
+      "organic_treatment_options": [
+        "Remove fallen infected leaves",
+        "Reduce leaf wetness",
+        "Improve canopy ventilation"
+      ],
+      "chemical_safety_warning": "Rotate fungicide groups to reduce resistance risk. Do not exceed label frequency.",
+      "local_sindhi_term_verified": true,
       "name": "Alternaria Leaf Spot",
-      "name_sd": "الٽرنيريا ليف اسپاٽ",
-      "symptoms": ["Brown circular spots with yellow halo", "Older leaves show larger necrotic patches", "Severe infection causes leaf fall"],
-      "symptoms_sd": ["پيلي گهيري سان ناسي گول داغ", "پراڻن پنن تي وڏا سڪل نشان", "سخت بيماري ۾ پن ڪري سگهن ٿا"],
-      "causes": ["Alternaria fungus spreading in humid orchards"],
-      "causes_sd": ["نمي وارن باغن ۾ الٽرنيريا فنگس پکڙجڻ"],
-      "prevention": ["Avoid excess irrigation", "Keep orchard airy", "Remove fallen infected leaves"],
-      "prevention_sd": ["گهڻو پاڻي ڏيڻ کان بچو", "باغ ۾ هوا جو گذر رکو", "ڪريل بيمار پن هٽايو"],
-      "treatment": ["Apply broad-spectrum fungicide after expert diagnosis"],
-      "treatment_sd": ["ماهر جي تشخيص کان پوءِ براڊ اسپيڪٽرم فنگسائڊ استعمال ڪريو"],
+      "name_sd": "الٽرنيريا پنن جا داغ",
+      "symptoms": [
+        "Brown circular spots with yellow halo",
+        "Older leaves show larger necrotic patches",
+        "Severe infection causes leaf fall"
+      ],
+      "symptoms_sd": [
+        "پيلي گهيري سان ناسي گول داغ",
+        "پراڻن پنن تي وڏا سڪل نشان",
+        "سخت بيماري ۾ پن ڪري سگهن ٿا"
+      ],
+      "causes": [
+        "Alternaria fungus spreading in humid orchards"
+      ],
+      "causes_sd": [
+        "گهم وارن باغن ۾ الٽرنيريا ڦڦوند پکڙجڻ"
+      ],
+      "prevention": [
+        "Avoid excess irrigation",
+        "Keep orchard airy",
+        "Remove fallen infected leaves"
+      ],
+      "prevention_sd": [
+        "گهڻو پاڻي ڏيڻ کان بچو",
+        "باغ ۾ هوا جو گذر رکو",
+        "ڪريل بيمار پن هٽايو"
+      ],
+      "treatment": [
+        "Apply broad-spectrum fungicide after expert diagnosis"
+      ],
+      "treatment_sd": [
+        "ماهر جي تشخيص کان پوءِ وڏي اثر واري ڦڦوند مار دوا استعمال ڪريو"
+      ],
       "medicines": [
-        {"name": "Mancozeb", "name_sd": "مينڪوزيب", "dose": "2 g per liter water", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
-      ]
+        {
+          "name": "Mancozeb",
+          "name_sd": "مينڪوزيب",
+          "dose": "2 g per liter water",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        }
+      ],
+      "action_urgency": "Within 3 days",
+      "favorable_conditions": {
+        "temperature": "20-30°C",
+        "humidity": "High",
+        "rainfall": "Frequent rain or leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "Medium",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 6,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": "Leaf spot complex + secondary pest damage",
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Low",
+      "recommendation_summary": "Scout the field within 3 days, remove infected material, improve airflow, and use Mancozeb only if symptoms continue spreading.",
+      "sd": {
+        "simple": {
+          "name": "الٽرنيريا پنن جا داغ",
+          "overview": "هي ڦڦوند پنن تي ناسي گول داغ ۽ پيلي گهيري وارا نشان پيدا ڪري ٿي. گهم ۾ داغ تيزي سان وڌن ٿا.",
+          "symptoms": [
+            "پنن تي ناسي گول داغ ٿين ٿا",
+            "داغن جي چوڌاري پيلو گهيرو ٿي سگهي ٿو",
+            "سخت حالت ۾ پن ڪري سگهن ٿا"
+          ],
+          "causes": [
+            "گهم ۽ پنن تي پاڻي بيهڻ سان ڦڦوند وڌي ٿي",
+            "ڪريل بيمار پن بيماري جو ذريعو بڻجن ٿا"
+          ],
+          "prevention": [
+            "ڪريل پن باغ مان هٽايو",
+            "پاڻي ڏيڻ جو وقت اهڙو رکو جو پن گهڻو دير ڀنا نه رهن",
+            "وڻ ۾ هوا جو گذر بهتر رکو"
+          ],
+          "treatment": [
+            "بيمار پن هٽايو",
+            "داغ وڌن ته مناسب ڦڦوند مار دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "هي داغ ٻين داغدار بيمارين سان ملندڙ جلندڙ ٿي سگهن ٿا، تنهنڪري تصوير صاف ۽ ويجهي وٺو."
+        },
+        "medium": {
+          "name": "الٽرنيريا پنن جا داغ",
+          "overview": "هي ڦڦوند پنن تي ناسي گول داغ ۽ پيلي گهيري وارا نشان پيدا ڪري ٿي. گهم ۾ داغ تيزي سان وڌن ٿا.",
+          "symptoms": [
+            "پنن تي ناسي گول داغ ٿين ٿا",
+            "داغن جي چوڌاري پيلو گهيرو ٿي سگهي ٿو",
+            "سخت حالت ۾ پن ڪري سگهن ٿا"
+          ],
+          "causes": [
+            "گهم ۽ پنن تي پاڻي بيهڻ سان ڦڦوند وڌي ٿي",
+            "ڪريل بيمار پن بيماري جو ذريعو بڻجن ٿا"
+          ],
+          "prevention": [
+            "ڪريل پن باغ مان هٽايو",
+            "پاڻي ڏيڻ جو وقت اهڙو رکو جو پن گهڻو دير ڀنا نه رهن",
+            "وڻ ۾ هوا جو گذر بهتر رکو"
+          ],
+          "treatment": [
+            "بيمار پن هٽايو",
+            "داغ وڌن ته مناسب ڦڦوند مار دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "هي داغ ٻين داغدار بيمارين سان ملندڙ جلندڙ ٿي سگهن ٿا، تنهنڪري تصوير صاف ۽ ويجهي وٺو."
+        },
+        "expert": {
+          "name": "الٽرنيريا پنن جا داغ",
+          "overview": "هي ڦڦوند پنن تي ناسي گول داغ ۽ پيلي گهيري وارا نشان پيدا ڪري ٿي. گهم ۾ داغ تيزي سان وڌن ٿا. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي ناسي گول داغ ٿين ٿا",
+            "داغن جي چوڌاري پيلو گهيرو ٿي سگهي ٿو",
+            "سخت حالت ۾ پن ڪري سگهن ٿا"
+          ],
+          "causes": [
+            "گهم ۽ پنن تي پاڻي بيهڻ سان ڦڦوند وڌي ٿي",
+            "ڪريل بيمار پن بيماري جو ذريعو بڻجن ٿا"
+          ],
+          "prevention": [
+            "ڪريل پن باغ مان هٽايو",
+            "پاڻي ڏيڻ جو وقت اهڙو رکو جو پن گهڻو دير ڀنا نه رهن",
+            "وڻ ۾ هوا جو گذر بهتر رکو"
+          ],
+          "treatment": [
+            "بيمار پن هٽايو",
+            "داغ وڌن ته مناسب ڦڦوند مار دوا ماهر جي صلاح سان استعمال ڪريو"
+          ],
+          "important_note": "هي داغ ٻين داغدار بيمارين سان ملندڙ جلندڙ ٿي سگهن ٿا، تنهنڪري تصوير صاف ۽ ويجهي وٺو. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "wheat_rust",
@@ -213,19 +2193,210 @@
       "label": "Wheat Rust",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wheat_leaf_rust.jpg",
       "severity": "High risk",
+      "taxonomy": {
+        "crop": "Wheat",
+        "disease_type": "Fungal",
+        "class_label": "wheat_rust"
+      },
+      "scientific_name": "Puccinia species",
+      "confidence_level": "High",
+      "spread_type": "Airborne",
+      "economic_impact": "High",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Flowering"
+      ],
+      "image_symptoms_focus": [
+        "orange-brown pustules",
+        "rust powder",
+        "linear leaf pustules",
+        "premature drying"
+      ],
+      "differential_diagnosis": [
+        "Leaf spot has flat necrotic lesions, not powdery pustules",
+        "Nutrient stress lacks rust-colored spores"
+      ],
+      "organic_treatment_options": [
+        "Use resistant varieties",
+        "Remove volunteer wheat",
+        "Avoid late sowing in rust-prone areas"
+      ],
+      "chemical_safety_warning": "Apply fungicide only at early active infection and according to local wheat recommendations.",
+      "local_sindhi_term_verified": true,
       "name": "Wheat Rust",
-      "name_sd": "ڪڻڪ جو رسٽ",
-      "symptoms": ["Orange or brown pustules on leaves", "Premature leaf drying"],
-      "symptoms_sd": ["پنن تي نارنگي يا ناسي ڦٽ", "پن جلد سڪڻ"],
-      "causes": ["Rust fungus spread by wind"],
-      "causes_sd": ["هوا سان پکڙجندڙ رسٽ فنگس"],
-      "prevention": ["Use resistant varieties", "Avoid late sowing where rust is common"],
-      "prevention_sd": ["مزاحمتي قسم پوکيو", "رسٽ وارن علائقن ۾ دير سان پوک کان بچو"],
-      "treatment": ["Use recommended triazole fungicide at early infection"],
-      "treatment_sd": ["شروعاتي بيماري تي سفارش ڪيل ٽرائيازول فنگسائڊ استعمال ڪريو"],
+      "name_sd": "ڪڻڪ جي رتيءَ واري بيماري",
+      "symptoms": [
+        "Orange or brown pustules on leaves",
+        "Premature leaf drying"
+      ],
+      "symptoms_sd": [
+        "پنن تي نارنگي يا ناسي ڦٽ",
+        "پن جلد سڪڻ"
+      ],
+      "causes": [
+        "Rust fungus spread by wind"
+      ],
+      "causes_sd": [
+        "هوا سان پکڙجندڙ رتيءَ واري ڦڦوند"
+      ],
+      "prevention": [
+        "Use resistant varieties",
+        "Avoid late sowing where rust is common"
+      ],
+      "prevention_sd": [
+        "مزاحمتي قسم پوکيو",
+        "رتيءَ واري بيماري وارن علائقن ۾ دير سان پوک کان بچو"
+      ],
+      "treatment": [
+        "Use recommended triazole fungicide at early infection"
+      ],
+      "treatment_sd": [
+        "شروعاتي بيماري تي سفارش ڪيل ٽرائيازول ڦڦوند مار دوا استعمال ڪريو"
+      ],
       "medicines": [
-        {"name": "Propiconazole", "name_sd": "پروپيڪونازول", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
-      ]
+        {
+          "name": "Propiconazole",
+          "name_sd": "پروپيڪونازول",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        }
+      ],
+      "action_urgency": "Immediate",
+      "favorable_conditions": {
+        "temperature": "20-30°C",
+        "humidity": "High",
+        "rainfall": "Frequent rain or leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "High",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 8,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": [
+        "Rust + Powdery mildew",
+        "Rust + leaf spot complex"
+      ],
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Medium",
+      "recommendation_summary": "Remove infected leaves/debris immediately and consider Propiconazole within 48 hours if symptoms are active and spreading.",
+      "sd": {
+        "simple": {
+          "name": "ڪڻڪ جي رتيءَ واري بيماري",
+          "overview": "ڪڻڪ جي پنن تي نارنگي يا ناسي زنگ جهڙا ڦٽ پيدا ٿين ٿا. هوا سان پکڙجندڙ هي بيماري پيداوار گهٽائي سگهي ٿي.",
+          "symptoms": [
+            "پنن تي زنگ جهڙا نارنگي يا ناسي ڦٽ ٿين ٿا",
+            "هٿ لڳائڻ سان پائوڊر جهڙو مادو لڳي سگهي ٿو",
+            "پن وقت کان اڳ سڪي سگهن ٿا"
+          ],
+          "causes": [
+            "رتيءَ واري ڦڦوند هوا سان پکڙجي ٿي",
+            "گهم ۽ مناسب گرمي پد بيماري وڌائين ٿا"
+          ],
+          "prevention": [
+            "مزاحمتي قسم پوکيو",
+            "دير سان پوک کان پاسو ڪريو جتي رتيءَ واري بيماري عام هجي",
+            "پاڻمرادو ڦٽل ڪڻڪ ختم ڪريو"
+          ],
+          "treatment": [
+            "شروعاتي ڦٽن تي کيت جو معائنو ڪريو",
+            "بيماري وڌي ته سفارش ڪيل دوا صحيح مرحلي تي استعمال ڪريو"
+          ],
+          "important_note": "رتيءَ واري بيماري جلدي پکڙجي سگهي ٿو، تنهنڪري شروعاتي سڃاڻپ تمام ضروري آهي."
+        },
+        "medium": {
+          "name": "ڪڻڪ جي رتيءَ واري بيماري",
+          "overview": "ڪڻڪ جي پنن تي نارنگي يا ناسي زنگ جهڙا ڦٽ پيدا ٿين ٿا. هوا سان پکڙجندڙ هي بيماري پيداوار گهٽائي سگهي ٿي.",
+          "symptoms": [
+            "پنن تي زنگ جهڙا نارنگي يا ناسي ڦٽ ٿين ٿا",
+            "هٿ لڳائڻ سان پائوڊر جهڙو مادو لڳي سگهي ٿو",
+            "پن وقت کان اڳ سڪي سگهن ٿا"
+          ],
+          "causes": [
+            "رتيءَ واري ڦڦوند هوا سان پکڙجي ٿي",
+            "گهم ۽ مناسب گرمي پد بيماري وڌائين ٿا"
+          ],
+          "prevention": [
+            "مزاحمتي قسم پوکيو",
+            "دير سان پوک کان پاسو ڪريو جتي رتيءَ واري بيماري عام هجي",
+            "پاڻمرادو ڦٽل ڪڻڪ ختم ڪريو"
+          ],
+          "treatment": [
+            "شروعاتي ڦٽن تي کيت جو معائنو ڪريو",
+            "بيماري وڌي ته سفارش ڪيل دوا صحيح مرحلي تي استعمال ڪريو"
+          ],
+          "important_note": "رتيءَ واري بيماري جلدي پکڙجي سگهي ٿو، تنهنڪري شروعاتي سڃاڻپ تمام ضروري آهي."
+        },
+        "expert": {
+          "name": "ڪڻڪ جي رتيءَ واري بيماري",
+          "overview": "ڪڻڪ جي پنن تي نارنگي يا ناسي زنگ جهڙا ڦٽ پيدا ٿين ٿا. هوا سان پکڙجندڙ هي بيماري پيداوار گهٽائي سگهي ٿي. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي زنگ جهڙا نارنگي يا ناسي ڦٽ ٿين ٿا",
+            "هٿ لڳائڻ سان پائوڊر جهڙو مادو لڳي سگهي ٿو",
+            "پن وقت کان اڳ سڪي سگهن ٿا"
+          ],
+          "causes": [
+            "رتيءَ واري ڦڦوند هوا سان پکڙجي ٿي",
+            "گهم ۽ مناسب گرمي پد بيماري وڌائين ٿا"
+          ],
+          "prevention": [
+            "مزاحمتي قسم پوکيو",
+            "دير سان پوک کان پاسو ڪريو جتي رتيءَ واري بيماري عام هجي",
+            "پاڻمرادو ڦٽل ڪڻڪ ختم ڪريو"
+          ],
+          "treatment": [
+            "شروعاتي ڦٽن تي کيت جو معائنو ڪريو",
+            "بيماري وڌي ته سفارش ڪيل دوا صحيح مرحلي تي استعمال ڪريو"
+          ],
+          "important_note": "رتيءَ واري بيماري جلدي پکڙجي سگهي ٿو، تنهنڪري شروعاتي سڃاڻپ تمام ضروري آهي. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "wheat_powdery_mildew",
@@ -233,19 +2404,209 @@
       "label": "Wheat Powdery Mildew",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Powdery_mildew_on_wheat_leaf.jpg",
       "severity": "Medium risk",
+      "taxonomy": {
+        "crop": "Wheat",
+        "disease_type": "Fungal",
+        "class_label": "wheat_powdery_mildew"
+      },
+      "scientific_name": "Blumeria graminis f. sp. tritici",
+      "confidence_level": "Medium",
+      "spread_type": "Airborne",
+      "economic_impact": "Medium",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Flowering"
+      ],
+      "image_symptoms_focus": [
+        "white powdery patches",
+        "leaf yellowing under colonies",
+        "gray fungal growth"
+      ],
+      "differential_diagnosis": [
+        "Rust pustules are orange-brown",
+        "Dust deposits are more uniform and not colony-like"
+      ],
+      "organic_treatment_options": [
+        "Use resistant varieties",
+        "Avoid dense sowing",
+        "Avoid excessive nitrogen"
+      ],
+      "chemical_safety_warning": "Sulfur and fungicides can injure crops in unsuitable conditions; follow label and temperature limits.",
+      "local_sindhi_term_verified": true,
       "name": "Wheat Powdery Mildew",
       "name_sd": "ڪڻڪ پائوڊري ملڊيو",
-      "symptoms": ["White powdery patches on leaves", "Yellowing under heavy infection"],
-      "symptoms_sd": ["پنن تي اڇا پائوڊر جهڙا داغ", "سخت بيماري ۾ پن پيلا ٿيڻ"],
-      "causes": ["Dense crop canopy and humid conditions"],
-      "causes_sd": ["گھاٽو فصل ۽ نمي واري حالت"],
-      "prevention": ["Avoid excessive nitrogen", "Use resistant varieties"],
-      "prevention_sd": ["نائٽروجن گهڻي نه ڏيو", "مزاحمتي قسم استعمال ڪريو"],
-      "treatment": ["Apply sulfur or triazole fungicide if disease spreads"],
-      "treatment_sd": ["بيماري پکڙجي ته سلفر يا ٽرائيازول فنگسائڊ استعمال ڪريو"],
+      "symptoms": [
+        "White powdery patches on leaves",
+        "Yellowing under heavy infection"
+      ],
+      "symptoms_sd": [
+        "پنن تي اڇا پائوڊر جهڙا داغ",
+        "سخت بيماري ۾ پن پيلا ٿيڻ"
+      ],
+      "causes": [
+        "Dense crop canopy and humid conditions"
+      ],
+      "causes_sd": [
+        "گھاٽو فصل ۽ گهم واري حالت"
+      ],
+      "prevention": [
+        "Avoid excessive nitrogen",
+        "Use resistant varieties"
+      ],
+      "prevention_sd": [
+        "نائٽروجن گهڻي نه ڏيو",
+        "مزاحمتي قسم استعمال ڪريو"
+      ],
+      "treatment": [
+        "Apply sulfur or triazole fungicide if disease spreads"
+      ],
+      "treatment_sd": [
+        "بيماري پکڙجي ته سلفر يا ٽرائيازول ڦڦوند مار دوا استعمال ڪريو"
+      ],
       "medicines": [
-        {"name": "Sulfur", "name_sd": "سلفر", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Sulfur",
+          "name_sd": "سلفر",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Within 3 days",
+      "favorable_conditions": {
+        "temperature": "18-28°C",
+        "humidity": "High humidity with dry leaf surface",
+        "rainfall": "Light rain/dew; heavy rain may wash spores"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "Medium",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 6,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": [
+        "Rust + Powdery mildew",
+        "Rust + leaf spot complex"
+      ],
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Low",
+      "recommendation_summary": "Scout the field within 3 days, remove infected material, improve airflow, and use Sulfur only if symptoms continue spreading.",
+      "sd": {
+        "simple": {
+          "name": "ڪڻڪ جي اڇي ڦڦوند",
+          "overview": "ڪڻڪ جي پنن تي اڇي پائوڊر جهڙي ڦڦوند ٺهي ٿي، خاص ڪري گهاٽي فصل ۽ گهم واري حالت ۾.",
+          "symptoms": [
+            "پنن تي اڇا پائوڊر جهڙا نشان ٿين ٿا",
+            "سخت حالت ۾ پن پيلا ٿيڻ لڳن ٿا",
+            "فصل ڪمزور ٿي سگهي ٿو"
+          ],
+          "causes": [
+            "گهاٽي پوک ۽ گهم بيماري وڌائين ٿا",
+            "گهڻي نائٽروجن سان نرم واڌ وڌي بيماري کي مدد ملي ٿي"
+          ],
+          "prevention": [
+            "مناسب فاصلي تي پوک ڪريو",
+            "گهڻي نائٽروجن کان پاسو ڪريو",
+            "مزاحمتي قسم چونڊيو"
+          ],
+          "treatment": [
+            "شروعات ۾ فصل کي هوا ۽ روشني ملڻ ڏيو",
+            "ضرورت هجي ته سلفر يا سفارش ڪيل دوا استعمال ڪريو"
+          ],
+          "important_note": "اڇي ڦڦوند کي مٽي يا ڌوڙ نه سمجهو؛ بار بار ساڳين پنن تي وڌندڙ پرت بيماري جي نشاني آهي."
+        },
+        "medium": {
+          "name": "ڪڻڪ جي اڇي ڦڦوند",
+          "overview": "ڪڻڪ جي پنن تي اڇي پائوڊر جهڙي ڦڦوند ٺهي ٿي، خاص ڪري گهاٽي فصل ۽ گهم واري حالت ۾.",
+          "symptoms": [
+            "پنن تي اڇا پائوڊر جهڙا نشان ٿين ٿا",
+            "سخت حالت ۾ پن پيلا ٿيڻ لڳن ٿا",
+            "فصل ڪمزور ٿي سگهي ٿو"
+          ],
+          "causes": [
+            "گهاٽي پوک ۽ گهم بيماري وڌائين ٿا",
+            "گهڻي نائٽروجن سان نرم واڌ وڌي بيماري کي مدد ملي ٿي"
+          ],
+          "prevention": [
+            "مناسب فاصلي تي پوک ڪريو",
+            "گهڻي نائٽروجن کان پاسو ڪريو",
+            "مزاحمتي قسم چونڊيو"
+          ],
+          "treatment": [
+            "شروعات ۾ فصل کي هوا ۽ روشني ملڻ ڏيو",
+            "ضرورت هجي ته سلفر يا سفارش ڪيل دوا استعمال ڪريو"
+          ],
+          "important_note": "اڇي ڦڦوند کي مٽي يا ڌوڙ نه سمجهو؛ بار بار ساڳين پنن تي وڌندڙ پرت بيماري جي نشاني آهي."
+        },
+        "expert": {
+          "name": "ڪڻڪ جي اڇي ڦڦوند",
+          "overview": "ڪڻڪ جي پنن تي اڇي پائوڊر جهڙي ڦڦوند ٺهي ٿي، خاص ڪري گهاٽي فصل ۽ گهم واري حالت ۾. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي اڇا پائوڊر جهڙا نشان ٿين ٿا",
+            "سخت حالت ۾ پن پيلا ٿيڻ لڳن ٿا",
+            "فصل ڪمزور ٿي سگهي ٿو"
+          ],
+          "causes": [
+            "گهاٽي پوک ۽ گهم بيماري وڌائين ٿا",
+            "گهڻي نائٽروجن سان نرم واڌ وڌي بيماري کي مدد ملي ٿي"
+          ],
+          "prevention": [
+            "مناسب فاصلي تي پوک ڪريو",
+            "گهڻي نائٽروجن کان پاسو ڪريو",
+            "مزاحمتي قسم چونڊيو"
+          ],
+          "treatment": [
+            "شروعات ۾ فصل کي هوا ۽ روشني ملڻ ڏيو",
+            "ضرورت هجي ته سلفر يا سفارش ڪيل دوا استعمال ڪريو"
+          ],
+          "important_note": "اڇي ڦڦوند کي مٽي يا ڌوڙ نه سمجهو؛ بار بار ساڳين پنن تي وڌندڙ پرت بيماري جي نشاني آهي. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "cotton_leaf_curl",
@@ -253,19 +2614,217 @@
       "label": "Cotton Leaf Curl",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_leaf_curl_virus_symptoms.jpg",
       "severity": "High risk",
+      "taxonomy": {
+        "crop": "Cotton",
+        "disease_type": "Viral",
+        "class_label": "cotton_leaf_curl"
+      },
+      "scientific_name": "Cotton leaf curl begomovirus complex",
+      "confidence_level": "High",
+      "spread_type": "Insect",
+      "economic_impact": "High",
+      "growth_stage_affected": [
+        "Seedling",
+        "Vegetative",
+        "Flowering"
+      ],
+      "image_symptoms_focus": [
+        "leaf curling",
+        "vein thickening",
+        "enations",
+        "stunted plant"
+      ],
+      "differential_diagnosis": [
+        "Herbicide injury may curl leaves but lacks vein thickening",
+        "Nutrient stress usually does not create enations"
+      ],
+      "organic_treatment_options": [
+        "Remove infected volunteer plants",
+        "Use tolerant varieties",
+        "Manage whitefly with yellow sticky traps and conservation of natural enemies"
+      ],
+      "chemical_safety_warning": "Virus has no curative spray. Avoid repeated pesticide use; target whitefly only when monitoring shows need.",
+      "local_sindhi_term_verified": true,
       "name": "Cotton Leaf Curl",
-      "name_sd": "ڪپهه ليف ڪرل",
-      "symptoms": ["Leaves curl upward or downward", "Vein thickening", "Stunted plants"],
-      "symptoms_sd": ["پن مڙڻ", "رڳون ٿلهيون ٿيڻ", "ٻوٽو ننڍو رهڻ"],
-      "causes": ["Virus transmitted by whitefly"],
-      "causes_sd": ["سفيد مک ذريعي پکڙجندڙ وائرس"],
-      "prevention": ["Use tolerant varieties", "Control whitefly early", "Remove infected volunteer plants"],
-      "prevention_sd": ["برداشت ڪندڙ قسم استعمال ڪريو", "سفيد مک کي جلد ڪنٽرول ڪريو", "بيمار پاڻمرادو ڦٽل ٻوٽا هٽايو"],
-      "treatment": ["No cure for infected plants; manage whitefly and crop hygiene"],
-      "treatment_sd": ["بيمار ٻوٽي جو علاج ناهي؛ سفيد مک ۽ صفائي تي ڌيان ڏيو"],
+      "name_sd": "ڪپهه پن مڙڻ واري بيماري",
+      "symptoms": [
+        "Leaves curl upward or downward",
+        "Vein thickening",
+        "Stunted plants"
+      ],
+      "symptoms_sd": [
+        "پن مڙڻ",
+        "رڳون ٿلهيون ٿيڻ",
+        "ٻوٽو ننڍو رهڻ"
+      ],
+      "causes": [
+        "Virus transmitted by whitefly"
+      ],
+      "causes_sd": [
+        "سفيد مک ذريعي پکڙجندڙ وائرس"
+      ],
+      "prevention": [
+        "Use tolerant varieties",
+        "Control whitefly early",
+        "Remove infected volunteer plants"
+      ],
+      "prevention_sd": [
+        "برداشت ڪندڙ قسم استعمال ڪريو",
+        "سفيد مک کي جلد قابو ڪريو",
+        "بيمار پاڻمرادو ڦٽل ٻوٽا هٽايو"
+      ],
+      "treatment": [
+        "No cure for infected plants; manage whitefly and crop hygiene"
+      ],
+      "treatment_sd": [
+        "بيمار ٻوٽي جو علاج ناهي؛ سفيد مک ۽ صفائي تي ڌيان ڏيو"
+      ],
       "medicines": [
-        {"name": "Pyriproxyfen", "name_sd": "پائريپروڪسيفن", "dose": "Use label dose for whitefly", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
-      ]
+        {
+          "name": "Pyriproxyfen",
+          "name_sd": "پائريپروڪسيفن",
+          "dose": "Use label dose for whitefly",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        }
+      ],
+      "action_urgency": "Immediate",
+      "favorable_conditions": {
+        "temperature": "25-35°C",
+        "humidity": "Medium",
+        "rainfall": "Dry warm periods can increase whitefly pressure"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with herbicide injury or nutrient stress"
+      ],
+      "economic_threshold_action": "Remove infected plants and manage whitefly if symptoms appear on more than 2-3% plants or whitefly exceeds local threshold.",
+      "stage_based_management": {
+        "early": [
+          "Remove infected volunteer plants",
+          "Start whitefly monitoring with sticky traps"
+        ],
+        "moderate": [
+          "Manage whitefly using IPM and tolerant varieties",
+          "Remove heavily infected young plants if spread is increasing"
+        ],
+        "severe": [
+          "Do not rely on curative spray; rogue badly infected plants",
+          "Control vector pressure and avoid planting near infected fields"
+        ]
+      },
+      "recurrence_risk": "High",
+      "resistance_notes": "No curative pesticide exists for viral infection. Resistance management should focus on tolerant varieties and vector control.",
+      "ipm_score": 8,
+      "pre_harvest_interval_days": 7,
+      "progression_stages": [
+        "Stage 1: slight leaf curling or vein changes",
+        "Stage 2: clear vein thickening and plant stunting",
+        "Stage 3: severe stunting and yield loss"
+      ],
+      "possible_co_infections": [
+        "Leaf curl virus + whitefly infestation",
+        "Boll rot + bollworm damage"
+      ],
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "herbicide drift",
+        "heat stress leaf curling",
+        "nutrient imbalance"
+      ],
+      "ml_focus_regions": [
+        "leaf veins",
+        "leaf margin",
+        "new growth tip"
+      ],
+      "treatment_effectiveness": {
+        "vector_management": 0.7,
+        "infected_plant_removal": 0.65,
+        "curative_spray": 0.0
+      },
+      "treatment_cost_estimate": "High",
+      "recommendation_summary": "Do not use curative spray. Remove badly infected plants where needed and control whitefly with IPM monitoring within 3 days.",
+      "sd": {
+        "simple": {
+          "name": "ڪپهه پن مڙڻ واري بيماري",
+          "overview": "ڪپهه ۾ پن مڙڻ، رڳن جو ٿلهو ٿيڻ ۽ ٻوٽي جو ننڍو رهڻ هن وائرس واري بيماري جون اهم نشانيون آهن. اڪثر سفيد مک ان کي پکيڙي ٿي.",
+          "symptoms": [
+            "پن مڙي وڃن ٿا",
+            "رڳون ٿلهيون ۽ نمايان ٿين ٿيون",
+            "ٻوٽو ننڍو يا ڪمزور رهي ٿو"
+          ],
+          "causes": [
+            "سفيد مک وائرس کي هڪ ٻوٽي کان ٻئي ڏانهن کڻي وڃي ٿي",
+            "بيمار پاڻمرادو ڦٽل ٻوٽا به ذريعو بڻجن ٿا"
+          ],
+          "prevention": [
+            "برداشت ڪندڙ قسم استعمال ڪريو",
+            "سفيد مک تي شروعاتي نگراني رکو",
+            "بيمار پاڻمرادو ڦٽل ٻوٽا ختم ڪريو"
+          ],
+          "treatment": [
+            "وائرس لاءِ شفا ڏيندڙ دوا ناهي",
+            "سفيد مک کي آءِ پي ايم ذريعي قابو ڪريو",
+            "گهڻو متاثر ٻوٽو هٽائڻو پئجي سگهي ٿو"
+          ],
+          "important_note": "هن بيماري ۾ اصل ڌيان سفيد مک جي قابو ۽ بيمار ٻوٽن جي روڪٿام تي هئڻ گهرجي."
+        },
+        "medium": {
+          "name": "ڪپهه پن مڙڻ واري بيماري",
+          "overview": "ڪپهه ۾ پن مڙڻ، رڳن جو ٿلهو ٿيڻ ۽ ٻوٽي جو ننڍو رهڻ هن وائرس واري بيماري جون اهم نشانيون آهن. اڪثر سفيد مک ان کي پکيڙي ٿي.",
+          "symptoms": [
+            "پن مڙي وڃن ٿا",
+            "رڳون ٿلهيون ۽ نمايان ٿين ٿيون",
+            "ٻوٽو ننڍو يا ڪمزور رهي ٿو"
+          ],
+          "causes": [
+            "سفيد مک وائرس کي هڪ ٻوٽي کان ٻئي ڏانهن کڻي وڃي ٿي",
+            "بيمار پاڻمرادو ڦٽل ٻوٽا به ذريعو بڻجن ٿا"
+          ],
+          "prevention": [
+            "برداشت ڪندڙ قسم استعمال ڪريو",
+            "سفيد مک تي شروعاتي نگراني رکو",
+            "بيمار پاڻمرادو ڦٽل ٻوٽا ختم ڪريو"
+          ],
+          "treatment": [
+            "وائرس لاءِ شفا ڏيندڙ دوا ناهي",
+            "سفيد مک کي آءِ پي ايم ذريعي قابو ڪريو",
+            "گهڻو متاثر ٻوٽو هٽائڻو پئجي سگهي ٿو"
+          ],
+          "important_note": "هن بيماري ۾ اصل ڌيان سفيد مک جي قابو ۽ بيمار ٻوٽن جي روڪٿام تي هئڻ گهرجي."
+        },
+        "expert": {
+          "name": "ڪپهه پن مڙڻ واري بيماري",
+          "overview": "ڪپهه ۾ پن مڙڻ، رڳن جو ٿلهو ٿيڻ ۽ ٻوٽي جو ننڍو رهڻ هن وائرس واري بيماري جون اهم نشانيون آهن. اڪثر سفيد مک ان کي پکيڙي ٿي. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پن مڙي وڃن ٿا",
+            "رڳون ٿلهيون ۽ نمايان ٿين ٿيون",
+            "ٻوٽو ننڍو يا ڪمزور رهي ٿو"
+          ],
+          "causes": [
+            "سفيد مک وائرس کي هڪ ٻوٽي کان ٻئي ڏانهن کڻي وڃي ٿي",
+            "بيمار پاڻمرادو ڦٽل ٻوٽا به ذريعو بڻجن ٿا"
+          ],
+          "prevention": [
+            "برداشت ڪندڙ قسم استعمال ڪريو",
+            "سفيد مک تي شروعاتي نگراني رکو",
+            "بيمار پاڻمرادو ڦٽل ٻوٽا ختم ڪريو"
+          ],
+          "treatment": [
+            "وائرس لاءِ شفا ڏيندڙ دوا ناهي",
+            "سفيد مک کي آءِ پي ايم ذريعي قابو ڪريو",
+            "گهڻو متاثر ٻوٽو هٽائڻو پئجي سگهي ٿو"
+          ],
+          "important_note": "هن بيماري ۾ اصل ڌيان سفيد مک جي قابو ۽ بيمار ٻوٽن جي روڪٿام تي هئڻ گهرجي. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "cotton_boll_rot",
@@ -273,19 +2832,215 @@
       "label": "Cotton Boll Rot",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_boll_rot.jpg",
       "severity": "Medium risk",
+      "taxonomy": {
+        "crop": "Cotton",
+        "disease_type": "Fungal/Bacterial complex",
+        "class_label": "cotton_boll_rot"
+      },
+      "scientific_name": "Fusarium, Diplodia, Colletotrichum and bacterial complexes",
+      "confidence_level": "Medium",
+      "spread_type": "Water",
+      "economic_impact": "Medium",
+      "growth_stage_affected": [
+        "Fruit"
+      ],
+      "image_symptoms_focus": [
+        "brown or black bolls",
+        "rotting boll tissue",
+        "lint discoloration",
+        "wet rot"
+      ],
+      "differential_diagnosis": [
+        "Bollworm damage may show entry holes",
+        "Physiological boll shedding lacks rot and smell"
+      ],
+      "organic_treatment_options": [
+        "Improve drainage",
+        "Control bollworm damage using IPM",
+        "Avoid dense humid canopy"
+      ],
+      "chemical_safety_warning": "Do not rely on fungicide alone; correct drainage and insect injury first.",
+      "local_sindhi_term_verified": true,
       "name": "Cotton Boll Rot",
-      "name_sd": "ڪپهه بول روٽ",
-      "symptoms": ["Bolls become brown or black", "Lint quality drops", "Bad smell in wet rot cases"],
-      "symptoms_sd": ["بول ناسي يا ڪارا ٿيڻ", "روئي جي معيار گهٽجڻ", "نمي واري روٽ ۾ بدبو"],
-      "causes": ["Fungi and bacteria entering damaged bolls during humid weather"],
-      "causes_sd": ["نمي ۾ خراب بول ۾ فنگس ۽ بيڪٽيريا داخل ٿيڻ"],
-      "prevention": ["Control bollworms", "Improve field drainage", "Avoid excessive vegetative growth"],
-      "prevention_sd": ["بول ورم ڪنٽرول ڪريو", "پاڻي نيڪال بهتر ڪريو", "گهڻي سبزي واڌ کان بچو"],
-      "treatment": ["Manage insects and apply recommended fungicide if needed"],
-      "treatment_sd": ["جيت ڪنٽرول ڪريو ۽ ضرورت هجي ته سفارش ڪيل فنگسائڊ ڏيو"],
+      "name_sd": "ڪپهه بول جو ساڙ",
+      "symptoms": [
+        "Bolls become brown or black",
+        "Lint quality drops",
+        "Bad smell in wet rot cases"
+      ],
+      "symptoms_sd": [
+        "بول ناسي يا ڪارا ٿيڻ",
+        "روئي جي معيار گهٽجڻ",
+        "گهم واري ساڙ ۾ بدبو"
+      ],
+      "causes": [
+        "Fungi and bacteria entering damaged bolls during humid weather"
+      ],
+      "causes_sd": [
+        "گهم ۾ خراب بول ۾ ڦڦوند ۽ بيڪٽيريا داخل ٿيڻ"
+      ],
+      "prevention": [
+        "Control bollworms",
+        "Improve field drainage",
+        "Avoid excessive vegetative growth"
+      ],
+      "prevention_sd": [
+        "بول ورم قابو ڪريو",
+        "پاڻي نيڪال بهتر ڪريو",
+        "گهڻي سبزي واڌ کان بچو"
+      ],
+      "treatment": [
+        "Manage insects and apply recommended fungicide if needed"
+      ],
+      "treatment_sd": [
+        "جيت قابو ڪريو ۽ ضرورت هجي ته سفارش ڪيل ڦڦوند مار دوا ڏيو"
+      ],
       "medicines": [
-        {"name": "Chlorothalonil", "name_sd": "ڪلوروٿالونل", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Chlorothalonil",
+          "name_sd": "ڪلوروٿالونل",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Within 3 days",
+      "favorable_conditions": {
+        "temperature": "20-30°C",
+        "humidity": "High",
+        "rainfall": "Frequent rain or leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if more than 10% leaves or new flush show active symptoms, or if disease is spreading after rain.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "Medium",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 6,
+      "pre_harvest_interval_days": 14,
+      "progression_stages": [
+        "Stage 1: small spots or mild discoloration",
+        "Stage 2: lesion expansion and visible tissue damage",
+        "Stage 3: tissue necrosis, leaf drop, or fruit/flower damage"
+      ],
+      "possible_co_infections": [
+        "Leaf curl virus + whitefly infestation",
+        "Boll rot + bollworm damage"
+      ],
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "boll surface",
+        "boll opening",
+        "infected lint area"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "Low",
+      "recommendation_summary": "Scout the field within 3 days, remove infected material, improve airflow, and use Chlorothalonil only if symptoms continue spreading.",
+      "sd": {
+        "simple": {
+          "name": "ڪپهه بول جو ساڙ",
+          "overview": "ڪپهه جا بول ناسي يا ڪارا ٿي سڙڻ لڳن ٿا، جنهن سان روئي جو معيار ۽ پيداوار متاثر ٿيندي آهي.",
+          "symptoms": [
+            "بول ناسي يا ڪارا ٿين ٿا",
+            "روئي جو رنگ ۽ معيار خراب ٿئي ٿو",
+            "گهم واري حالت ۾ بدبو به ٿي سگهي ٿي"
+          ],
+          "causes": [
+            "گهم، خراب پاڻي نيڪال ۽ جيتن جي زخمن مان جراثيم داخل ٿين ٿا",
+            "گهاٽو فصل بولن کي سڪڻ نٿو ڏئي"
+          ],
+          "prevention": [
+            "پاڻي نيڪال بهتر رکو",
+            "بول ورم ۽ ٻين جيتن تي نظر رکو",
+            "گهڻي سبزي واڌ کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "جيتن جي زخمن کي گهٽايو",
+            "متاثر بول هٽايو جتي ممڪن هجي",
+            "ضرورت هجي ته سفارش ڪيل دوا استعمال ڪريو"
+          ],
+          "important_note": "صرف دوا سان مسئلو حل نه ٿيندو؛ پاڻي نيڪال ۽ جيتن جي قابو تي به ڌيان ڏيو."
+        },
+        "medium": {
+          "name": "ڪپهه بول جو ساڙ",
+          "overview": "ڪپهه جا بول ناسي يا ڪارا ٿي سڙڻ لڳن ٿا، جنهن سان روئي جو معيار ۽ پيداوار متاثر ٿيندي آهي.",
+          "symptoms": [
+            "بول ناسي يا ڪارا ٿين ٿا",
+            "روئي جو رنگ ۽ معيار خراب ٿئي ٿو",
+            "گهم واري حالت ۾ بدبو به ٿي سگهي ٿي"
+          ],
+          "causes": [
+            "گهم، خراب پاڻي نيڪال ۽ جيتن جي زخمن مان جراثيم داخل ٿين ٿا",
+            "گهاٽو فصل بولن کي سڪڻ نٿو ڏئي"
+          ],
+          "prevention": [
+            "پاڻي نيڪال بهتر رکو",
+            "بول ورم ۽ ٻين جيتن تي نظر رکو",
+            "گهڻي سبزي واڌ کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "جيتن جي زخمن کي گهٽايو",
+            "متاثر بول هٽايو جتي ممڪن هجي",
+            "ضرورت هجي ته سفارش ڪيل دوا استعمال ڪريو"
+          ],
+          "important_note": "صرف دوا سان مسئلو حل نه ٿيندو؛ پاڻي نيڪال ۽ جيتن جي قابو تي به ڌيان ڏيو."
+        },
+        "expert": {
+          "name": "ڪپهه بول جو ساڙ",
+          "overview": "ڪپهه جا بول ناسي يا ڪارا ٿي سڙڻ لڳن ٿا، جنهن سان روئي جو معيار ۽ پيداوار متاثر ٿيندي آهي. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "بول ناسي يا ڪارا ٿين ٿا",
+            "روئي جو رنگ ۽ معيار خراب ٿئي ٿو",
+            "گهم واري حالت ۾ بدبو به ٿي سگهي ٿي"
+          ],
+          "causes": [
+            "گهم، خراب پاڻي نيڪال ۽ جيتن جي زخمن مان جراثيم داخل ٿين ٿا",
+            "گهاٽو فصل بولن کي سڪڻ نٿو ڏئي"
+          ],
+          "prevention": [
+            "پاڻي نيڪال بهتر رکو",
+            "بول ورم ۽ ٻين جيتن تي نظر رکو",
+            "گهڻي سبزي واڌ کان پاسو ڪريو"
+          ],
+          "treatment": [
+            "جيتن جي زخمن کي گهٽايو",
+            "متاثر بول هٽايو جتي ممڪن هجي",
+            "ضرورت هجي ته سفارش ڪيل دوا استعمال ڪريو"
+          ],
+          "important_note": "صرف دوا سان مسئلو حل نه ٿيندو؛ پاڻي نيڪال ۽ جيتن جي قابو تي به ڌيان ڏيو. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "rice_blast",
@@ -293,19 +3048,214 @@
       "label": "Rice Blast",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rice_blast_leaf_lesions.jpg",
       "severity": "High risk",
+      "taxonomy": {
+        "crop": "Rice",
+        "disease_type": "Fungal",
+        "class_label": "rice_blast"
+      },
+      "scientific_name": "Magnaporthe oryzae",
+      "confidence_level": "High",
+      "spread_type": "Airborne",
+      "economic_impact": "High",
+      "growth_stage_affected": [
+        "Seedling",
+        "Vegetative",
+        "Flowering"
+      ],
+      "image_symptoms_focus": [
+        "diamond-shaped lesions",
+        "gray center",
+        "brown border",
+        "neck blast symptoms"
+      ],
+      "differential_diagnosis": [
+        "Brown spot is more oval and uniformly brown",
+        "Bacterial blight causes water-soaked streaks"
+      ],
+      "organic_treatment_options": [
+        "Use resistant varieties",
+        "Avoid excess nitrogen",
+        "Maintain balanced water management"
+      ],
+      "chemical_safety_warning": "Use rice fungicides only at recommended stage and rotate modes of action where possible.",
+      "local_sindhi_term_verified": true,
       "name": "Rice Blast",
       "name_sd": "چانور بلاسٽ",
-      "symptoms": ["Diamond-shaped lesions on leaves", "Neck blast can empty grains", "Grey center with brown border"],
-      "symptoms_sd": ["پنن تي هيري جهڙا داغ", "نيڪ بلاسٽ سان داڻا خالي ٿي سگهن ٿا", "ڀورو مرڪز ۽ ناسي ڪنارو"],
-      "causes": ["Magnaporthe fungus under humid conditions"],
-      "causes_sd": ["نمي ۾ ميگناپورٿي فنگس"],
-      "prevention": ["Use resistant varieties", "Avoid excess nitrogen", "Keep balanced water management"],
-      "prevention_sd": ["مزاحمتي قسم استعمال ڪريو", "نائٽروجن گهڻي نه ڏيو", "پاڻي جو توازن رکو"],
-      "treatment": ["Apply tricyclazole or recommended fungicide at early symptoms"],
-      "treatment_sd": ["شروعاتي علامتن تي ٽرائي سائيڪلازول يا سفارش ڪيل فنگسائڊ ڏيو"],
+      "symptoms": [
+        "Diamond-shaped lesions on leaves",
+        "Neck blast can empty grains",
+        "Grey center with brown border"
+      ],
+      "symptoms_sd": [
+        "پنن تي هيري جهڙا داغ",
+        "نيڪ بلاسٽ سان داڻا خالي ٿي سگهن ٿا",
+        "ڀورو مرڪز ۽ ناسي ڪنارو"
+      ],
+      "causes": [
+        "Magnaporthe fungus under humid conditions"
+      ],
+      "causes_sd": [
+        "گهم ۾ ميگناپورٿي ڦڦوند"
+      ],
+      "prevention": [
+        "Use resistant varieties",
+        "Avoid excess nitrogen",
+        "Keep balanced water management"
+      ],
+      "prevention_sd": [
+        "مزاحمتي قسم استعمال ڪريو",
+        "نائٽروجن گهڻي نه ڏيو",
+        "پاڻي جو توازن رکو"
+      ],
+      "treatment": [
+        "Apply tricyclazole or recommended fungicide at early symptoms"
+      ],
+      "treatment_sd": [
+        "شروعاتي علامتن تي ٽرائي سائيڪلازول يا سفارش ڪيل ڦڦوند مار دوا ڏيو"
+      ],
       "medicines": [
-        {"name": "Tricyclazole", "name_sd": "ٽرائي سائيڪلازول", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"}
-      ]
+        {
+          "name": "Tricyclazole",
+          "name_sd": "ٽرائي سائيڪلازول",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+        }
+      ],
+      "action_urgency": "Immediate",
+      "favorable_conditions": {
+        "temperature": "20-28°C",
+        "humidity": "Very high",
+        "rainfall": "Frequent rain, dew, cloudy weather"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence",
+        "Can be confused with nutrient deficiency or old mechanical damage"
+      ],
+      "economic_threshold_action": "Treat if blast lesions appear in multiple field spots or neck blast risk is high during booting/heading.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "High",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 9,
+      "pre_harvest_interval_days": 21,
+      "progression_stages": [
+        "Stage 1: small spindle or diamond-shaped lesions",
+        "Stage 2: lesions expand with gray center and brown border",
+        "Stage 3: neck blast or panicle damage reduces grain filling"
+      ],
+      "possible_co_infections": [
+        "Rice blast + brown spot",
+        "Rice blast + sheath blight"
+      ],
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "lesion border",
+        "neck/panicle area"
+      ],
+      "treatment_effectiveness": {
+        "sanitation_and_pruning": 0.6,
+        "copper_fungicide": 0.75,
+        "mancozeb": 0.85
+      },
+      "treatment_cost_estimate": "High",
+      "recommendation_summary": "Act immediately if lesions are spreading: reduce excess nitrogen, keep balanced water, and apply recommended blast fungicide at the correct crop stage.",
+      "sd": {
+        "simple": {
+          "name": "چانورن جو بلاسٽ",
+          "overview": "چانورن ۾ پنن تي هيري جهڙا داغ ۽ ڪڏهن سنگ جي ڳچي تي حملو ٿي سگهي ٿو. گهم ۽ ابر واري موسم ۾ هي بيماري تيزي سان وڌي ٿي.",
+          "symptoms": [
+            "پنن تي هيري جهڙا داغ ٿين ٿا",
+            "داغ جو وچ ڀورو ۽ ڪنارو ناسي ٿي سگهي ٿو",
+            "ڳچي تي حملو ٿئي ته داڻا ڀرجي نٿا سگهن"
+          ],
+          "causes": [
+            "گهم، اوس ۽ ابر واري موسم ڦڦوند کي وڌائين ٿا",
+            "گهڻي نائٽروجن بيماري وڌائي سگهي ٿي"
+          ],
+          "prevention": [
+            "مزاحمتي قسم استعمال ڪريو",
+            "نائٽروجن مناسب مقدار ۾ ڏيو",
+            "پاڻي جو انتظام متوازن رکو"
+          ],
+          "treatment": [
+            "شروعاتي داغن تي کيت جو معائنو وڌايو",
+            "خطرو وڌي ته سفارش ڪيل بلاسٽ واري دوا صحيح مرحلي تي ڏيو"
+          ],
+          "important_note": "سنگ نڪرڻ واري وقت بلاسٽ وڌيڪ خطرناڪ آهي، تنهنڪري ان مرحلي تي خاص نگراني ڪريو."
+        },
+        "medium": {
+          "name": "چانورن جو بلاسٽ",
+          "overview": "چانورن ۾ پنن تي هيري جهڙا داغ ۽ ڪڏهن سنگ جي ڳچي تي حملو ٿي سگهي ٿو. گهم ۽ ابر واري موسم ۾ هي بيماري تيزي سان وڌي ٿي.",
+          "symptoms": [
+            "پنن تي هيري جهڙا داغ ٿين ٿا",
+            "داغ جو وچ ڀورو ۽ ڪنارو ناسي ٿي سگهي ٿو",
+            "ڳچي تي حملو ٿئي ته داڻا ڀرجي نٿا سگهن"
+          ],
+          "causes": [
+            "گهم، اوس ۽ ابر واري موسم ڦڦوند کي وڌائين ٿا",
+            "گهڻي نائٽروجن بيماري وڌائي سگهي ٿي"
+          ],
+          "prevention": [
+            "مزاحمتي قسم استعمال ڪريو",
+            "نائٽروجن مناسب مقدار ۾ ڏيو",
+            "پاڻي جو انتظام متوازن رکو"
+          ],
+          "treatment": [
+            "شروعاتي داغن تي کيت جو معائنو وڌايو",
+            "خطرو وڌي ته سفارش ڪيل بلاسٽ واري دوا صحيح مرحلي تي ڏيو"
+          ],
+          "important_note": "سنگ نڪرڻ واري وقت بلاسٽ وڌيڪ خطرناڪ آهي، تنهنڪري ان مرحلي تي خاص نگراني ڪريو."
+        },
+        "expert": {
+          "name": "چانورن جو بلاسٽ",
+          "overview": "چانورن ۾ پنن تي هيري جهڙا داغ ۽ ڪڏهن سنگ جي ڳچي تي حملو ٿي سگهي ٿو. گهم ۽ ابر واري موسم ۾ هي بيماري تيزي سان وڌي ٿي. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي هيري جهڙا داغ ٿين ٿا",
+            "داغ جو وچ ڀورو ۽ ڪنارو ناسي ٿي سگهي ٿو",
+            "ڳچي تي حملو ٿئي ته داڻا ڀرجي نٿا سگهن"
+          ],
+          "causes": [
+            "گهم، اوس ۽ ابر واري موسم ڦڦوند کي وڌائين ٿا",
+            "گهڻي نائٽروجن بيماري وڌائي سگهي ٿي"
+          ],
+          "prevention": [
+            "مزاحمتي قسم استعمال ڪريو",
+            "نائٽروجن مناسب مقدار ۾ ڏيو",
+            "پاڻي جو انتظام متوازن رکو"
+          ],
+          "treatment": [
+            "شروعاتي داغن تي کيت جو معائنو وڌايو",
+            "خطرو وڌي ته سفارش ڪيل بلاسٽ واري دوا صحيح مرحلي تي ڏيو"
+          ],
+          "important_note": "سنگ نڪرڻ واري وقت بلاسٽ وڌيڪ خطرناڪ آهي، تنهنڪري ان مرحلي تي خاص نگراني ڪريو. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     },
     {
       "id": "tomato_late_blight",
@@ -313,19 +3263,217 @@
       "label": "Tomato Late Blight",
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phytophthora_infestans_-_potato_late_blight.jpg",
       "severity": "High risk",
+      "taxonomy": {
+        "crop": "Tomato",
+        "disease_type": "Oomycete",
+        "class_label": "tomato_late_blight"
+      },
+      "scientific_name": "Phytophthora infestans",
+      "confidence_level": "High",
+      "spread_type": "Airborne",
+      "economic_impact": "High",
+      "growth_stage_affected": [
+        "Vegetative",
+        "Flowering",
+        "Fruit"
+      ],
+      "image_symptoms_focus": [
+        "water-soaked lesions",
+        "brown leaf patches",
+        "white underside growth",
+        "fruit rot"
+      ],
+      "differential_diagnosis": [
+        "Early blight has target-like concentric rings",
+        "Bacterial spot produces smaller speckled lesions"
+      ],
+      "organic_treatment_options": [
+        "Remove infected plants quickly",
+        "Avoid overhead irrigation",
+        "Improve spacing and airflow"
+      ],
+      "chemical_safety_warning": "Late blight can spread fast; follow local disease alerts and label instructions. Avoid harvesting before the labeled interval.",
+      "local_sindhi_term_verified": true,
       "name": "Tomato Late Blight",
-      "name_sd": "ٽماٽو ليٽ بلائٽ",
-      "symptoms": ["Water-soaked leaf spots", "White growth under leaves in humid weather", "Brown fruit rot"],
-      "symptoms_sd": ["پنن تي پاڻي جهڙا داغ", "نمي ۾ پنن هيٺ اڇي واڌ", "ميوي تي ناسي روٽ"],
-      "causes": ["Oomycete pathogen spread by cool wet weather"],
-      "causes_sd": ["ٿڌي ۽ نمي واري موسم ۾ پکڙجندڙ جراثيم"],
-      "prevention": ["Avoid overhead irrigation", "Use clean seedling material", "Remove infected plants quickly"],
-      "prevention_sd": ["مٿي کان پاڻي نه ڏيو", "صاف ٻوٽا استعمال ڪريو", "بيمار ٻوٽا جلد هٽايو"],
-      "treatment": ["Use protective fungicides early and follow local extension advice"],
-      "treatment_sd": ["شروعات ۾ حفاظتي فنگسائڊ ۽ مقامي زرعي صلاح تي عمل ڪريو"],
+      "name_sd": "ٽماٽي جي دير سان ساڙيندڙ بيماري",
+      "symptoms": [
+        "Water-soaked leaf spots",
+        "White growth under leaves in humid weather",
+        "Brown fruit rot"
+      ],
+      "symptoms_sd": [
+        "پنن تي پاڻي جهڙا داغ",
+        "گهم ۾ پنن هيٺ اڇي واڌ",
+        "ميوي تي ناسي ساڙ"
+      ],
+      "causes": [
+        "Oomycete pathogen spread by cool wet weather"
+      ],
+      "causes_sd": [
+        "ٿڌي ۽ گهم واري موسم ۾ پکڙجندڙ جراثيم"
+      ],
+      "prevention": [
+        "Avoid overhead irrigation",
+        "Use clean seedling material",
+        "Remove infected plants quickly"
+      ],
+      "prevention_sd": [
+        "مٿي کان پاڻي نه ڏيو",
+        "صاف ٻوٽا استعمال ڪريو",
+        "بيمار ٻوٽا جلد هٽايو"
+      ],
+      "treatment": [
+        "Use protective fungicides early and follow local extension advice"
+      ],
+      "treatment_sd": [
+        "شروعات ۾ حفاظتي ڦڦوند مار دوا ۽ مقامي زرعي صلاح تي عمل ڪريو"
+      ],
       "medicines": [
-        {"name": "Mancozeb + Metalaxyl", "name_sd": "مينڪوزيب + ميٽالاڪسل", "dose": "Use label dose", "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"}
-      ]
+        {
+          "name": "Mancozeb + Metalaxyl",
+          "name_sd": "مينڪوزيب + ميٽالاڪسل",
+          "dose": "Use label dose",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+        }
+      ],
+      "action_urgency": "Immediate",
+      "favorable_conditions": {
+        "temperature": "10-25°C",
+        "humidity": "Very high",
+        "rainfall": "Frequent rain, fog, long leaf wetness"
+      },
+      "region_prevalence": [
+        "Sindh",
+        "Punjab",
+        "South Asia"
+      ],
+      "visual_confusion_risks": [
+        "Early-stage symptoms may be hard to detect from one image",
+        "Poor lighting, dust, or blur can reduce model confidence"
+      ],
+      "economic_threshold_action": "Act immediately if water-soaked lesions appear and cool wet weather is forecast.",
+      "stage_based_management": {
+        "early": [
+          "Scout field and confirm symptoms on multiple plants",
+          "Remove visibly infected leaves or plant debris where practical"
+        ],
+        "moderate": [
+          "Apply IPM measures and use recommended treatment only if symptoms are spreading",
+          "Improve airflow, irrigation timing, and field sanitation"
+        ],
+        "severe": [
+          "Isolate or remove heavily infected plant material",
+          "Use recommended chemical control with PPE and local agriculture advice"
+        ]
+      },
+      "recurrence_risk": "High",
+      "resistance_notes": "Repeated use of the same fungicide group may select resistant pathogen populations. Rotate modes of action and avoid unnecessary sprays.",
+      "ipm_score": 9,
+      "pre_harvest_interval_days": 7,
+      "progression_stages": [
+        "Stage 1: water-soaked leaf spots",
+        "Stage 2: brown lesions expand with white growth under leaves",
+        "Stage 3: rapid leaf collapse and fruit rot"
+      ],
+      "possible_co_infections": [
+        "Late blight + early blight",
+        "Late blight + bacterial spot"
+      ],
+      "false_positive_triggers": [
+        "poor focus or motion blur",
+        "dust accumulation on leaves",
+        "sun glare or harsh shadows",
+        "nutrient deficiency spots",
+        "old mechanical injury",
+        "sun scorch"
+      ],
+      "ml_focus_regions": [
+        "leaf center",
+        "leaf margin",
+        "lesion border",
+        "underside if visible"
+      ],
+      "treatment_effectiveness": {
+        "mancozeb_metalaxyl": 0.82,
+        "sanitation_and_airflow": 0.55,
+        "copper_fungicide": 0.65
+      },
+      "treatment_cost_estimate": "High",
+      "recommendation_summary": "Act immediately in cool wet weather: remove infected leaves/plants, avoid overhead irrigation, and apply recommended protective fungicide if symptoms are active.",
+      "sd": {
+        "simple": {
+          "name": "ٽماٽي جي دير سان ساڙيندڙ بيماري",
+          "overview": "ٽماٽي ۾ پاڻي جهڙا داغ، پنن جو جلدي سڙڻ ۽ ميوي جو خراب ٿيڻ هن خطرناڪ بيماري جون نشانيون آهن. ٿڌي ۽ گهم واري موسم ۾ تيزي سان پکڙجي ٿي.",
+          "symptoms": [
+            "پنن تي پاڻي جهڙا داغ ٿين ٿا",
+            "گهم ۾ پنن جي هيٺان اڇي واڌ نظر اچي سگهي ٿي",
+            "ميوو ناسي ٿي سڙي سگهي ٿو"
+          ],
+          "causes": [
+            "ٿڌي، گهم ۽ مينهن واري موسم ۾ جراثيم تيزي سان وڌن ٿا",
+            "متاثر ٻوٽن مان بيماري آساني سان پکڙجي ٿي"
+          ],
+          "prevention": [
+            "مٿي کان پاڻي ڏيڻ کان بچو",
+            "ٻوٽن ۾ مناسب فاصلو رکو",
+            "بيمار پن يا ٻوٽا جلد هٽايو"
+          ],
+          "treatment": [
+            "علامت ڏسڻ شرط متاثر حصا هٽايو",
+            "برساتي موسم ۾ حفاظتي دوا مقامي صلاح مطابق استعمال ڪريو",
+            "فصل کي هوا ملڻ ڏيو"
+          ],
+          "important_note": "دير سان ساڙيندڙ بيماري تيزي سان نقصان ڪري سگهي ٿي؛ ٿڌي ۽ گهم واري موسم ۾ دير نه ڪريو."
+        },
+        "medium": {
+          "name": "ٽماٽي جي دير سان ساڙيندڙ بيماري",
+          "overview": "ٽماٽي ۾ پاڻي جهڙا داغ، پنن جو جلدي سڙڻ ۽ ميوي جو خراب ٿيڻ هن خطرناڪ بيماري جون نشانيون آهن. ٿڌي ۽ گهم واري موسم ۾ تيزي سان پکڙجي ٿي.",
+          "symptoms": [
+            "پنن تي پاڻي جهڙا داغ ٿين ٿا",
+            "گهم ۾ پنن جي هيٺان اڇي واڌ نظر اچي سگهي ٿي",
+            "ميوو ناسي ٿي سڙي سگهي ٿو"
+          ],
+          "causes": [
+            "ٿڌي، گهم ۽ مينهن واري موسم ۾ جراثيم تيزي سان وڌن ٿا",
+            "متاثر ٻوٽن مان بيماري آساني سان پکڙجي ٿي"
+          ],
+          "prevention": [
+            "مٿي کان پاڻي ڏيڻ کان بچو",
+            "ٻوٽن ۾ مناسب فاصلو رکو",
+            "بيمار پن يا ٻوٽا جلد هٽايو"
+          ],
+          "treatment": [
+            "علامت ڏسڻ شرط متاثر حصا هٽايو",
+            "برساتي موسم ۾ حفاظتي دوا مقامي صلاح مطابق استعمال ڪريو",
+            "فصل کي هوا ملڻ ڏيو"
+          ],
+          "important_note": "دير سان ساڙيندڙ بيماري تيزي سان نقصان ڪري سگهي ٿي؛ ٿڌي ۽ گهم واري موسم ۾ دير نه ڪريو."
+        },
+        "expert": {
+          "name": "ٽماٽي جي دير سان ساڙيندڙ بيماري",
+          "overview": "ٽماٽي ۾ پاڻي جهڙا داغ، پنن جو جلدي سڙڻ ۽ ميوي جو خراب ٿيڻ هن خطرناڪ بيماري جون نشانيون آهن. ٿڌي ۽ گهم واري موسم ۾ تيزي سان پکڙجي ٿي. هن داخلا ۾ سائنسي نالو ۽ کيت تشخيص لاءِ تصويري نشان الڳ ڏنل آهن.",
+          "symptoms": [
+            "پنن تي پاڻي جهڙا داغ ٿين ٿا",
+            "گهم ۾ پنن جي هيٺان اڇي واڌ نظر اچي سگهي ٿي",
+            "ميوو ناسي ٿي سڙي سگهي ٿو"
+          ],
+          "causes": [
+            "ٿڌي، گهم ۽ مينهن واري موسم ۾ جراثيم تيزي سان وڌن ٿا",
+            "متاثر ٻوٽن مان بيماري آساني سان پکڙجي ٿي"
+          ],
+          "prevention": [
+            "مٿي کان پاڻي ڏيڻ کان بچو",
+            "ٻوٽن ۾ مناسب فاصلو رکو",
+            "بيمار پن يا ٻوٽا جلد هٽايو"
+          ],
+          "treatment": [
+            "علامت ڏسڻ شرط متاثر حصا هٽايو",
+            "برساتي موسم ۾ حفاظتي دوا مقامي صلاح مطابق استعمال ڪريو",
+            "فصل کي هوا ملڻ ڏيو"
+          ],
+          "important_note": "دير سان ساڙيندڙ بيماري تيزي سان نقصان ڪري سگهي ٿي؛ ٿڌي ۽ گهم واري موسم ۾ دير نه ڪريو. بيماري جي تصديق لاءِ تصوير، موسم، فصل جو مرحلو ۽ کيت جو معائنو گڏ ڏسڻ گهرجن."
+        }
+      }
     }
   ]
 }

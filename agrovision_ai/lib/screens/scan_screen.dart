@@ -49,6 +49,12 @@ class _ScanScreenState extends State<ScanScreen> {
         ResultScreen.routeName,
         arguments: ResultScreenArgs(image: image, prediction: result),
       );
+    } on ScanRejectedException catch (error) {
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = _localizedRejectionMessage(context, error.reason);
+      });
     } catch (error) {
       if (!mounted) return;
       setState(() {
@@ -98,6 +104,16 @@ class _ScanScreenState extends State<ScanScreen> {
                           strings.mangoOnly,
                           style: const TextStyle(color: Color(0xFF60756B)),
                         ),
+                        const SizedBox(height: 10),
+                        Text(
+                          _cameraGuideMessage(context),
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Color(0xFF60756B),
+                            fontSize: 13,
+                            height: 1.35,
+                          ),
+                        ),
                       ],
                     )
                   : ClipRRect(
@@ -130,10 +146,69 @@ class _ScanScreenState extends State<ScanScreen> {
           ],
           if (_error != null) ...[
             const SizedBox(height: 14),
-            Text(_error!, style: const TextStyle(color: Colors.red)),
+            Card(
+              color: const Color(0xFFFFF1EB),
+              child: Padding(
+                padding: const EdgeInsets.all(14),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Icon(Icons.warning_amber, color: Color(0xFFC2410C)),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        _error!,
+                        style: const TextStyle(
+                          color: Color(0xFF7C2D12),
+                          fontWeight: FontWeight.w800,
+                          height: 1.35,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ],
       ),
     );
+  }
+
+  String _cameraGuideMessage(BuildContext context) {
+    final isSindhi = AppScope.of(context).language.isSindhi;
+    if (isSindhi) {
+      return 'رڳو انب جو صاف ۽ حقيقي پن جانچيو. فون يا ڪمپيوٽر جي پردي واري تصوير نه ڏيو.';
+    }
+    return 'Please scan only a clear real mango leaf. Avoid laptop/mobile screen photos.';
+  }
+
+  String _localizedRejectionMessage(
+    BuildContext context,
+    ScanRejectionReason reason,
+  ) {
+    final isSindhi = AppScope.of(context).language.isSindhi;
+    final title = isSindhi
+        ? 'اڻڄاتل يا غير واضح شيءِ'
+        : 'Unknown or unclear object';
+    final message = switch (reason) {
+      ScanRejectionReason.blurry =>
+        isSindhi
+            ? 'تصوير ڌنڌلي آهي. مھرباني ڪري انب جو صاف ۽ ويجهو پن جانچيو.'
+            : 'The image is blurry. Please scan a clear real mango leaf only.',
+      ScanRejectionReason.tooDark =>
+        isSindhi
+            ? 'تصوير اونداھي آهي. مھرباني ڪري بهتر روشني ۾ انب جو پن جانچيو.'
+            : 'The image is too dark. Please scan a clear real mango leaf in better light.',
+      ScanRejectionReason.tooBright =>
+        isSindhi
+            ? 'تصوير تمام روشن يا چمڪ واري آهي. مھرباني ڪري سڌي چمڪ کان بچي انب جو پن جانچيو.'
+            : 'The image is too bright or has glare. Please avoid direct glare and scan a real mango leaf.',
+      ScanRejectionReason.unclearObject =>
+        isSindhi
+            ? 'مھرباني ڪري رڳو انب جو صاف پن جانچيو. فون يا ڪمپيوٽر جي پردي واري تصوير نه ڏيو.'
+            : 'Please scan a clear real mango leaf only. Avoid mobile or laptop screen images.',
+    };
+    return '$title\n$message';
   }
 }

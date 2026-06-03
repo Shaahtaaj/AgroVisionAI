@@ -8,8 +8,18 @@ import 'package:tflite_flutter/tflite_flutter.dart';
 import '../data/disease_repository.dart';
 import '../models/prediction_result.dart';
 
+enum ScanRejectionReason { unclearObject, blurry, tooDark, tooBright }
+
+class ScanRejectedException implements Exception {
+  const ScanRejectedException(this.reason);
+
+  final ScanRejectionReason reason;
+}
+
 class TfliteDiseaseClassifier {
   static const int inputSize = 224;
+  static const double minConfidence = 0.75;
+  static const double minConfidenceGap = 0.20;
 
   Interpreter? _interpreter;
   List<String>? _labels;
@@ -28,6 +38,7 @@ class TfliteDiseaseClassifier {
     final labels = _labels!;
     final decoded = await _decode(imageFile);
     final quality = _inspectQuality(decoded);
+    _rejectPoorQuality(quality);
     final input = _preprocess(decoded);
     final outputShape = interpreter.getOutputTensor(0).shape;
     final outputLength = outputShape.isEmpty
@@ -38,17 +49,25 @@ class TfliteDiseaseClassifier {
     interpreter.run(input, output);
 
     final scores = output.first;
-    final bestIndex = _argMax(scores);
-    final confidence = _confidence(scores[bestIndex], scores);
-    final label = bestIndex < labels.length
-        ? labels[bestIndex]
-        : 'class_$bestIndex';
+    final candidates = _rankPredictions(scores, labels);
+    final top1 = candidates.first;
+    final top2 = candidates.length > 1
+        ? candidates[1]
+        : const PredictionCandidate(label: 'none', confidence: 0);
+    final confidenceGap = top1.confidence - top2.confidence;
+
+    if (top1.confidence < minConfidence || confidenceGap < minConfidenceGap) {
+      throw const ScanRejectedException(ScanRejectionReason.unclearObject);
+    }
+
+    final label = top1.label;
     final disease = await DiseaseRepository.instance.findByLabel(label);
 
     return PredictionResult(
       label: label,
-      confidence: confidence,
+      confidence: top1.confidence,
       quality: quality,
+      topPredictions: candidates,
       disease: disease,
     );
   }
@@ -109,6 +128,18 @@ class TfliteDiseaseClassifier {
     );
   }
 
+  void _rejectPoorQuality(ImageQualityReport quality) {
+    if (quality.issues.contains(ImageQualityIssue.blurry)) {
+      throw const ScanRejectedException(ScanRejectionReason.blurry);
+    }
+    if (quality.issues.contains(ImageQualityIssue.tooDark)) {
+      throw const ScanRejectedException(ScanRejectionReason.tooDark);
+    }
+    if (quality.issues.contains(ImageQualityIssue.tooBright)) {
+      throw const ScanRejectedException(ScanRejectionReason.tooBright);
+    }
+  }
+
   double _luminance(img.Pixel pixel) {
     return (0.299 * pixel.r) + (0.587 * pixel.g) + (0.114 * pixel.b);
   }
@@ -140,27 +171,34 @@ class TfliteDiseaseClassifier {
         .toList();
   }
 
-  int _argMax(List<double> values) {
-    var bestIndex = 0;
-    var bestValue = values.first;
-    for (var i = 1; i < values.length; i++) {
-      if (values[i] > bestValue) {
-        bestIndex = i;
-        bestValue = values[i];
-      }
-    }
-    return bestIndex;
+  List<PredictionCandidate> _rankPredictions(
+    List<double> scores,
+    List<String> labels,
+  ) {
+    final probabilities = _probabilities(scores);
+    final candidates = <PredictionCandidate>[
+      for (var i = 0; i < probabilities.length; i++)
+        PredictionCandidate(
+          label: i < labels.length ? labels[i] : 'class_$i',
+          confidence: probabilities[i],
+        ),
+    ];
+    candidates.sort((a, b) => b.confidence.compareTo(a.confidence));
+    return candidates;
   }
 
-  double _confidence(double rawScore, List<double> scores) {
+  List<double> _probabilities(List<double> scores) {
     final total = scores.fold<double>(0, (sum, value) => sum + value);
-    if (rawScore >= 0 && rawScore <= 1 && total > 0.95 && total < 1.05) {
-      return rawScore.clamp(0, 1);
+    final looksLikeProbabilities = scores.every(
+      (score) => score >= 0 && score <= 1,
+    );
+    if (looksLikeProbabilities && total > 0.95 && total < 1.05) {
+      return scores.map((score) => score.clamp(0, 1).toDouble()).toList();
     }
     final maxScore = scores.reduce(max);
     final expScores = scores.map((score) => exp(score - maxScore)).toList();
     final expTotal = expScores.fold<double>(0, (sum, value) => sum + value);
-    return (exp(rawScore - maxScore) / expTotal).clamp(0, 1);
+    return expScores.map((score) => score / expTotal).toList();
   }
 
   void close() {
