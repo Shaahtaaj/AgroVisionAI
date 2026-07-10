@@ -1,0 +1,42 @@
+field,value,status,source,notes
+model_file,assets/model/mango_model.tflite,Verified,Repository file,Deployed artifact exists; contents were not modified
+label_file,assets/model/labels.txt,Verified,Repository file,App label file exists; original training class_indices were not found
+model_size_bytes,44684752,Verified,docs/model_recovery/tflite_model_report.json,Measured from the deployed model by inspect_tflite.py
+model_sha256,616EA24D8784A6E1E75633B92392DA327E579B52465F9802069D675CF547E1FE,Verified,docs/model_recovery/tflite_model_report.json,Hash of the inspected deployed model on 2026-07-10
+input_shape,"[1,224,224,3]",Verified,docs/model_recovery/tflite_model_report.json,Input shape signature is [-1 224 224 3]
+input_dtype,float32,Verified,docs/model_recovery/tflite_model_report.json,Verified from TFLite interpreter tensor details
+output_shape,"[1,8]",Verified,docs/model_recovery/tflite_model_report.json,Output shape signature is [-1 8]
+output_dtype,float32,Verified,docs/model_recovery/tflite_model_report.json,Verified from TFLite interpreter tensor details
+quantization,"Input and output quantization [0.0,0]; no quantization scales or zero points",Verified,docs/model_recovery/tflite_model_report.json,Deployed tensors are unquantized float32
+label_count,8,Verified,docs/model_recovery/tflite_model_report.json,Label count matches the primary output score count of 8
+label_order,"Anthracnose | Bacterial Canker | Cutting Weevil | Die Back | Gall Midge | Healthy | Powdery Mildew | Sooty Mould",Verified,assets/model/labels.txt,Verified from app label file; not yet verified from original training class_indices
+flutter_preprocessing,"decode -> direct resize 224x224 -> RGB -> pixel/255.0 -> batch [1,224,224,3]",App assumption,lib/services/tflite_disease_classifier.dart,Verified as current app behavior but not confirmed against training
+resize_method,direct resize to 224x224 with linear interpolation,App assumption,lib/services/tflite_disease_classifier.dart,Training resize or crop method is Unknown
+channel_order,RGB,App assumption,lib/services/tflite_disease_classifier.dart,Training channel order is Unknown
+normalization,pixel / 255.0,App assumption,lib/services/tflite_disease_classifier.dart,Training normalization is Unknown
+output_processing,"Use probabilities when scores sum near 1; otherwise softmax; rank descending",Verified,lib/services/tflite_disease_classifier.dart,Verified current app runtime behavior only
+confidence_threshold,0.75,Verified,lib/services/tflite_disease_classifier.dart,Temporary app decision threshold; not validated or calibrated
+top_two_gap_threshold,0.20,Verified,lib/services/tflite_disease_classifier.dart,Temporary app decision threshold; not validated or calibrated
+training_code,TBD,Unknown,Repository and safe inventory scan,No original training script or notebook found
+tensorflow_version,TBD,Unknown,Repository and safe inventory scan,No training environment file or executable Python environment found
+keras_version,TBD,Unknown,Repository and safe inventory scan,No training environment file found
+model_backbone,TBD,Unknown,Repository and safe inventory scan,README only reports CNN; exact architecture was not recovered
+pretrained_weights,TBD,Unknown,Repository and safe inventory scan,No source training configuration found
+dataset_source,TBD,Unknown,Repository and safe inventory scan,No dataset manifest or original download record found
+dataset_license,TBD,Unknown,Repository and safe inventory scan,No dataset license evidence found
+per_class_image_counts,TBD,Unknown,Repository and safe inventory scan,No training dataset folders or count report found
+train_validation_test_split,TBD,Unknown,Repository and safe inventory scan,No split manifest found
+split_unit,TBD,Unknown,Repository and safe inventory scan,Image-level versus tree/orchard-level split is unknown
+duplicate_leakage_audit,TBD,Unknown,Repository and safe inventory scan,No duplicate or leakage report found
+augmentation_config,TBD,Unknown,Repository and safe inventory scan,Guide contains recommendations only; not training evidence
+optimizer,TBD,Unknown,Repository and safe inventory scan,No training configuration found
+loss_function,TBD,Unknown,Repository and safe inventory scan,No training configuration found
+batch_size,TBD,Unknown,Repository and safe inventory scan,No training configuration found
+epochs,TBD,Unknown,Repository and safe inventory scan,No training logs or configuration found
+tflite_conversion_command,TBD,Unknown,Repository and safe inventory scan,No conversion script or command found
+evaluation_confusion_matrix,TBD,Unknown,Repository and safe inventory scan,No evaluation artifact found
+per_class_precision_recall_f1,TBD,Unknown,Repository and safe inventory scan,No evaluation artifact found
+external_field_validation,TBD,Unknown,Repository and safe inventory scan,No independent field-validation report found
+python_flutter_parity,TBD,Unknown,Repository and safe inventory scan,No shared test vectors or parity report found
+python_environment,Python 3.12.10 virtual environment,Verified,docs/model_recovery/python_environment_unblock_summary.md,Project recovery environment created at .venv-model-recovery
+tflite_inspection_report,docs/model_recovery/tflite_model_report.json,Verified,tools/inspect_tflite.py,Generated successfully by the inspection script on 2026-07-10
