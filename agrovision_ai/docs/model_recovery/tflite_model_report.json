@@ -1,0 +1,87 @@
+{
+  "report_status": "Verified by TensorFlow Lite interpreter inspection",
+  "generated_at_utc": "2026-07-10T07:14:49.090680+00:00",
+  "tensorflow_version": "2.21.0",
+  "model": {
+    "path": "assets/model/mango_model.tflite",
+    "size_bytes": 44684752,
+    "size_mib": 42.6147,
+    "sha256": "616EA24D8784A6E1E75633B92392DA327E579B52465F9802069D675CF547E1FE"
+  },
+  "labels": {
+    "path": "assets/model/labels.txt",
+    "count": 8,
+    "order": [
+      "Anthracnose",
+      "Bacterial Canker",
+      "Cutting Weevil",
+      "Die Back",
+      "Gall Midge",
+      "Healthy",
+      "Powdery Mildew",
+      "Sooty Mould"
+    ]
+  },
+  "inputs": [
+    {
+      "name": "serving_default_keras_tensor_10:0",
+      "index": 0,
+      "shape": [
+        1,
+        224,
+        224,
+        3
+      ],
+      "shape_signature": [
+        -1,
+        224,
+        224,
+        3
+      ],
+      "dtype": "float32",
+      "quantization": [
+        0.0,
+        0
+      ],
+      "quantization_parameters": {
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0,
+        "block_size": 0
+      },
+      "sparsity_parameters": {}
+    }
+  ],
+  "outputs": [
+    {
+      "name": "StatefulPartitionedCall_1:0",
+      "index": 26,
+      "shape": [
+        1,
+        8
+      ],
+      "shape_signature": [
+        -1,
+        8
+      ],
+      "dtype": "float32",
+      "quantization": [
+        0.0,
+        0
+      ],
+      "quantization_parameters": {
+        "scales": [],
+        "zero_points": [],
+        "quantized_dimension": 0,
+        "block_size": 0
+      },
+      "sparsity_parameters": {}
+    }
+  ],
+  "consistency": {
+    "output_tensor_count": 1,
+    "primary_output_score_count": 8,
+    "label_count": 8,
+    "label_count_matches_primary_output": true
+  }
+}
