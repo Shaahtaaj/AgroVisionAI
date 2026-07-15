@@ -254,6 +254,10 @@ class _ScanScreenState extends State<ScanScreen> {
         isSindhi
             ? 'مھرباني ڪري رڳو انب جو صاف پن جانچيو. فون يا ڪمپيوٽر جي پردي واري تصوير نه ڏيو.'
             : 'Please scan a clear real mango leaf only. Avoid mobile or laptop screen images.',
+      ScanRejectionReason.likelyHand =>
+        isSindhi
+            ? 'تصوير ۾ هٿ يا چمڙي جهڙي شيءِ نظر اچي ٿي. مھرباني ڪري رڳو انب جو صاف ۽ حقيقي پن جانچيو.'
+            : 'A hand or skin-like object was detected. Please scan only a clear real mango leaf.',
     };
     return '$title\n$message';
   }

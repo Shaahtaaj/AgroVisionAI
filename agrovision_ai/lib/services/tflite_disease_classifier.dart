@@ -9,7 +9,13 @@ import 'package:tflite_flutter/tflite_flutter.dart';
 import '../data/disease_repository.dart';
 import '../models/prediction_result.dart';
 
-enum ScanRejectionReason { unclearObject, blurry, tooDark, tooBright }
+enum ScanRejectionReason {
+  unclearObject,
+  likelyHand,
+  blurry,
+  tooDark,
+  tooBright,
+}
 
 class ScanRejectedException implements Exception {
   const ScanRejectedException(this.reason);
@@ -58,12 +64,13 @@ class TfliteDiseaseClassifier {
   }
 
   Future<PredictionResult> predict(File imageFile) async {
-    await load();
-    final interpreter = _interpreter!;
-    final labels = _labels!;
     final decoded = await _decode(imageFile);
     final quality = _inspectQuality(decoded);
     _rejectPoorQuality(quality);
+    _rejectLikelyHand(decoded);
+    await load();
+    final interpreter = _interpreter!;
+    final labels = _labels!;
     final input = _preprocess(decoded);
     late List<PredictionCandidate> candidates;
     try {
@@ -175,6 +182,56 @@ class TfliteDiseaseClassifier {
     }
     if (quality.issues.contains(ImageQualityIssue.tooBright)) {
       throw const ScanRejectedException(ScanRejectionReason.tooBright);
+    }
+  }
+
+  void _rejectLikelyHand(img.Image decoded) {
+    final small = img.copyResize(decoded, width: 96, height: 96);
+    final startX = (small.width * 0.1).round();
+    final endX = (small.width * 0.9).round();
+    final startY = (small.height * 0.1).round();
+    final endY = (small.height * 0.9).round();
+    var skinPixels = 0;
+    var greenPixels = 0;
+    var samples = 0;
+
+    for (var y = startY; y < endY; y++) {
+      for (var x = startX; x < endX; x++) {
+        final pixel = small.getPixel(x, y);
+        final red = pixel.r.toDouble();
+        final green = pixel.g.toDouble();
+        final blue = pixel.b.toDouble();
+        final maximum = max(red, max(green, blue));
+        final minimum = min(red, min(green, blue));
+
+        final looksLikeSkin =
+            red > 95 &&
+            green > 40 &&
+            blue > 20 &&
+            maximum - minimum > 15 &&
+            (red - green).abs() > 15 &&
+            red > green &&
+            red > blue;
+        final looksGreen =
+            green > 45 && green > red * 1.04 && green > blue * 1.08;
+
+        if (looksLikeSkin) skinPixels++;
+        if (looksGreen) greenPixels++;
+        samples++;
+      }
+    }
+
+    final skinFraction = skinPixels / samples;
+    final greenFraction = greenPixels / samples;
+    debugPrint(
+      'Subject gate: skin=${skinFraction.toStringAsFixed(3)}, '
+      'green=${greenFraction.toStringAsFixed(3)}',
+    );
+
+    // Keep this conservative: it targets a hand filling the guide area and
+    // does not attempt to prove that every accepted subject is a mango leaf.
+    if (skinFraction >= 0.32 && greenFraction < 0.18) {
+      throw const ScanRejectedException(ScanRejectionReason.likelyHand);
     }
   }
 
