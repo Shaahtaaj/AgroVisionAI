@@ -12,6 +12,7 @@ import '../models/prediction_result.dart';
 enum ScanRejectionReason {
   unclearObject,
   likelyHand,
+  likelyNonLeaf,
   blurry,
   tooDark,
   tooBright,
@@ -67,7 +68,7 @@ class TfliteDiseaseClassifier {
     final decoded = await _decode(imageFile);
     final quality = _inspectQuality(decoded);
     _rejectPoorQuality(quality);
-    _rejectLikelyHand(decoded);
+    _rejectUnlikelySubject(decoded);
     await load();
     final interpreter = _interpreter!;
     final labels = _labels!;
@@ -185,7 +186,7 @@ class TfliteDiseaseClassifier {
     }
   }
 
-  void _rejectLikelyHand(img.Image decoded) {
+  void _rejectUnlikelySubject(img.Image decoded) {
     final small = img.copyResize(decoded, width: 96, height: 96);
     final startX = (small.width * 0.1).round();
     final endX = (small.width * 0.9).round();
@@ -193,6 +194,8 @@ class TfliteDiseaseClassifier {
     final endY = (small.height * 0.9).round();
     var skinPixels = 0;
     var greenPixels = 0;
+    var botanicalPixels = 0;
+    var neutralPixels = 0;
     var samples = 0;
 
     for (var y = startY; y < endY; y++) {
@@ -203,6 +206,7 @@ class TfliteDiseaseClassifier {
         final blue = pixel.b.toDouble();
         final maximum = max(red, max(green, blue));
         final minimum = min(red, min(green, blue));
+        final saturation = maximum == 0 ? 0.0 : (maximum - minimum) / maximum;
 
         final looksLikeSkin =
             red > 95 &&
@@ -214,24 +218,48 @@ class TfliteDiseaseClassifier {
             red > blue;
         final looksGreen =
             green > 45 && green > red * 1.04 && green > blue * 1.08;
+        final looksLikeLeafColor =
+            looksGreen ||
+            (green > 35 &&
+                green > red * 0.88 &&
+                green > blue * 1.05 &&
+                saturation > 0.12) ||
+            (red > 65 &&
+                green > 50 &&
+                blue < green * 0.75 &&
+                red < green * 1.8 &&
+                saturation > 0.20);
 
         if (looksLikeSkin) skinPixels++;
         if (looksGreen) greenPixels++;
+        if (looksLikeLeafColor) botanicalPixels++;
+        if (saturation < 0.12) neutralPixels++;
         samples++;
       }
     }
 
     final skinFraction = skinPixels / samples;
     final greenFraction = greenPixels / samples;
+    final botanicalFraction = botanicalPixels / samples;
+    final neutralFraction = neutralPixels / samples;
     debugPrint(
       'Subject gate: skin=${skinFraction.toStringAsFixed(3)}, '
-      'green=${greenFraction.toStringAsFixed(3)}',
+      'green=${greenFraction.toStringAsFixed(3)}, '
+      'botanical=${botanicalFraction.toStringAsFixed(3)}, '
+      'neutral=${neutralFraction.toStringAsFixed(3)}',
     );
 
     // Keep this conservative: it targets a hand filling the guide area and
     // does not attempt to prove that every accepted subject is a mango leaf.
     if (skinFraction >= 0.32 && greenFraction < 0.18) {
       throw const ScanRejectedException(ScanRejectionReason.likelyHand);
+    }
+
+    // Screens, keyboards, walls, and similar neutral objects typically have
+    // little botanical color in the guide area. Yellow and brown leaf colors
+    // are included above so this does not require a leaf to be purely green.
+    if (botanicalFraction < 0.12 && neutralFraction >= 0.35) {
+      throw const ScanRejectedException(ScanRejectionReason.likelyNonLeaf);
     }
   }
 

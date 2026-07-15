@@ -258,6 +258,10 @@ class _ScanScreenState extends State<ScanScreen> {
         isSindhi
             ? 'تصوير ۾ هٿ يا چمڙي جهڙي شيءِ نظر اچي ٿي. مھرباني ڪري رڳو انب جو صاف ۽ حقيقي پن جانچيو.'
             : 'A hand or skin-like object was detected. Please scan only a clear real mango leaf.',
+      ScanRejectionReason.likelyNonLeaf =>
+        isSindhi
+            ? 'تصوير ۾ انب جو پن صاف نظر نٿو اچي. ڪمپيوٽر جي پردي، ڪي بورڊ يا ٻي شيءِ بدران رڳو حقيقي پن جانچيو.'
+            : 'A clear mango leaf was not found. Avoid screens, keyboards, and other objects.',
     };
     return '$title\n$message';
   }
