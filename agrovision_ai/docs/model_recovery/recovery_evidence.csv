@@ -40,3 +40,25 @@ external_field_validation,TBD,Unknown,Repository and safe inventory scan,No inde
 python_flutter_parity,TBD,Unknown,Repository and safe inventory scan,No shared test vectors or parity report found
 python_environment,Python 3.12.10 virtual environment,Verified,docs/model_recovery/python_environment_unblock_summary.md,Project recovery environment created at .venv-model-recovery
 tflite_inspection_report,docs/model_recovery/tflite_model_report.json,Verified,tools/inspect_tflite.py,Generated successfully by the inspection script on 2026-07-10
+python_inference_runner,12 of 12 smoke images completed,Verified,docs/model_recovery/python_inference_results.csv,Executed with flutter_default preprocessing on 2026-07-11
+flutter_inference_capture,12 of 12 Android smoke outputs captured,Verified,docs/model_recovery/flutter_inference_results.csv,Captured on TECNO KJ7 Android 14 using test-only entrypoint
+parity_test_vectors,12 real local smoke images,Verified,docs/model_recovery/test_vector_manifest.csv,Runtime parity only; expected classes and training membership are unknown
+parity_smoke_image_count,12,Verified,docs/model_recovery/test_vector_counts.md,Counted from real supported image files in test_vectors/parity_smoke
+python_inference_results,docs/model_recovery/python_inference_results.csv,Verified,tools/run_tflite_inference.py,Contains successful outputs for all 12 real smoke images
+flutter_inference_results,docs/model_recovery/flutter_inference_results.csv,Verified,tool/android_parity_main.dart,Real CSV pulled from TECNO KJ7 with matching device/local SHA-256
+parity_comparison_report,docs/model_recovery/parity_comparison_report.csv,Verified,tools/compare_parity_results.py,Comparison ran on 12 paired real-image outputs
+python_flutter_top1_parity,12 of 12 top-1 labels match,Verified,docs/model_recovery/parity_comparison_report.csv,Top-1 agreement only; five score rows exceed tolerance
+python_flutter_score_tolerance,0.03 provisional smoke tolerance,Inferred,Week 3C comparison,7 PASS and 5 REVIEW at this tolerance
+preprocessing_parity_status,TBD,Unknown,Week 3b smoke attempt,Python execution alone cannot establish cross-runtime parity
+android_flutter_parity_capture,12 of 12 images completed,Verified,tool/android_parity_main.dart,TECNO KJ7 device 115333741O003144 Android 14 API 34
+runtime_preprocessing_parity_status,Aligned Python candidate matches Android outputs on 12 smoke images,Verified,docs/model_recovery/parity_comparison_report_aligned_candidate.csv,12 PASS at provisional score tolerance 0.03; training preprocessing remains unverified
+review_images_for_tensor_debug,5 REVIEW images,Verified,docs/model_recovery/review_images_for_tensor_debug.csv,Derived directly from the Week 3C parity comparison report
+python_input_tensor_dump,5 full float32 tensors and summaries,Verified,tools/dump_python_input_tensors.py,No inference performed by the dump tool
+flutter_input_tensor_dump,5 full float32 tensors and summaries,Verified,tool/android_input_tensor_dump_main.dart,Captured on TECNO KJ7 from the same hash-matched images
+input_tensor_comparison_report,docs/model_recovery/tensor_debug/input_tensor_comparison_report.csv,Verified,tools/compare_input_tensors.py,Full binary comparison completed for all 5 REVIEW images
+input_tensor_parity_status,Not demonstrated; 5 of 5 full tensor hashes differ,Unknown,docs/model_recovery/tensor_debug/input_tensor_comparison_report.csv,Shapes match but max absolute differences exceed 1e-5
+score_difference_root_cause,Different resize implementations are the leading cause,Inferred,docs/model_recovery/tensor_debug/week_3d_tensor_debug_findings.md,Pillow bilinear and package:image linear produce measurably different tensors; decode differences are not fully excluded
+python_preprocessing_candidate_test,6 modes across 5 REVIEW images,Verified,docs/model_recovery/tensor_debug/preprocessing_candidate_comparison.csv,30 real tensor comparisons completed
+best_python_preprocessing_candidate,flutter_image_linear_candidate,Verified,docs/model_recovery/tensor_debug/preprocessing_candidate_comparison.csv,Best by aggregate mean and worst-case maximum absolute difference
+candidate_tensor_parity_status,No candidate reached max_abs_diff <= 1e-5,Unknown,docs/model_recovery/tensor_debug/preprocessing_candidate_comparison.csv,Best candidate average mean_abs_diff 0.002185994 and worst max_abs_diff 0.058823556
+aligned_python_flutter_score_parity,12 PASS / 0 REVIEW / 0 FAIL / 0 SKIPPED,Verified,docs/model_recovery/parity_comparison_report_aligned_candidate.csv,Maximum top-1 score difference 0.018201113 at tolerance 0.03

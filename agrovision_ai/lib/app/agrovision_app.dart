@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../core/app_language.dart';
 import '../core/app_scope.dart';
+import '../core/language_preferences.dart';
 import '../screens/about_screen.dart';
 import '../screens/agri_terms_screen.dart';
 import '../screens/disease_info_screen.dart';
@@ -13,15 +16,38 @@ import '../screens/welcome_screen.dart';
 import '../services/tflite_disease_classifier.dart';
 
 class AgroVisionApp extends StatefulWidget {
-  const AgroVisionApp({super.key});
+  const AgroVisionApp({this.initialLanguage = AppLanguage.english, super.key});
+
+  final AppLanguage initialLanguage;
 
   @override
   State<AgroVisionApp> createState() => _AgroVisionAppState();
 }
 
 class _AgroVisionAppState extends State<AgroVisionApp> {
-  AppLanguage _language = AppLanguage.english;
+  late AppLanguage _language;
   final TfliteDiseaseClassifier _classifier = TfliteDiseaseClassifier();
+
+  @override
+  void initState() {
+    super.initState();
+    _language = widget.initialLanguage;
+  }
+
+  void _changeLanguage(AppLanguage language) {
+    if (_language == language) return;
+    setState(() => _language = language);
+    unawaited(_persistLanguage(language));
+  }
+
+  Future<void> _persistLanguage(AppLanguage language) async {
+    try {
+      await LanguagePreferences.save(language);
+    } catch (error, stackTrace) {
+      debugPrint('Could not persist app language: $error');
+      debugPrintStack(stackTrace: stackTrace);
+    }
+  }
 
   @override
   void dispose() {
@@ -33,7 +59,7 @@ class _AgroVisionAppState extends State<AgroVisionApp> {
   Widget build(BuildContext context) {
     return AppScope(
       language: _language,
-      onLanguageChanged: (language) => setState(() => _language = language),
+      onLanguageChanged: _changeLanguage,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'AgroVision AI',

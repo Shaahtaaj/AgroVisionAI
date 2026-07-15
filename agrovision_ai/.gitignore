@@ -33,6 +33,21 @@ migrate_working_dir/
 /build/
 /coverage/
 .venv-model-recovery/
+__pycache__/
+
+# Local model recovery artifacts
+docs/model_recovery/tensor_debug/
+docs/model_recovery/*_raw.csv
+docs/model_recovery/*_debug.csv
+
+# Local test images
+test_vectors/**/*.jpg
+test_vectors/**/*.jpeg
+test_vectors/**/*.png
+test_vectors/**/*.webp
+
+# Temporary Flutter/generated platform artifacts
+web/
 
 # Symbolication related
 app.*.symbols

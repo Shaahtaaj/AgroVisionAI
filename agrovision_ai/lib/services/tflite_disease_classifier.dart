@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:image/image.dart' as img;
 import 'package:tflite_flutter/tflite_flutter.dart';
@@ -16,6 +17,18 @@ class ScanRejectedException implements Exception {
   final ScanRejectionReason reason;
 }
 
+class ImageDecodeException implements Exception {
+  const ImageDecodeException();
+}
+
+class ModelLoadException implements Exception {
+  const ModelLoadException();
+}
+
+class DiseaseInferenceException implements Exception {
+  const DiseaseInferenceException();
+}
+
 class TfliteDiseaseClassifier {
   static const int inputSize = 224;
   static const double minConfidence = 0.75;
@@ -25,11 +38,23 @@ class TfliteDiseaseClassifier {
   List<String>? _labels;
 
   Future<void> load() async {
-    _interpreter ??= await Interpreter.fromAsset(
-      'assets/model/mango_model.tflite',
-      options: InterpreterOptions()..threads = 2,
-    );
-    _labels ??= await _loadLabels();
+    if (_interpreter != null && _labels != null) return;
+    try {
+      _interpreter ??= await Interpreter.fromAsset(
+        'assets/model/mango_model.tflite',
+        options: InterpreterOptions()..threads = 2,
+      );
+      _labels ??= await _loadLabels();
+      if (_labels!.isEmpty) {
+        throw StateError('The deployed label file is empty.');
+      }
+    } catch (error, stackTrace) {
+      debugPrint('TFLite model load failed: $error');
+      debugPrintStack(stackTrace: stackTrace);
+      close();
+      _labels = null;
+      throw const ModelLoadException();
+    }
   }
 
   Future<PredictionResult> predict(File imageFile) async {
@@ -40,16 +65,23 @@ class TfliteDiseaseClassifier {
     final quality = _inspectQuality(decoded);
     _rejectPoorQuality(quality);
     final input = _preprocess(decoded);
-    final outputShape = interpreter.getOutputTensor(0).shape;
-    final outputLength = outputShape.isEmpty
-        ? labels.length
-        : outputShape.reduce((a, b) => a * b);
-    final output = [List<double>.filled(outputLength, 0)];
-
-    interpreter.run(input, output);
-
-    final scores = output.first;
-    final candidates = _rankPredictions(scores, labels);
+    late List<PredictionCandidate> candidates;
+    try {
+      final outputShape = interpreter.getOutputTensor(0).shape;
+      final outputLength = outputShape.isEmpty
+          ? labels.length
+          : outputShape.reduce((a, b) => a * b);
+      final output = [List<double>.filled(outputLength, 0)];
+      interpreter.run(input, output);
+      candidates = _rankPredictions(output.first, labels);
+      if (candidates.isEmpty) {
+        throw StateError('The model returned no prediction candidates.');
+      }
+    } catch (error, stackTrace) {
+      debugPrint('TFLite inference failed: $error');
+      debugPrintStack(stackTrace: stackTrace);
+      throw const DiseaseInferenceException();
+    }
     final top1 = candidates.first;
     final top2 = candidates.length > 1
         ? candidates[1]
@@ -73,12 +105,18 @@ class TfliteDiseaseClassifier {
   }
 
   Future<img.Image> _decode(File imageFile) async {
-    final bytes = await imageFile.readAsBytes();
-    final decoded = img.decodeImage(bytes);
-    if (decoded == null) {
-      throw const FormatException('Unsupported image file.');
+    try {
+      final bytes = await imageFile.readAsBytes();
+      final decoded = img.decodeImage(bytes);
+      if (decoded == null) {
+        throw const FormatException('Unsupported image file.');
+      }
+      return decoded;
+    } catch (error, stackTrace) {
+      debugPrint('Image decode failed: $error');
+      debugPrintStack(stackTrace: stackTrace);
+      throw const ImageDecodeException();
     }
-    return decoded;
   }
 
   ImageQualityReport _inspectQuality(img.Image decoded) {

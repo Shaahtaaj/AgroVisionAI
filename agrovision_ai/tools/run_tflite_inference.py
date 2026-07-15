@@ -8,8 +8,9 @@ import csv
 import math
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
+from preprocessing_modes import PREPROCESSING_MODES, preprocess_image
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = PROJECT_ROOT / "assets" / "model" / "mango_model.tflite"
@@ -21,12 +22,6 @@ DEFAULT_OUTPUT = (
     / "python_inference_results.csv"
 )
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
-PREPROCESSING_MODES = (
-    "flutter_default",
-    "minus_one_to_one",
-    "raw_0_to_255",
-    "center_crop_0_to_1",
-)
 CSV_COLUMNS = (
     "image_path",
     "preprocessing_mode",
@@ -102,26 +97,21 @@ def _images(input_path: Path) -> list[Path]:
     return []
 
 
-def _preprocess(image_path: Path, mode: str, np: Any, Image: Any) -> Any:
-    with Image.open(image_path) as source:
-        image = source.convert("RGB")
-        if mode == "center_crop_0_to_1":
-            side = min(image.width, image.height)
-            left = (image.width - side) // 2
-            top = (image.height - side) // 2
-            image = image.crop((left, top, left + side, top + side))
-        image = image.resize((224, 224), resample=Image.Resampling.BILINEAR)
-        values = np.asarray(image, dtype=np.float32)
-
-    if mode in {"flutter_default", "center_crop_0_to_1"}:
-        values = values / 255.0
-    elif mode == "minus_one_to_one":
-        values = (values / 127.5) - 1.0
-    elif mode == "raw_0_to_255":
-        pass
-    else:
-        raise ValueError(f"Unsupported preprocessing mode: {mode}")
-    return np.expand_dims(values, axis=0)
+def _preprocess(
+    image_path: Path,
+    mode: str,
+    np: Any,
+    Image: Any,
+    tf: Any,
+) -> Any:
+    tensor, _ = preprocess_image(
+        image_path,
+        mode,
+        np=np,
+        Image=Image,
+        tf=tf,
+    )
+    return tensor
 
 
 def _coerce_input(values: Any, tensor_details: dict[str, Any], np: Any) -> Any:
@@ -208,7 +198,11 @@ def main() -> int:
     for image_path in image_paths:
         try:
             values = _preprocess(
-                image_path, args.preprocessing, np=np, Image=Image
+                image_path,
+                args.preprocessing,
+                np=np,
+                Image=Image,
+                tf=tf,
             )
             expected_shape = tuple(int(value) for value in input_tensor["shape"])
             if tuple(values.shape) != expected_shape:
@@ -257,7 +251,10 @@ def main() -> int:
     with output_path.open("w", encoding="utf-8", newline="") as destination:
         writer = csv.DictWriter(destination, fieldnames=CSV_COLUMNS)
         writer.writeheader()
-        writer.writerows(rows)
+        # rows is a list[dict[str, Any]] which mypy may not consider a
+        # valid Iterable[Mapping[Literal[...], Any]]. Cast to Any to
+        # satisfy the type checker while preserving runtime behavior.
+        writer.writerows(cast(Any, rows))
 
     successful = sum(row["status"] == "OK" for row in rows)
     print(f"Images found: {len(image_paths)}")

@@ -10,6 +10,7 @@ class DiseaseRepository {
   static final DiseaseRepository instance = DiseaseRepository._();
 
   List<Disease>? _cache;
+  Set<String>? _detectableLabels;
 
   Future<List<Disease>> getDiseases() async {
     if (_cache != null) return _cache!;
@@ -35,6 +36,8 @@ class DiseaseRepository {
 
   Future<Disease?> findByLabel(String label) async {
     final normalized = _normalize(label);
+    final detectableLabels = await getDetectableLabels();
+    if (!detectableLabels.contains(normalized)) return null;
     final diseases = await getDiseases();
     for (final disease in diseases) {
       if (_normalize(disease.label) == normalized ||
@@ -45,6 +48,32 @@ class DiseaseRepository {
     return null;
   }
 
+  Future<Set<String>> getDetectableLabels() async {
+    if (_detectableLabels != null) return _detectableLabels!;
+    final raw = await rootBundle.loadString('assets/model/labels.txt');
+    _detectableLabels = raw
+        .split(RegExp(r'\r?\n'))
+        .map((label) => _normalize(label.trim()))
+        .where((label) => label.isNotEmpty)
+        .toSet();
+    return _detectableLabels!;
+  }
+
+  Future<List<DiseaseCatalogEntry>> getDiseaseCatalogByCrop(String crop) async {
+    final diseases = await getDiseasesByCrop(crop);
+    final detectableLabels = await getDetectableLabels();
+    return diseases
+        .map(
+          (disease) => DiseaseCatalogEntry(
+            disease: disease,
+            isAiDetectable: detectableLabels.contains(
+              _normalize(disease.label),
+            ),
+          ),
+        )
+        .toList();
+  }
+
   String _normalize(String value) {
     return value
         .toLowerCase()
@@ -52,4 +81,14 @@ class DiseaseRepository {
         .replaceAll(RegExp(r'_+'), '_')
         .replaceAll(RegExp(r'^_|_$'), '');
   }
+}
+
+class DiseaseCatalogEntry {
+  const DiseaseCatalogEntry({
+    required this.disease,
+    required this.isAiDetectable,
+  });
+
+  final Disease disease;
+  final bool isAiDetectable;
 }

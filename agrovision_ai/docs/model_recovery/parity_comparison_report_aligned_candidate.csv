@@ -1,0 +1,13 @@
+image_path,actual_class,python_top1,python_score,flutter_top1,flutter_score,absolute_score_difference,top1_match,status,notes
+test_vectors/parity_smoke/blurry_image_01.jpg,unknown,Sooty Mould,0.998382211,Sooty Mould,0.998580575,0.000198364,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/dark_image_01.jpg,unknown,Sooty Mould,0.999593079,Sooty Mould,0.999557912,0.000035167,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/door_01.jpg,unknown,Sooty Mould,0.999150753,Sooty Mould,0.999171972,0.000021219,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/hand_01.jpg,unknown,Powdery Mildew,0.993111491,Powdery Mildew,0.991109967,0.002001524,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/notebook_01.jpg,unknown,Sooty Mould,0.919671178,Sooty Mould,0.923889279,0.004218101,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/plant_01.jpg,unknown,Powdery Mildew,1.000000000,Powdery Mildew,1.000000000,0.000000000,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/roof_01.jpg,unknown,Gall Midge,0.896534681,Gall Midge,0.901010215,0.004475534,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/screen_01.jpg,unknown,Powdery Mildew,0.999999404,Powdery Mildew,0.999999404,0.000000000,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/soil_01.jpg,unknown,Die Back,0.976945400,Die Back,0.978283167,0.001337767,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/tiles_01.jpg,unknown,Die Back,0.931022942,Die Back,0.949224055,0.018201113,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/wall_01.jpg,unknown,Sooty Mould,0.830835521,Sooty Mould,0.818854094,0.011981427,true,PASS,Labels match within initial tolerance 0.030.
+test_vectors/parity_smoke/window_01.jpg,unknown,Cutting Weevil,0.997780502,Cutting Weevil,0.997959256,0.000178754,true,PASS,Labels match within initial tolerance 0.030.

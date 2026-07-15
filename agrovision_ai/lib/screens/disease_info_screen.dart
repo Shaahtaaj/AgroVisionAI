@@ -29,8 +29,8 @@ class DiseaseInfoScreen extends StatelessWidget {
           style: const TextStyle(fontWeight: FontWeight.w900),
         ),
       ),
-      body: FutureBuilder<List<Disease>>(
-        future: DiseaseRepository.instance.getDiseasesByCrop(crop),
+      body: FutureBuilder<List<DiseaseCatalogEntry>>(
+        future: DiseaseRepository.instance.getDiseaseCatalogByCrop(crop),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
             return const Center(child: CircularProgressIndicator());
@@ -39,8 +39,11 @@ class DiseaseInfoScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
-              final disease = snapshot.data![index];
-              return _DiseaseExpansionTile(disease: disease);
+              final entry = snapshot.data![index];
+              return _DiseaseExpansionTile(
+                disease: entry.disease,
+                isAiDetectable: entry.isAiDetectable,
+              );
             },
           );
         },
@@ -50,9 +53,13 @@ class DiseaseInfoScreen extends StatelessWidget {
 }
 
 class _DiseaseExpansionTile extends StatelessWidget {
-  const _DiseaseExpansionTile({required this.disease});
+  const _DiseaseExpansionTile({
+    required this.disease,
+    required this.isAiDetectable,
+  });
 
   final Disease disease;
+  final bool isAiDetectable;
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +88,11 @@ class _DiseaseExpansionTile extends StatelessWidget {
                       ],
                     ),
                   ),
+                ),
+                PositionedDirectional(
+                  top: 12,
+                  end: 12,
+                  child: _DetectabilityBadge(isAiDetectable: isAiDetectable),
                 ),
                 PositionedDirectional(
                   start: 16,
@@ -208,6 +220,49 @@ class _DiseaseExpansionTile extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _DetectabilityBadge extends StatelessWidget {
+  const _DetectabilityBadge({required this.isAiDetectable});
+
+  final bool isAiDetectable;
+
+  @override
+  Widget build(BuildContext context) {
+    final strings = AppStrings(AppScope.of(context).language);
+    final background = isAiDetectable
+        ? const Color(0xFF0B7A3B)
+        : const Color(0xFF8A4B08);
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        color: background,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: Colors.white54),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              isAiDetectable ? Icons.auto_awesome : Icons.menu_book,
+              size: 15,
+              color: Colors.white,
+            ),
+            const SizedBox(width: 5),
+            Text(
+              isAiDetectable ? strings.aiDetectable : strings.informationOnly,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

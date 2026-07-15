@@ -1,86 +1,50 @@
-# Model Recovery Workspace
+# AgroVision AI Model Recovery
 
-This folder contains Week 1 evidence for recovering the provenance and runtime
-contract of the deployed AgroVision AI mango model. Recovery files document
-what is verified, what the Flutter app assumes, what is inferred, and what
-remains unknown.
+This slim folder preserves the final verified runtime contract and accepted
+Python-Android parity result for the deployed mango model.
 
-## Run the inventory
+## Final Status
 
-From the Flutter project directory:
+- Top-1 Python-Android parity: Verified on 12 smoke images.
+- Aligned runtime score parity: Verified at tolerance 0.03.
+- Exact tensor parity: Not verified.
+- Training preprocessing: Not recovered.
+- Model accuracy: Not validated.
+- Production readiness: Not claimed.
 
-```powershell
-python tools/model_recovery_inventory.py
-```
+## Essential Evidence
 
-The tool automatically scans the repository parent when it is safe. Disable
-that optional parent scan with:
+- MODEL_SPEC: ../MODEL_SPEC.md
+- Recovery evidence: recovery_evidence.csv
+- TFLite inspection: tflite_model_report.json
+- Python environment record: python_environment_unblock_summary.md
+- Final alignment summary: week_3e_preprocessing_alignment_summary.md
+- Final aligned comparison: parity_comparison_report_aligned_candidate.csv
+- Cleanup record: cleanup_summary.md
 
-```powershell
-python tools/model_recovery_inventory.py --no-parent
-```
+Raw tensor dumps, local smoke images, intermediate inference CSVs, and weekly
+debug logs were removed after their accepted conclusions were summarized.
 
-The inventory skips `.git`, `build`, `.dart_tool`, `android/.gradle`,
-`ios/Pods`, and `node_modules`. It writes:
+## Verification Tools
 
-```text
-docs/model_recovery/training_artifacts_inventory.csv
-```
+The retained reusable tools are:
 
-## Inspect the TFLite model
+- tools/inspect_tflite.py
+- tools/run_tflite_inference.py
+- tools/preprocessing_modes.py
 
-TensorFlow must be installed in the active Python environment:
+Recreate the isolated Python environment when verification is needed:
 
-```powershell
-python tools/inspect_tflite.py
-```
+    .\scripts\setup_model_recovery_env.ps1
 
-On success, the script writes:
+Then inspect the model:
 
-```text
-docs/model_recovery/tflite_model_report.json
-```
+    .\.venv-model-recovery\Scripts\python.exe tools\inspect_tflite.py
 
-If TensorFlow is missing, the script exits with a clear error and does not
-modify the model. Do not manually invent tensor details in the report.
+For Python runtime evaluation aligned toward the deployed package:image resize
+path, use:
 
-## Evidence statuses
+    .\.venv-model-recovery\Scripts\python.exe tools\run_tflite_inference.py --input <images> --preprocessing flutter_image_linear_candidate
 
-- `Verified`: directly proven by repository content, file metadata, hash, or an
-  generated inspection report.
-- `App assumption`: behavior implemented by Flutter but not confirmed against
-  the original training pipeline.
-- `Inferred`: supported by indirect evidence but not directly proven.
-- `Unknown`: evidence is unavailable.
-
-The deployed model, labels, Flutter behavior, disease data, and release
-configuration are outside the scope of Week 1 changes.
-
-## Prepare the Week 2 Python environment
-
-The recovery dependencies are isolated from Flutter in:
-
-```text
-requirements-model-recovery.txt
-```
-
-After installing Python 3.11 or 3.12, run:
-
-```powershell
-.\scripts\setup_model_recovery_env.ps1
-```
-
-The script creates `.venv-model-recovery`, upgrades pip, installs TensorFlow,
-NumPy, and Pillow, and prints the inspection and inference commands. It does
-not install system Python.
-
-Python inference usage:
-
-```powershell
-.\.venv-model-recovery\Scripts\python.exe tools\run_tflite_inference.py `
-  --input test_vectors `
-  --preprocessing flutter_default
-```
-
-Only `flutter_default` represents the current app preprocessing assumption.
-Other modes are diagnostic candidates and are not recovered training facts.
+The aligned candidate supports runtime comparison only. It does not prove the
+original training preprocessing or model accuracy.

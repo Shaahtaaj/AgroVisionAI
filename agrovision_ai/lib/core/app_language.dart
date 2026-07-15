@@ -8,4 +8,11 @@ enum AppLanguage {
   final String label;
 
   bool get isSindhi => this == AppLanguage.sindhi;
+
+  static AppLanguage fromCode(String? code) {
+    return AppLanguage.values.firstWhere(
+      (language) => language.code == code,
+      orElse: () => AppLanguage.english,
+    );
+  }
 }

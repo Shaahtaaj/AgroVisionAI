@@ -29,11 +29,34 @@ class AppStrings {
       _sd ? 'تصوير چڪاس ٿي رهي آهي...' : 'Analyzing leaf image...';
   String get chooseImage =>
       _sd ? 'تصوير وٺو يا چونڊيو' : 'Capture or choose a leaf image';
-  String get mangoOnly =>
-      _sd ? 'في الحال سڃاڻپ صرف انب لاءِ آهي' : 'AI model currently supports mango';
+  String get mangoOnly => _sd
+      ? 'في الحال سڃاڻپ صرف انب لاءِ آهي'
+      : 'AI model currently supports mango';
   String get noMatch => _sd
       ? 'هن بيماري جي مقامي ڄاڻ موجود ناهي'
       : 'Local details for this class are not available yet';
+  String get cameraPermissionRequired => _sd
+      ? 'پن جانچڻ لاءِ ڪئميرا جي اجازت ضروري آهي.'
+      : 'Camera permission is required to scan a leaf.';
+  String get cameraPermissionSettings => _sd
+      ? 'مھرباني ڪري فون جي سيٽنگن مان ڪئميرا جي اجازت ڏيو.'
+      : 'Please allow camera access from app settings.';
+  String get galleryPermissionRequired => _sd
+      ? 'تصوير چونڊڻ لاءِ فوٽن تائين رسائي جي اجازت ڏيو.'
+      : 'Please allow photo access to choose an image.';
+  String get noImageSelected =>
+      _sd ? 'ڪا تصوير نه چونڊي وئي.' : 'No image was selected.';
+  String get imageReadFailed => _sd
+      ? 'تصوير پڙهي نه سگهي. مھرباني ڪري ٻي تصوير آزمائي ڏسو.'
+      : 'The image could not be read. Please try another photo.';
+  String get modelLoadFailed => _sd
+      ? 'بيماري سڃاڻڻ وارو ماڊل کلي نه سگهيو. ايپ ٻيهر کوليو.'
+      : 'The disease detection model could not be loaded. Restart the app and try again.';
+  String get unexpectedScanError => _sd
+      ? 'ڪا خرابي ٿي پئي. مھرباني ڪري ٻيهر ڪوشش ڪريو.'
+      : 'Something went wrong. Please try again.';
+  String get aiDetectable => _sd ? 'اي آءِ سان سڃاڻپ' : 'AI Detectable';
+  String get informationOnly => _sd ? 'رڳو ڄاڻ لاءِ' : 'Information Only';
   String get retry => _sd ? 'ٻيهر ڪوشش' : 'Try again';
   String get details => _sd ? 'تفصيل' : 'Details';
   String get classifierLibrary =>

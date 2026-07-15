@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'app/agrovision_app.dart';
+import 'core/language_preferences.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const AgroVisionApp());
+  final language = await LanguagePreferences.load();
+  runApp(AgroVisionApp(initialLanguage: language));
 }

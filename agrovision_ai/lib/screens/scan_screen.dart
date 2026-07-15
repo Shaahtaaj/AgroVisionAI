@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../core/app_scope.dart';
@@ -26,6 +27,7 @@ class _ScanScreenState extends State<ScanScreen> {
   String? _error;
 
   Future<void> _pick(ImageSource source) async {
+    final strings = AppStrings(AppScope.of(context).language);
     setState(() {
       _busy = true;
       _error = null;
@@ -37,7 +39,11 @@ class _ScanScreenState extends State<ScanScreen> {
         maxWidth: 1400,
       );
       if (picked == null) {
-        setState(() => _busy = false);
+        if (!mounted) return;
+        setState(() {
+          _busy = false;
+          _error = strings.noImageSelected;
+        });
         return;
       }
       final image = File(picked.path);
@@ -55,13 +61,53 @@ class _ScanScreenState extends State<ScanScreen> {
         _busy = false;
         _error = _localizedRejectionMessage(context, error.reason);
       });
-    } catch (error) {
+    } on PlatformException catch (error, stackTrace) {
+      debugPrint('Image picker failed: $error\n$stackTrace');
       if (!mounted) return;
       setState(() {
         _busy = false;
-        _error = error.toString();
+        _error = _permissionMessage(strings, error);
+      });
+    } on ImageDecodeException catch (error, stackTrace) {
+      debugPrint('Image decode failed: $error\n$stackTrace');
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = strings.imageReadFailed;
+      });
+    } on ModelLoadException catch (error, stackTrace) {
+      debugPrint('Disease model load failed: $error\n$stackTrace');
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = strings.modelLoadFailed;
+      });
+    } on DiseaseInferenceException catch (error, stackTrace) {
+      debugPrint('Disease inference failed: $error\n$stackTrace');
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = strings.unexpectedScanError;
+      });
+    } catch (error, stackTrace) {
+      debugPrint('Unexpected scan failure: $error\n$stackTrace');
+      if (!mounted) return;
+      setState(() {
+        _busy = false;
+        _error = strings.unexpectedScanError;
       });
     }
+  }
+
+  String _permissionMessage(AppStrings strings, PlatformException error) {
+    return switch (error.code) {
+      'camera_access_denied' => strings.cameraPermissionRequired,
+      'camera_access_denied_without_prompt' ||
+      'camera_access_restricted' => strings.cameraPermissionSettings,
+      'photo_access_denied' ||
+      'photo_access_restricted' => strings.galleryPermissionRequired,
+      _ => strings.unexpectedScanError,
+    };
   }
 
   @override
