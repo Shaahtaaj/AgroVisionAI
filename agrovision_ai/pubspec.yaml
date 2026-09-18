@@ -64,13 +64,30 @@ flutter:
     - assets/data/agro_knowledge_base.json
     - assets/images/agrovision_logo.png
     - assets/images/developer_shah_taj.jpg
+    - assets/images/diseases/
+    - assets/images/medicines/
     - assets/model/mango_model.tflite
     - assets/model/labels.txt
 
   fonts:
-    - family: Lateefi
+    - family: MBSarangSattar
       fonts:
-        - asset: assets/fonts/mb_lateefi_regular.ttf
+        - asset: assets/fonts/mbsarang-sattar-sk-20-regular-1_00.ttf
+          weight: 400
+        - asset: assets/fonts/mblateefibold-sattar-mblateefibold-regular-1_0.ttf
+          weight: 700
+        - asset: assets/fonts/mblateefibold-sattar-mblateefibold-regular-1_0.ttf
+          weight: 800
+        - asset: assets/fonts/mblateefibold-sattar-mblateefibold-regular-1_0.ttf
+          weight: 900
+    - family: MBLateefiBold
+      fonts:
+        - asset: assets/fonts/mblateefibold-sattar-mblateefibold-regular-1_0.ttf
+          weight: 700
+        - asset: assets/fonts/mblateefibold-sattar-mblateefibold-regular-1_0.ttf
+          weight: 800
+        - asset: assets/fonts/mblateefibold-sattar-mblateefibold-regular-1_0.ttf
+          weight: 900
 
   # To add assets to your application, add an assets section, like this:
   # assets:

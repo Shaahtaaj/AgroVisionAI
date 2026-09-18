@@ -38,7 +38,7 @@ class DiseaseInferenceException implements Exception {
 
 class TfliteDiseaseClassifier {
   static const int inputSize = 224;
-  static const double minConfidence = 0.75;
+  static const double minConfidence = 0.80;
   static const double minConfidenceGap = 0.20;
 
   Interpreter? _interpreter;
@@ -196,6 +196,7 @@ class TfliteDiseaseClassifier {
     var greenPixels = 0;
     var botanicalPixels = 0;
     var neutralPixels = 0;
+    var exgPositivePixels = 0;
     var samples = 0;
 
     for (var y = startY; y < endY; y++) {
@@ -207,6 +208,12 @@ class TfliteDiseaseClassifier {
         final maximum = max(red, max(green, blue));
         final minimum = min(red, min(green, blue));
         final saturation = maximum == 0 ? 0.0 : (maximum - minimum) / maximum;
+        final exg = 2 * green - red - blue;
+
+        // Excess Green Index (ExG): Strong indicator of vegetative chlorophyll reflectance
+        if (exg > 10 && green > 40) {
+          exgPositivePixels++;
+        }
 
         final looksLikeSkin =
             red > 95 &&
@@ -216,19 +223,20 @@ class TfliteDiseaseClassifier {
             (red - green).abs() > 15 &&
             red > green &&
             red > blue;
+
+        // Active green leaf tissue
         final looksGreen =
             green > 45 && green > red * 1.04 && green > blue * 1.08;
-        final looksLikeLeafColor =
-            looksGreen ||
-            (green > 35 &&
-                green > red * 0.88 &&
-                green > blue * 1.05 &&
-                saturation > 0.12) ||
-            (red > 65 &&
-                green > 50 &&
-                blue < green * 0.75 &&
-                red < green * 1.8 &&
-                saturation > 0.20);
+
+        // Diseased leaf tissue: yellow-chlorotic or necrosis with specific botanical chromaticity
+        final looksChloroticSpot =
+            saturation > 0.22 &&
+            green > 45 &&
+            red > 50 &&
+            blue < min(red, green) * 0.70 &&
+            (green >= red * 0.90 || red <= green * 1.35);
+
+        final looksLikeLeafColor = looksGreen || looksChloroticSpot;
 
         if (looksLikeSkin) skinPixels++;
         if (looksGreen) greenPixels++;
@@ -242,23 +250,34 @@ class TfliteDiseaseClassifier {
     final greenFraction = greenPixels / samples;
     final botanicalFraction = botanicalPixels / samples;
     final neutralFraction = neutralPixels / samples;
+    final exgFraction = exgPositivePixels / samples;
+
     debugPrint(
-      'Subject gate: skin=${skinFraction.toStringAsFixed(3)}, '
+      'Subject gate: botanical=${botanicalFraction.toStringAsFixed(3)}, '
       'green=${greenFraction.toStringAsFixed(3)}, '
-      'botanical=${botanicalFraction.toStringAsFixed(3)}, '
+      'exg=${exgFraction.toStringAsFixed(3)}, '
+      'skin=${skinFraction.toStringAsFixed(3)}, '
       'neutral=${neutralFraction.toStringAsFixed(3)}',
     );
 
-    // Keep this conservative: it targets a hand filling the guide area and
-    // does not attempt to prove that every accepted subject is a mango leaf.
-    if (skinFraction >= 0.32 && greenFraction < 0.18) {
+    // Rejection 1: Hand / skin fills the guide area without sufficient leaf tissue
+    if (skinFraction >= 0.25 && greenFraction < 0.15) {
       throw const ScanRejectedException(ScanRejectionReason.likelyHand);
     }
 
-    // Screens, keyboards, walls, and similar neutral objects typically have
-    // little botanical color in the guide area. Yellow and brown leaf colors
-    // are included above so this does not require a leaf to be purely green.
-    if (botanicalFraction < 0.12 && neutralFraction >= 0.35) {
+    // Rejection 2: Non-vegetative subjects (furniture, desks, clothing, flooring, screens)
+    // Real mango leaves (even heavily diseased ones) retain significant vegetation signature
+    if (exgFraction < 0.18 && greenFraction < 0.14) {
+      throw const ScanRejectedException(ScanRejectionReason.likelyNonLeaf);
+    }
+
+    // Rejection 3: Total botanical leaf coverage in the viewfinder is too low
+    if (botanicalFraction < 0.28) {
+      throw const ScanRejectedException(ScanRejectionReason.likelyNonLeaf);
+    }
+
+    // Rejection 4: Neutral objects (screens, keyboards, walls, paper)
+    if (neutralFraction >= 0.40 && greenFraction < 0.14) {
       throw const ScanRejectedException(ScanRejectionReason.likelyNonLeaf);
     }
   }

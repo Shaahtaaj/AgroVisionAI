@@ -4,7 +4,7 @@
       "id": "mango_anthracnose",
       "crop": "Mango",
       "label": "Anthracnose",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "image": "assets/images/diseases/mango_anthracnose.jpg",
       "severity": "High risk",
       "taxonomy": {
         "crop": "Mango",
@@ -80,13 +80,13 @@
           "name": "Mancozeb 80% WP",
           "name_sd": "مينڪوزيب 80٪ WP",
           "dose": "2-2.5 g per liter water",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/mancozeb_80_wp.jpg"
         },
         {
           "name": "Copper Oxychloride",
           "name_sd": "ڪاپر آڪسي ڪلورائيڊ",
           "dose": "2.5-3 g per liter water",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/copper_oxychloride.jpg"
         }
       ],
       "action_urgency": "Immediate",
@@ -233,7 +233,7 @@
       "id": "mango_bacterial_canker",
       "crop": "Mango",
       "label": "Bacterial Canker",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "image": "assets/images/diseases/mango_bacterial_canker.jpg",
       "severity": "High risk",
       "taxonomy": {
         "crop": "Mango",
@@ -309,13 +309,13 @@
           "name": "Copper Hydroxide",
           "name_sd": "ڪاپر هائيڊرو آڪسائيڊ",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/copper_hydroxide.jpg"
         },
         {
           "name": "Streptocycline + Copper",
           "name_sd": "اسٽرپٽو سائڪلين + ڪاپر",
           "dose": "Use only with local extension advice",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/streptocycline_copper.jpg"
         }
       ],
       "action_urgency": "Immediate",
@@ -455,7 +455,7 @@
       "id": "mango_cutting_weevil",
       "crop": "Mango",
       "label": "Cutting Weevil",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "image": "assets/images/diseases/mango_cutting_weevil.jpg",
       "severity": "Pest alert",
       "taxonomy": {
         "crop": "Mango",
@@ -525,13 +525,13 @@
           "name": "Imidacloprid",
           "name_sd": "اميڊاڪلوپرڊ",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/imidacloprid.jpg"
         },
         {
           "name": "Lambda-cyhalothrin",
           "name_sd": "ليمبڊا سائي هيلوٿرن",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/lambda_cyhalothrin.jpg"
         }
       ],
       "action_urgency": "Within 3 days",
@@ -675,7 +675,7 @@
       "id": "mango_die_back",
       "crop": "Mango",
       "label": "Die Back",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "image": "assets/images/diseases/mango_die_back.jpg",
       "severity": "High risk",
       "taxonomy": {
         "crop": "Mango",
@@ -750,13 +750,13 @@
           "name": "Carbendazim",
           "name_sd": "ڪاربينڊازم",
           "dose": "1 g per liter water",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/carbendazim.jpg"
         },
         {
           "name": "Copper Oxychloride",
           "name_sd": "ڪاپر آڪسي ڪلورائيڊ",
           "dose": "2.5 g per liter water",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/copper_oxychloride.jpg"
         }
       ],
       "action_urgency": "Immediate",
@@ -900,7 +900,7 @@
       "id": "mango_gall_midge",
       "crop": "Mango",
       "label": "Gall Midge",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "image": "assets/images/diseases/mango_gall_midge.jpg",
       "severity": "Pest alert",
       "taxonomy": {
         "crop": "Mango",
@@ -969,13 +969,13 @@
           "name": "Acetamiprid",
           "name_sd": "اسيٽاميپرڊ",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/acetamiprid.jpg"
         },
         {
           "name": "Imidacloprid",
           "name_sd": "اميڊاڪلوپرڊ",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/imidacloprid.jpg"
         }
       ],
       "action_urgency": "Within 3 days",
@@ -1119,7 +1119,7 @@
       "id": "mango_healthy",
       "crop": "Mango",
       "label": "Healthy",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mangifera_indica_leaf.jpg",
+      "image": "assets/images/diseases/mango_healthy.jpg",
       "severity": "Healthy",
       "taxonomy": {
         "crop": "Mango",
@@ -1189,7 +1189,7 @@
           "name": "No medicine needed",
           "name_sd": "دوا جي ضرورت ناهي",
           "dose": "Maintain good crop care",
-          "image": ""
+          "image": "assets/images/medicines/no_medicine.jpg"
         }
       ],
       "action_urgency": "Monitor",
@@ -1323,7 +1323,7 @@
       "id": "mango_powdery_mildew",
       "crop": "Mango",
       "label": "Powdery Mildew",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_powdery_mildew_severe_leaf_blight_with_mycelium_1.jpg",
+      "image": "assets/images/diseases/mango_powdery_mildew.jpg",
       "severity": "Medium risk",
       "taxonomy": {
         "crop": "Mango",
@@ -1395,13 +1395,13 @@
           "name": "Wettable Sulfur",
           "name_sd": "ويٽيبل سلفر",
           "dose": "2-3 g per liter water",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/sulfur.jpg"
         },
         {
           "name": "Hexaconazole",
           "name_sd": "هيڪساڪونازول",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/hexaconazole.jpg"
         }
       ],
       "action_urgency": "Within 3 days",
@@ -1545,7 +1545,7 @@
       "id": "mango_sooty_mould",
       "crop": "Mango",
       "label": "Sooty Mould",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sooty_mould_in_mango.jpg",
+      "image": "assets/images/diseases/mango_sooty_mould.jpg",
       "severity": "Medium risk",
       "taxonomy": {
         "crop": "Mango",
@@ -1614,13 +1614,13 @@
           "name": "Neem Oil",
           "name_sd": "نيم آئل",
           "dose": "3-5 ml per liter water",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Expeller_(4).jpg"
+          "image": "assets/images/medicines/neem_oil.jpg"
         },
         {
           "name": "Imidacloprid",
           "name_sd": "اميڊاڪلوپرڊ",
           "dose": "Use label dose for sucking pests",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/imidacloprid.jpg"
         }
       ],
       "action_urgency": "Within 3 days",
@@ -1767,7 +1767,7 @@
       "id": "mango_scab",
       "crop": "Mango",
       "label": "Mango Scab",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "image": "assets/images/diseases/mango_scab.jpg",
       "severity": "Medium risk",
       "taxonomy": {
         "crop": "Mango",
@@ -1838,7 +1838,7 @@
           "name": "Copper Fungicide",
           "name_sd": "ڪاپر ڦڦوند مار دوا",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/copper_oxychloride.jpg"
         }
       ],
       "action_urgency": "Within 3 days",
@@ -1979,7 +1979,7 @@
       "id": "mango_alternaria_leaf_spot",
       "crop": "Mango",
       "label": "Alternaria Leaf Spot",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mango_Tree_with_Leaf_Spots.jpg",
+      "image": "assets/images/diseases/mango_alternaria_leaf_spot.jpg",
       "severity": "Medium risk",
       "taxonomy": {
         "crop": "Mango",
@@ -2050,7 +2050,7 @@
           "name": "Mancozeb",
           "name_sd": "مينڪوزيب",
           "dose": "2 g per liter water",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/mancozeb.jpg"
         }
       ],
       "action_urgency": "Within 3 days",
@@ -2191,7 +2191,7 @@
       "id": "wheat_rust",
       "crop": "Wheat",
       "label": "Wheat Rust",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wheat_leaf_rust.jpg",
+      "image": "assets/images/diseases/wheat_rust.jpg",
       "severity": "High risk",
       "taxonomy": {
         "crop": "Wheat",
@@ -2258,7 +2258,7 @@
           "name": "Propiconazole",
           "name_sd": "پروپيڪونازول",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/propiconazole.jpg"
         }
       ],
       "action_urgency": "Immediate",
@@ -2402,7 +2402,7 @@
       "id": "wheat_powdery_mildew",
       "crop": "Wheat",
       "label": "Wheat Powdery Mildew",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Powdery_mildew_on_wheat_leaf.jpg",
+      "image": "assets/images/diseases/wheat_powdery_mildew.jpg",
       "severity": "Medium risk",
       "taxonomy": {
         "crop": "Wheat",
@@ -2468,7 +2468,7 @@
           "name": "Sulfur",
           "name_sd": "سلفر",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/sulfur.jpg"
         }
       ],
       "action_urgency": "Within 3 days",
@@ -2612,7 +2612,7 @@
       "id": "cotton_leaf_curl",
       "crop": "Cotton",
       "label": "Cotton Leaf Curl",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_leaf_curl_virus_symptoms.jpg",
+      "image": "assets/images/diseases/cotton_leaf_curl.jpg",
       "severity": "High risk",
       "taxonomy": {
         "crop": "Cotton",
@@ -2684,7 +2684,7 @@
           "name": "Pyriproxyfen",
           "name_sd": "پائريپروڪسيفن",
           "dose": "Use label dose for whitefly",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/pyriproxyfen.jpg"
         }
       ],
       "action_urgency": "Immediate",
@@ -2830,7 +2830,7 @@
       "id": "cotton_boll_rot",
       "crop": "Cotton",
       "label": "Cotton Boll Rot",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cotton_boll_rot.jpg",
+      "image": "assets/images/diseases/cotton_boll_rot.jpg",
       "severity": "Medium risk",
       "taxonomy": {
         "crop": "Cotton",
@@ -2900,7 +2900,7 @@
           "name": "Chlorothalonil",
           "name_sd": "ڪلوروٿالونل",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/chlorothalonil.jpg"
         }
       ],
       "action_urgency": "Within 3 days",
@@ -3046,7 +3046,7 @@
       "id": "rice_blast",
       "crop": "Rice",
       "label": "Rice Blast",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rice_blast_leaf_lesions.jpg",
+      "image": "assets/images/diseases/rice_blast.jpg",
       "severity": "High risk",
       "taxonomy": {
         "crop": "Rice",
@@ -3118,7 +3118,7 @@
           "name": "Tricyclazole",
           "name_sd": "ٽرائي سائيڪلازول",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cropduster_spraying_pesticides.jpg"
+          "image": "assets/images/medicines/tricyclazole.jpg"
         }
       ],
       "action_urgency": "Immediate",
@@ -3261,7 +3261,7 @@
       "id": "tomato_late_blight",
       "crop": "Tomato",
       "label": "Tomato Late Blight",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phytophthora_infestans_-_potato_late_blight.jpg",
+      "image": "assets/images/diseases/tomato_late_blight.jpg",
       "severity": "High risk",
       "taxonomy": {
         "crop": "Tomato",
@@ -3333,7 +3333,7 @@
           "name": "Mancozeb + Metalaxyl",
           "name_sd": "مينڪوزيب + ميٽالاڪسل",
           "dose": "Use label dose",
-          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1919_sprayer.jpg"
+          "image": "assets/images/medicines/mancozeb_metalaxyl.jpg"
         }
       ],
       "action_urgency": "Immediate",

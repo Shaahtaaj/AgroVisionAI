@@ -14,7 +14,7 @@ lib/
 assets/
   data/diseases.json    Offline disease knowledge base
   images/               App logo and future medicine images
-  fonts/                Sindhi Lateefi font
+  fonts/                Sindhi MB Sarang Sattar and MB Lateefi Bold fonts
   model/                mango_model.tflite and labels.txt
 ```
 
@@ -83,5 +83,5 @@ Keep `labels.txt` in the exact class order used during training. If the model wa
 ## Language And Media
 
 - English uses the default Roboto-style Material typography.
-- Sindhi uses `assets/fonts/mb_lateefi_regular.ttf` through the `Lateefi` font family and switches the app to RTL direction.
+- Sindhi uses `assets/fonts/mbsarang-sattar-sk-20-regular-1_00.ttf` (`MBSarangSattar`) for body and regular text, and `assets/fonts/mblateefibold-sattar-mblateefibold-regular-1_0.ttf` (`MBLateefiBold`) for headings and highlighted elements, while switching the app to RTL direction.
 - Disease and pesticide images are stored as internet URLs in `diseases.json`. The UI uses a resilient image widget with loading and offline fallback states.

@@ -2,8 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import '../core/app_fonts.dart';
 import '../core/app_language.dart';
 import '../core/app_scope.dart';
+import '../core/app_theme.dart';
 import '../core/language_preferences.dart';
 import '../screens/about_screen.dart';
 import '../screens/agri_terms_screen.dart';
@@ -65,23 +67,53 @@ class _AgroVisionAppState extends State<AgroVisionApp> {
         title: 'AgroVision AI',
         theme: ThemeData(
           useMaterial3: true,
-          fontFamily: _language.isSindhi ? 'Lateefi' : 'Roboto',
+          fontFamily: AppFonts.body(_language),
           colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color(0xFF159957),
+            seedColor: AppColors.primary,
             brightness: Brightness.light,
           ),
-          scaffoldBackgroundColor: const Color(0xFFF5FAF4),
-          appBarTheme: const AppBarTheme(
+          scaffoldBackgroundColor: AppColors.sage,
+          appBarTheme: AppBarTheme(
             centerTitle: false,
             elevation: 0,
             backgroundColor: Colors.transparent,
-            foregroundColor: Color(0xFF153B2D),
+            foregroundColor: AppColors.forest,
+            titleTextStyle: TextStyle(
+              fontFamily: AppFonts.heading(_language),
+              fontSize: 21,
+              fontWeight: FontWeight.w900,
+              color: AppColors.forest,
+            ),
           ),
+          textTheme: _buildTextTheme(_language),
           cardTheme: CardThemeData(
             elevation: 0,
-            color: Colors.white,
+            color: AppColors.surface,
+            margin: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(16),
+              side: const BorderSide(color: AppColors.border),
+            ),
+          ),
+          filledButtonTheme: FilledButtonThemeData(
+            style: FilledButton.styleFrom(
+              elevation: 0,
+              backgroundColor: AppColors.primary,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+            ),
+          ),
+          outlinedButtonTheme: OutlinedButtonThemeData(
+            style: OutlinedButton.styleFrom(
+              foregroundColor: AppColors.forest,
+              side: const BorderSide(color: AppColors.border, width: 1.2),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
             ),
           ),
         ),
@@ -118,6 +150,59 @@ class _AgroVisionAppState extends State<AgroVisionApp> {
           return null;
         },
       ),
+    );
+  }
+
+  TextTheme _buildTextTheme(AppLanguage language) {
+    final bodyFont = AppFonts.body(language);
+    final headingFont = AppFonts.heading(language);
+
+    return TextTheme(
+      displayLarge: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w900,
+      ),
+      displayMedium: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w900,
+      ),
+      displaySmall: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w900,
+      ),
+      headlineLarge: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w900,
+      ),
+      headlineMedium: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w900,
+      ),
+      headlineSmall: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w900,
+      ),
+      titleLarge: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w900,
+      ),
+      titleMedium: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w800,
+      ),
+      titleSmall: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w800,
+      ),
+      bodyLarge: TextStyle(fontFamily: bodyFont),
+      bodyMedium: TextStyle(fontFamily: bodyFont),
+      bodySmall: TextStyle(fontFamily: bodyFont),
+      labelLarge: TextStyle(
+        fontFamily: headingFont,
+        fontWeight: FontWeight.w800,
+      ),
+      labelMedium: TextStyle(fontFamily: bodyFont),
+      labelSmall: TextStyle(fontFamily: bodyFont),
     );
   }
 }

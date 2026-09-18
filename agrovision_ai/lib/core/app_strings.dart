@@ -185,4 +185,28 @@ class AppStrings {
       _ => value,
     };
   }
+
+  String get farmerGreeting => _sd ? 'سلام، هاري ڀاءُ' : 'Hello, Farmer';
+  String get fieldAdvisoryTitle =>
+      _sd ? 'کيت جي اڄوڪي صلاح' : "Today's Field Advisory";
+  String get fieldAdvisorySubtitle => _sd
+      ? 'هوا ۾ گهم وڌيڪ آهي — انب جي باغ ۾ ڦڦوند واري داغن جو معائنو ڪريو.'
+      : 'High humidity recorded — inspect mango orchards for fungal leaf spots.';
+  String get tabOverview => _sd ? 'خلاصو' : 'Overview';
+  String get tabSymptoms => _sd ? 'علامتون ۽ سبب' : 'Symptoms & Causes';
+  String get tabTreatment => _sd ? 'علاج ۽ بچاءُ' : 'Treatment & Prevention';
+  String get tabMedicines => _sd ? 'دوائون ۽ مقدار' : 'Medicines & Dosage';
+  String get quickScanCardTitle =>
+      _sd ? 'اي آءِ سان پن چڪاسيو' : 'Instant AI Leaf Scanner';
+  String get quickScanCardSubtitle => _sd
+      ? 'انب جي پن جو فوٽو ڪڍو ۽ فوري سڃاڻپ حاصل ڪريو'
+      : 'Capture a mango leaf photo for instant offline disease diagnosis';
+  String get tipCenterLeaf => _sd ? 'هڪ پن وچ ۾ رکو' : 'Center 1 leaf';
+  String get tipGoodLight => _sd ? 'صاف قدرتي روشني' : 'Good natural light';
+  String get tipAvoidScreens => _sd ? 'حقيقي پن، اسڪرين نه' : 'Real leaf, no screen';
+  String get allCrops => _sd ? 'سڀ فصل' : 'All Crops';
+  String get aiConfirmed => _sd ? 'اي آءِ سڃاڻپ' : 'AI Diagnostic';
+  String get preHarvestShort =>
+      _sd ? 'فصل لهڻ کان اڳ وقفو' : 'Pre-harvest wait';
 }
+
