@@ -69,7 +69,7 @@ class AppStrings {
   String get about => _sd ? 'اسان جي باري ۾' : 'About';
   String get developer => _sd ? 'ڊولپر' : 'Developer';
   String get developerName => _sd ? 'سبيلا ميمڻ' : 'Sabila Memon';
-  String get developerRole => 'ويب ايپ ڊولپر';
+  String get developerRole => _sd ? 'ويب ايپ ڊولپر' : 'Web & App Developer';
   String get finalYearProject =>
       _sd ? 'فائنل ايئر پروجيڪٽ' : 'Final Year Project';
   String get vision => _sd ? 'اسان جو مقصد' : 'Our Vision';
