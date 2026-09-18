@@ -63,7 +63,7 @@ class AboutScreen extends StatelessWidget {
                       ),
                     ],
                     image: const DecorationImage(
-                      image: AssetImage('assets/images/developer_shah_taj.jpg'),
+                      image: AssetImage('assets/images/developer_sabila_memon.jpg'),
                       fit: BoxFit.cover,
                       alignment: Alignment.topCenter,
                     ),

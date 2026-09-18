@@ -68,7 +68,7 @@ class AppStrings {
       _sd ? 'بنا نيٽ جي مقامي رهنمائي' : 'Offline AI + Local Guide';
   String get about => _sd ? 'اسان جي باري ۾' : 'About';
   String get developer => _sd ? 'ڊولپر' : 'Developer';
-  String get developerName => _sd ? 'شاھ تاج' : 'Shah Taj';
+  String get developerName => _sd ? 'سبيلا ميمڻ' : 'Sabila Memon';
   String get developerRole => 'ويب ايپ ڊولپر';
   String get finalYearProject =>
       _sd ? 'فائنل ايئر پروجيڪٽ' : 'Final Year Project';

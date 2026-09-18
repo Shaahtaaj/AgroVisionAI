@@ -63,7 +63,7 @@ flutter:
     - assets/data/diseases.json
     - assets/data/agro_knowledge_base.json
     - assets/images/agrovision_logo.png
-    - assets/images/developer_shah_taj.jpg
+    - assets/images/developer_sabila_memon.jpg
     - assets/images/diseases/
     - assets/images/medicines/
     - assets/model/mango_model.tflite

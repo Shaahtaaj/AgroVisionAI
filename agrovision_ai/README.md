@@ -180,13 +180,13 @@ flutter run
 
 ---
 
-# 👨‍💻 Developed By
+# 👩‍💻 Developed By
 
-**SHAH TAJ**  
+**Sabila Memon**  
 IT Engineer | Flutter Developer | AI Enthusiast
 
 Associated with:
-- Sindh Agricultural University
+- Sindh University
 - AgroVision AI Research Project
 
 ---
