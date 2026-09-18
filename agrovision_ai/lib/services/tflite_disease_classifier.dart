@@ -65,7 +65,8 @@ class TfliteDiseaseClassifier {
   }
 
   Future<PredictionResult> predict(File imageFile) async {
-    final decoded = await _decode(imageFile);
+    final rawDecoded = await _decode(imageFile);
+    final decoded = _cropCenterSquare(rawDecoded);
     final quality = _inspectQuality(decoded);
     _rejectPoorQuality(quality);
     _rejectUnlikelySubject(decoded);
@@ -280,6 +281,20 @@ class TfliteDiseaseClassifier {
     if (neutralFraction >= 0.40 && greenFraction < 0.14) {
       throw const ScanRejectedException(ScanRejectionReason.likelyNonLeaf);
     }
+  }
+
+  img.Image _cropCenterSquare(img.Image image) {
+    if (image.width == image.height) return image;
+    final size = min(image.width, image.height);
+    final offsetX = (image.width - size) ~/ 2;
+    final offsetY = (image.height - size) ~/ 2;
+    return img.copyCrop(
+      image,
+      x: offsetX,
+      y: offsetY,
+      width: size,
+      height: size,
+    );
   }
 
   double _luminance(img.Pixel pixel) {
